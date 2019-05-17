@@ -1,0 +1,29 @@
+Zeitreihen haben häufig falsche oder unpräzise Werte, so wie GPS-Tracks,
+Sequenzen von Sensorwerte \ref{15} oder auch Aktienkurse \ref{16}. Zum Beispiel
+wird der Aktienkurs von SALVEPAR mit dem Kurs von SYBASE verwechselt, weil in
+einigen Quellen die selbe Kennziffer SY genutzt wird. Man muss jedoch solche
+Anomolien mit echt auftretenden Anomalien differenzien. "Das Intresse des
+Papers liegt bei echt auftretenden Anomalien". Z.b. eine plötzliche
+Temperaturschwankung von 20 bis 10 Grad am selben Tag; entstanden durch eine
+kalte Briese. Um solche Fälle zu unterscheiden, empfehlen wir labeled Truth [1]
+von falschen Beobachtungen anzuwenden. (Detail zu dirty data und ihren labeled
+truth im Beispiel 1)
+
+\ref{15} : Adaptive cleaning for RFID data streams
+Ein RFID-System besteht aus einem Transponder und einem Lesegeräte. Damit
+werden Radiowellen in einem Raum versendet und die zurückgeworfenen Wellen
+werden generiert. Damit können Objekt im Raum festgestellt werden. RFID ist
+relativ unzuverlässig. Im Paper wird von einer Ausfallrate von 30 % gesprochen.
+Im Paper wird eine gefensterte Interpolation vorgeschlagenen.
+
+\ref{16}: Truth finding on the deep web: Is the problem solved?
+In diesem paper geht es um die Zuverlässigkeit (bezogen auf Wahrheit) von
+Datenfusion, also das Gewinnen der Daten von heterogenen Webseiten. Speziell
+werden Aktienkurse und Reiseflüge untersucht, weil es für die Gesellschaft zwei
+wichtige Themen sind. Ein paar Seiten dannach wird vom referenzierten Problem
+gesprochen, also dass SALVEPAR und SYBASE die selbe Kennung haben.
+
+[1] Wie kann man eigentlich labeled Truth herausfinden (das sind offensichtlich
+richtige bzw. die gewünschten Daten). Wenn es ein Verfahren zur Gewinnung
+solcher Daten vorliegt, warum braucht man ein anderes Verfahren? (Vllt wegen
+Laufzeitprobleme?)

@@ -1,0 +1,29 @@
+Fehler sind in Zeitreihen weit verbreitet, wie z.B. bei GPS-Tracks oder
+Sensordaten. Die vorhandenen Methoden fokussieren sich eher auf das Erkennen
+von Anomalien und nicht auf das Reparieren der erkannten Anomalien. Durch das
+einfache Herausfiltern von als falsch erkannten Informationen, können die
+Anwendungen wegen der Unvollständigkeit noch unzuverlässig sein. Anstelle des
+einfachen Entfernen solcher falschen Daten, schlagen wir eine iterative[1]
+Repariermethode vor, welches kreativ die beauty of temporal nature in der
+Anomalienerkennung mit dem Minimum-Change-Prinzip[2] in data repairing
+verbindet. 
+Unsere Hauptbeitrag besteht aus:
+    - ein neues Framework[4] von iterative minimum repairing (IMR)
+    - explizite Analyse der Konvergenz des vorgeschlagenen IMR
+    - eine effiziente Schätzung der Parameter
+Mit aufsteigeinder Berechnung ist es bemerkenswert, dass wir die Komplexität
+der Parameterschätzung von O(n) zu O(1) reduzieren. Durch das Experimenten von
+realen Werten konnten wir feststellen, dass unsere Herangehensweise deutlich
+überlegen ist als die heutigen Verfahren. Speziell zeigen wir, dass die
+vorgeschlagene Reperatur tatsächlich Zeitreihenanwendungen verbessert.
+------------------------------------------------------------------------------
+
+[1]: Was ist unter iterativ zu verstehen? - Vermutlich Echtzeit (ohne
+Vorkenntnisse von zukünftigen Daten)
+
+[2] Was ist unter beauty of termporal nature zu verstehen? - Vermutlich, dass
+die Daten quasi-stationär sind, also sich nicht rapide verändern dürfen.
+
+[3] Was ist Minimum-Change-Prinzip? Hat vermutlich was mit (3) zu tun
+
+[4] Framework? Vermutlich nur Algorithmen; keine Implementation. 

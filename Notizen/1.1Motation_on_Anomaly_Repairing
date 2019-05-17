@@ -1,0 +1,46 @@
+Anwendungen, die sich mit Pattern Mining \ref{17} [1] oder Klassifikation
+beschäftigen, bauen auf fehlerhafte Zeitreihen auf, die eigentlich nicht
+zuverlässig sind.  Anomalienerkennung von Zeitreihen werden häufig angewandt
+und die fehlerhaften Daten werden einfach herausgefiltert( siehe \ref{11} für
+ein umfassenden Überblick von Anomalienerkennungen). Die fehlerhaften Daten
+werden einfach aus der Zeitreihe als nutzloses Rauschen entfernt. Jedoch wächst
+die Unzuverlässigkeit der unvollständigen Zeitreihen mit der Anzahl der
+entfernten Daten, sodass eine Analyse eigentlich nicht angewandt werden darf.
+Kürzliche Studien \ref{21} zeigen, dass das Reparieren von fehlerhaften Daten
+das Clustern von räumlichen Daten verbessert."Nicht Zeitreihen!" Für Zeitreihen
+haben wir gezeigt, dass das Reparieren von Anomalien ebenfalls eine
+Verbesserung für Anwendungen mit Klassifikation verbessert \ref{26}. Die
+reparierten Werte, die sehr nah bei den wahren Werten liegen, helfen den
+Applikation erheblich. 
+
+\ref{17}: Dieses Paper beschäftigt sich mit den Erkennung von Zusammenhängen
+zwischen zeitlichen Intervallen. Eine Zeitreihe wird segmententiert und die
+resultierende Intervalle werden auf mögliche Schlussfolgerungen, wie z.B.
+Intervalle mit hohen Frequenzen führen später zu Intervalle mit niedrigen
+Frequenzen, geprüft. Anstelle des Alien-Kalkül (Beschreibung von
+Intervallbeziehung, siehe zugehörigen Wikipedia-Eintrag) wird in diesem Paper
+eine neue hierachische Sprache TSKR eingeführt.
+
+\ref{11}: Das ist kein Paper, sondern ein Tutorial, dass auf andere Tutorals
+bezieht. Es geht darum, Outliers von Zeitreihen zu erkennen mit
+unterschiedlichen Ansätzen. Folgende Gruppen von Ansätzen werden hierbei vorgestellt: 
+    - Distance and Density based Approaches
+    - Grouping based Approches
+    - Network based Approaches (z.B. PCA aus Data Mining!)
+    - Spatio-Temporal Outlier Detectioon Approaches
+
+\ref{21}: Dieses Paper beschäftigt sich mit dem Reparieren von Daten bezogen
+auf das Clustering.  Das Reparieren basiert auch auf das
+Minimum-Change-Prinzip.  Ein untersuchter Datensatz ist z.B GPS-Daten. Sie
+haben auch darauf hingewiesen, dass fehlerhafte GPS daten im Indoor-Bereich
+passieren, weil das Signal zu schwach ist (Erstes Mal eine Begründung für
+falsche Daten!!!)
+
+\ref{26}: Dieses Paper (nur einer von unserem Paper angebene Wissenschaftler ist
+hier vertreten) geht es um das frühe Klassifizieren von Zeitreihen, wie es z.B.
+bei Gesundheiswerten (Herzfrequenz,...) notwendig ist. Das ein Verfahren
+angeblich Werte repariert habe ich nicht gefunden, aber müsste vermutlich drin
+stehen.
+
+[1] Was war nochmal pattern Mining? Erkennen von gewissen Muster und bezogen
+auf Zeitreihen: Das Untersuchen von Zusammenhänge von Zeitabschnitten.
