@@ -1,0 +1,46 @@
+Eine naheliegende Idee ist die vorhergesagten Werte in der Anomalienerkennung
+direkt als reparierte Werte zu benutzen, wie z.B. durch AR \ref{3, 14, 27} oder
+ARX \ref{3,19} (für weitere Details siehe Abschnitt 2). Ein Datenpunkt wird als
+Anomalie identifiziert, wenn seine (wahre) Vorhersage sich vom (rauschigen)
+Beobachtungswert deutlich unterscheidet. Leider liegen verauschte bzw.
+fehlerhafte Daten nahe bei den echten Werten, sodass Menschen oder Systeme
+deren Fehler intutitiv minimieren wollen. Beispielsweise bei Rechtschreibfehler
+(John Smith vs. Jhon Smith), Tippfehler (555-8145 vs.  555-8195) \ref{1},
+Rundungsfehler(76,821,000 vs 76M) oder Einheitsfehler (76M vs 76B) \ref{16}.
+Aufgrund solcher Fehler is die Reparierleistung von direktangewandten
+Anomalienerkennungen schwach, wie es in Example1 und den Experiments in
+Abschnitt 6 zeigen. "Solche Repairmethoden glauben, dass die Beobachtungswerte
+eigentlich nur fast korrekt sind und verändern die Werte lediglich minimal. In
+Example1 ist der Fehler jedoch gewaltig" 
+Anderseits folgen bedingt-basierte Repariermethoden wie SCREEN \ref{22} strikt
+das Minimum-Change-Prinzip in Datenreparierung \ref{1}, die sich stark auf
+bedingte Geschwindigkeitsveränderungen verlassen. Das Reparieren wird basierend
+von zwei aufeinanderefolgende Punkte durchgeführt, d.h. man betrachtet nur
+einen historischen Wert und somit beachtet es die temporale Natur von Fehlern
+nicht "ich glaube unter temporale Natur von Fehler bedeutet, dass auf einen
+Fehler häufig weitere Fehler auftreten". In Example1 zeigt das
+geschwindigkeitsbasierte SCREEN seine Effektivität bei Störimpulse "rapide
+Veränderung der Werte", kann aber mit aufeinanderfolgende fehlerbehaftete
+Punkte kaum umgehen. 
+Kurzgesagt erwarten die praxisangewandten Anomalienerkennungen keine geringe
+Fehler und die bedingtbasierten Reparierung sind nicht effektiv bezogen auf der
+temporale Natur von Fehlern. 
+
+\ref{3} Das ist ein verdammtes Buch aus 1994! Da wir AR und ARX, sowieso kennen
+lernen werden, brauchen wir das vermutlich garnicht.
+
+\ref{14} In diesme Paper geht es konkret auf Sensordaten, dessen Sensoren harte Bedingungen aufweisen (Unterwasssersensoren z.B.) und durch einen Netzwerk an einem Rechner geschickt werden. Es beschäftigt sich lediglich mit Anomalienerkennung, die autoregressiv sind.  
+
+\ref{27} Dieses Paper beschäftigt sich mit Outliers von nicht-stationären
+Zeitreihendaten. nicht-stationär heißt, dass die Charasterics einer Zeitreihe (
+bspw. Varianz und Erwartungswert) temporär immer ändert. AR wird hierbei
+modifiziert, da AR nur stationär gut sein soll.
+
+\ref{19} Dieses Paper zeigt wie man statische Algorithmen anwendet(wie mit
+ARX). Paper konnte ich kostenlos erstmal nciht zugreifen!
+
+\ref{1} - fehlt
+
+\ref{16} - fehlt
+
+\ref{22} - fehlt
