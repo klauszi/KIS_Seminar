@@ -1,0 +1,77 @@
+Da vollständige automatische Reparierung von Daten nicht gut in Zeitreihen
+funktioniert (wie man mit Screen \ref{22} in unseren Experimt in Abbildung 9 zu
+sehen ist), resultiert aus der Idee von genutzten Masterdaten (ein einzelnes
+Verzeichnis von qualitative Daten) in Data Repairing \ref{9}. Daher
+beschäftigenwir uns mit markierten wahren Daten von den Beobachtungen, damit
+man das Reparieren verbessert. Wahre Daten können entweder manuell oder
+automatisch durch zuverlässige Quellen festgestellt werden. Z.B. können genaue
+Ort-Koordinaten manuell durch einen Benutzer-Check als solche markiert werden
+(und für die gelesenen und unpräzise GPS-Track zum reparieren genutzt werden).
+b Darüber hinaus nehmen periodische und automatische Markieren in bestimmten
+Szenarios statt, z.B. nehmen präzise Austattungen genaue Luftdaten (als
+markierte Werte) in einen relativ langen Periode auf, während Mengen und
+partizipativen Wahrnemung unzuverlässige Beobachtung in bestimmter Weise
+generiert \ref{28}. 
+In Anbetracht des natürlich von Fehler der Anomalienerkennung und des
+Minimmum-Change-Prinzip in Data-Repairing, schlagen wir den
+Iterativ-Mimimung-Repairing (IMR) vor. Die Philosophie hinter den
+vorgeschlagenen Verfahren ist, dass höchst-vertrauliche Reparierungen in
+früheren Iterationen die späteren Reparierungen helfen können. Besonders IMR
+ändert einen Punkt in der Zeit minimal und beachtet nur die vertraulichsten
+Reparierung, bezogen auf das Minimimum-Change-Prinzip in Data-Repair, wobei
+Menschen und Systeme immer deren Fehler versuchen zu minimieren. Die
+höchstvertraulichen Reparierungen zusammen mit den als wahr markierten Daten
+der fehlerhaften Punkten werden genutzt, um temporal nature of erros in
+Anomalienerkennung zu lernen und zu verbessern. Dies generiert genauere
+Reparierkandidaten in zukünftigen Interationen.  
+Beispiel 1: Abbildung 1 zeigt ein Beispel eines Segment von Sensordaten, die
+eine schwarze Linie aufweisen. Angenommen die Fehler erscheinen von 370 bis
+385, wo die Beobachtungen nach oben von den richtigen Daten verschoben sind,
+z.B. verschuldet durch granulare Uneinigkeit oder Einheitsfehler. Um die Fehler
+zu reparieren, werden die richtigen Daten von anderen Beobachtung markiert,
+welche die Zeitpunkte {370, 371, 372, 379, 387} umfasst. 
+Existierende Geschwindigkeitsbasierte Cleaning (Screen) \ref{22} können
+aufeinanderefolgende Fehler in einer Periode nicht effektiv reparieren (welches
+auch in Beispiel 1 in \ref{22} beobachtet wird). Der Grund ist, dass
+Geschwindigkeitsbedingungen, dessen Menge von Werten relativ abhängig von der
+Zeitdifferenz beschränkt ist, können scharfe Abweichung erkennen, wie es in den
+Zeitpunkten 369 bis 370 zu beobachten ist, aber nicht kontinuierliche Fehler,
+wie in 383 und 384. Der EWMA-Algorithmus \ref{13} hat ebenfalls Problem einen
+angemessenen zu cleanen. Beide Methoden haben einen ähnlichen Reparierweg.   
+Beachtet man die Vorhersagewerte in der Anomalienerkennung als Reparierwerte
+(siehe Abschnitt 2 für weitere Details), das Ergebnis von ARX ist auch
+eingezeichnet. ARX, welches die Fehler zwischen den wahren Werten und
+Beobachtungen berücksichtig, zeigt bessere Reparierergebnisse als EWMA und SCREEN.
+Letztlich zeigt unsere vorgeschlagener IMR-Ansatz, welches Fehlervorhersage und
+Minimum-Change-Prinzip vereinigt, die besten Ergebnisse.
+IMR führt zu zwei neue Herausforderung:
+    - Ob der Repair-Prozess konvergiert
+    - Inwiefern die Parameter des temporären Model über den reparierten Daten
+      nach jeder Iteration geändert werden soll
+Beide Themen wurden in Anomalienerkennung nicht behandelt. 
+Unser Beitrag. Unsere hauptsächliche Beiträge in diesem Paper lässt sich wie folgt zusammenfassen:
+    - Wir formalisieren das Anomaly Repairing Problem in Abschnitt 2, gegeben
+      durch eine Zeitreihe mit einigen Werten, die als wahr markiert sind. Die
+      erweiterten Anomalienerkennungen werden dabei eingeführt. 
+    - Wir entwickeln einen iterativen Minimum-Change-bewussten
+      Repair-algorihmus IMR in Abschnitt 3. Beachtlich ist, dass wir zeigen,
+      dass das ARX-basierte Verfahren (in Abschnitt 2) tatsächlich ein
+      Sonderfall von IMR mit statischen Parameter ist (Vorschlag 2) 
+    - Wir untersuchen die Konvergenz von IMR in verschiedenen Szenarien in
+      Abschnitt 4. Besonders wird die Konvergenz explizit für den Sonderfall
+      IMR(1) mit der Ordnung p = 1 untersucht, welches eine hohe
+      Repariergenauigkeit in der Praxis aufweit (wird in Abschnitt 6 gezeigt).
+Wir beweisen, dass unter besimmten Eingaben, die konvergierten
+Reparierergebnisse direkt berechnet werden kann, ohne dies iterativ zu
+berechnen (Vorschlag 8)
+    - In Abschnitt 5 entwickeln wir einen effiziente optimierung und
+      inkrementierte Berechnung für die parameterschätzung in jeder Iteration.
+Um das Paramter schätzen über n Punkte zu verbessern, können Matrizen einfach
+entfernt werden durch das Einsetzen von Zeilen mit den Wert 0 (Vorschlag 9). Es
+ist auch bemerkenswert, dass inkrementelle Berechnung über unterschiedliche
+Repairiterationen (Vorschlag 10) dazu führt, das die Komplexität der
+parameterschätzung von O(n) zu O(1) reduziert wird.
+    - Experimente auf echten Datensätze mit realen und künstlichen Fehler
+      demonstrieren, dass unser IMR deutlich bessere Performance zeigt, als
+die heutzutage genutzten Ansätze, bestehend aus der genannten Anomalienerkennen
+und bedingungsbasierten Reparieren.
