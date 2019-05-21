@@ -1,0 +1,6 @@
+Im ersten Abschnitt wird das Problem der Anomalienreperatur eingeführt. Dannach
+die Erweiterung der existierenden Anomalienerkennungen für die
+Anomalienreperatur, d.h. AR ohne die Beachtung von markierten Daten und ARX mit
+markierten Daten. Die Haupterweiterung sind:
+    - Das Ausführen von Vorhersagewerte mit signifikaten Unterschied zu den beobachteten Werten als Reperaturwerte im Gegensatz zum Minimum-Change-Prinzip in der Datenreperatur. \ref{1}, so wie in der Einführung beschrieben.
+    - Einen statischen parameter phi, welcher gesetzt werden muss, d.h. geschätzt von den fehlerhaften Daten währen der Initialisierung. 
