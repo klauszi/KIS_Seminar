@@ -1,0 +1,33 @@
+Es sei eine Zeitreihe n der Messungen, x = x[1],...,x[n], wobei jedes x[i] der
+entsprechende gemessene Wert ist. Kurz durch x_i beschrieben.  Sei y die
+markierten und reparierten Werte der Sequence von x. Jedes y_i ist dabei
+entweder der korrekte Wert oder der reparierte Wert von x_i. Gegeben ist die
+Zeitreihe x und eine partiell markierte Teilmenge y von x. Das Reperaturproblem
+ist das Bestimmen der Reperaturwerte y_i von x_i, die nicht in y markiert sind.
+"Besser wäre die Reperaturwerte (also die Werte, von denen wir keine korrekte
+Kenntnis haben) von den korrekten Werte zu differenzien, wie bspw. y_i hat
+entweder einen Wert oder NULL und wir wollen y_i* ermitteln, wenn y_i gleich
+NULL ist."
+Beispiel 2 (Messung x, partiell markiertes y, vollständig repariertes y).
+Beachte x = {6,10,9.6, 8.3, 7.7, 5.4, 5.6, 5.9, 6.3, 6.8, 7.5, 8.5} mit zwölf
+Werten der Messung in Abb. 2, wo eine fehlerhafte Verschiebung (nach oben) bei
+den vier Punkten x_2 bis x_5 auftreten. Angenommen 5 dieser Punkte sind in y
+wahr markiert. Durch das Reparieren (Die Methode wird später präsentiert),
+schlagen wir einen vollständigen reparierten y an durch y = {6, 5.6, 5.4, 5.2,
+5.4, 5.6, 5.9, 6.3, 6.8, 7.5, 8.5} wie in Abb. 2 zu sehen. Im reparierten y,
+x_4 und x_5 wurden 8.3 zu 5.2 und 7.7 zu 5.39 geändert. Die markierten Werte y2
+und y3 wurden im Ergebnis dabei übernommen. Abb. 2 zeigt  auch andere Ansätze
+von Reparturen y' an, wie z.B. durch die lineare Interpolation \ref{25}. Wie in
+Abb.2 zu erkennen, inspiriert von \ref{22}, der Hauptzweck der Interpolation
+ist die ernsthafter Schaden aller an den nicht markierten umliegenden Punkte,
+also y'7 bis y'11, die eigentlich korrekte Werte sind und daher nicht
+modifiziert werden sollten. Im Gegensatz zu unseren Verfahren werden
+ausschließlich y4 und y5 repariert.
+"5 Werte sollen also in das reparierungsverfahren einfliessen. Jedoch ist nicht
+klar, welche dieser Werte überhaupt der Wahrheit entspricht. Vermutlich sind y2
+und y3 wahre Werte (man hat die Werte nämlich übernommen). y4 und y5 sind nicht
+bekannte Werte, die halt repariert worden sind. Welche 3 Punkte sind dann noch
+als Wahr bekannt? Ich stelle die Vermutung auf, dass y1, y6 und y12 die
+fehlenden bekannte Werte sind. Dies liegt nämlich daran, dass die Interpolation
+dort die echte Werte animmt. Das Verfahren soll ja auch angeblich nur die
+markierten werte berücksichtigen und auch in Ruhe lassen."
