@@ -1,0 +1,20 @@
+Intuitiv können Anomalienerkennungen zur Anomalienreperatur erweitert werden.
+Z.B. wenn man sich das AR (autoregressive) Modell \ref{14,27} anschaut:
+    x_t^' = c sum_from_i_to_p \phi_i x_{t-i} + \epsilon_t
+wobei x_t^' die Vohersage von x_t, p die Ordnung und phi_i der Parameter des Modells und c eine Konstante, definiert druch c = \mu(1- sum_from_i_to_p \phi_i) mit \mu ist der Erwartungswert und \epsilon_t ist ein Rauschanteil ist. (Häufig wird ein gaussiches Rauschen gewählt \ref{3}; mit \mu = 0 und Varianz \sigma^2 beduetet es c = 0).
+Falls der Vorhersagewert x_t^' signifikant von der Messung x_t unterscheidet, also |x_t^' - x_t| > \tau wobei \tau ein vordefinierter Schwellenwert ist, dann wird der Vorhersagewert als Reperatur genommen. Die zugrundeliegende Idee ist nämlich, dass ein vom Vorhersagewert weit entfernter Messungswert mit hoher Wahrscheinlichkeit auf einen Outlier hindeutet. Das AR-basierte Reperaturverfahren lässt sich wie folgt zusammenfassen:
+    - ersetze x_t durch y_t falls y_t gelabelt ist
+    - Setze den Lernparameter \phi von AR(P) abhängig von x neu
+    - Ersetze alle ungelabelten y_t durch AR(p) abhängig von x, sodass:
+        yt = x't, falls y_t ist ungelabelt und Differenz größer als
+        Schwellenwert, ansonsten x_t
+Beispiel 3 (entsprechend zu 3). Beachte wie x = {6,...,8.5} in Abb 2.
+Vereinfacht setzen wir die Ordnung p auf 1 und c = 0 für AR(1), sodass x_t^' =
+\phi_1 x_{t-i1} ist. Mithilfe der kleinsten Quadrate \ref{20}, schätzen wir den
+Parameter phi von x, sodass \phi_1 = 1.022 "kleinste Quadrate bedeutet, dass wir für jeden Datenpunkt eine Gleichung mit AR aufstellen. da das GLS nicht lösbar , fügen wir einen Fehlervariable als Summand hinzu. Der Fehlerwert muss dabei so klein wie möglich sein und der beste Wert ist 1.022 für phi. 
+" Sei tau = 0.1. y1 ist markiert und bleibt daher unverändert, also y1=6. Das
+gleiche gilt für y2 und y3. Wir haben daher x_4^' = phi_1 x_1 = 1.022 * 5.4 =
+5.52. Da die Differenz größer als 0.1 ist, akzeptierten wir den Vorhersagewert
+als neues x4.  Das geschieht auch mit den anderen Werte " phi_1 bleibt aber
+unverändert!, ich dachte eigentlich, dass phi über die Zeit sich ändert". Der
+RMS Fehler ist 0.51 (RMS, weiteres zu Abschnitt 6)
