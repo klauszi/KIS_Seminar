@@ -1,0 +1,9 @@
+Im Gegensatz zu den existierenden Anomalienerkennungen, welche die Daten durch
+One-pass Reperatur "also man liest die Werte einmal und speichert diese ggf. in
+einem Buffer, der konstant begrenzt ist" (so wie in der Einführung und in Abb.2
+gezeigt; später noch in Abschnitt 6 beobachtbar), schlagen wir das zunehmende
+reparieren der Daten vor. Die Aufmerksamkeit des Verfahren wird auf die
+genannten Fehler, also Error nature der Anomalienerkennung und das
+Minimum-Change-Prinzip der Datenreperaturn, liegen, sodass zuverlässige
+Reperaturen von früheren Iterationen in der Reperatur von zukünftigen Schritten
+helfen können.
