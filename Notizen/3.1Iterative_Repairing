@@ -1,0 +1,28 @@
+Sei y^(k) die Sequenz y in der k.te Iteration, wobei y^(0) die partiell markierte Zeitreihe der Eingabe ist. Da y^(0) unvollständig ist (weil pariell markiert), initialisieren wir y^(0) wie folgt: y_t^(0) = x_t falls y_t^(0) ist nicht markiert. Dabei werden die markierten Werte nicht repariert werden, also y_t^(k) = y_t^(0) falls y_t^(0) markiert ist.
+Algorithmus 1 präsentiert IMR(p), dessen Input aus der Messung x und den
+partiell markierten y^(0) besteht. Die Ausgabe y^(k) besteht aus den markierten
+und unveränderten Werten, als auch aus den unmarkierten und daher reparierten
+Werten.
+Die Hauptschritte sind:
+    (S1) Parameterschätzen, Zeile 2, lernt die Parameter von ARX(p) in der k.te Iteration, angegeben durch phi^(k), von x und den derzeitigen y^(k).
+    (S2) Ermittlung von Reparierkandidaten, Zeile 3, berechnet die möglichen Reperaturen y(hut)^(k), bezogen auf das ARX(p) abhängig von x, y^(k) und phi^(k).
+    (S3) Reperaturauswertung, in Zeile 4, bestimmt welche Reperaturkandidaten
+akzeptiert werden, also y_t^(k+1) = y(hut)_t^(k), bezogen auf das
+Minimum-Change-Prinzip in der Datenreperatur \ref{1}.
+Wie Zeile 5 zeigt, die Prozedure wir solange wiederholt bis die Reperatur
+konvergiert, sodass "Jeder Distanzwert der neuen Reperaturwerte und der alten
+kleiner als der Schwellenwert ist".
+Weobei tau ein Schwellenwert der Konvergenz ist oder die maximale Anzahl von
+Iteration erreicht ist. Das Setzen der Max-num-iterationen ist eine Abhilfe um
+das Warten der Konvergenz in der Praxis zu vermeiden (sehe Abschnitt 6.1.4).
+"Das heißt theoretisch gibt es eine Grenze von Iterationen, angegeben in
+O-Kalkül?"
+***Algorithmus***
+Beispiel 5 (Algorithmus Überblick, Beispiel 2 Fortsetzung).
+Beachte wieder x = {6,...,8.5} in Abb. 2. Bezogen auf die fünf markierten Werte, wie setzen y^(0) = {6,..., 8.5} "nur zwei Werte sind von x verschieden. drei markierte Werte entsprechenden nämlich den Messungen!". y_4^(0) = x_4 = 8.3 wird z.B. durch die unmarkierten Werte initialisiert.
+In jeder Iteration, der IMR Algorithmus:
+    -lernt die Parameter, z.b. phi_1^(0) = 0.5 für p = 1
+    - generiert Kandidaten für die Reperatur,
+        y(hut)^(0) = {-,-,-,6.2,7.7,-,5.6,...,7.5,-}
+    -wählt eine Repair und formt die neue Sequenz y^(1) = {6, 5.6,...,8.5}
+Die Prodzedur endet bis zur Konvergenz. Das Endresultat ist y^(7) = {6, 5.6,...,8.5} mit dem RMS-Fehler 0.03. Die einzelnen Schritten werden in den Folgenden Beispiele erläutert.
