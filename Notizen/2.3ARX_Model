@@ -1,0 +1,37 @@
+Damit wir die markierten y-Werte besser nutzen, betrachten wir das ARX (autoregresive Model mit exogenen Eingaben):
+    y't = xt + sum_from_i=1_to_p phi_i (y_t-i - x_t-i) + epsilon_t
+"Man gewichtet nicht nach den vorher festgelegten Werten, sondern nach der Differenz des Differenz des festgelegten Wert und der Messung"
+wobei yt' die mögliche Reperatur von xt ist und alles andere Variable
+entsprechen dem AR-Modell. Wenn man sich die Gleichung anschaut, wird nicht nur
+die Messung für den reparierten Wert herangezogen, sondern auch der reparierte Wert y_t-i. Der Ablauf geschieht wie folgt:
+    - Setze phi von ARX(p) abhängig von x und der markierten Werte von y
+    - Fülle alle unmarkierten yt durch ARX(P) ähnlich durch die Gleichung 2
+"Gleichung 2 war das von AP"
+Beispiel 4 (eine Fortsetzung von Beispiel 2). Beachte wieder x = {6,...,8.5}
+und die fünf markierten Werte von y. Damit es wieder einfach wird, nutzen wir
+ARX(1) mit der Ordnung p=1, d.h. yt' = x_t + phi_1(y_t-1 - x_t-1). Ähnlich zum
+AR in Beispiel 3, schätzen wir den Parameter mithilfe der kleinsten Quadrate
+\ref{20}, sodass phi_1 = 0.5 ist. " hier ist ein anderer Wert, weil wir nun die
+Differenz nutzen. Der Wert ist hierbei kleiner (bei AP war es 1.022)"
+Sei tau = 0.1. Wieder werden die Werte bis y_3 nicht modifiziert. Für den
+vierten Punkt gilt, dass y4' = 8.3 + 0.5 * (5.4-9.6) = 6.2 "Wie Formel halt".
+Da die Differenz zum gemessenen Werte 8.3 größer als 0.1 ist, wird für y4=6.2
+gesetzt. Die endgültige Reperatur von ARX ist damit y = {6,...,8.5} mit dem RMS
+Fehler von 0.49 und damit geringer als das von AR in Example 3. "Wenn man sich
+Abb. 2 anguckt, ist man erstmal überrascht, dass arx besser sein sollte, weil
+man auf die Werte von Zeitpunkt 4 und 5 achtet. Da ist nämlich AR deutlich
+besser!. Aber die Zeitpunkte 7 bis 11 sind genau andersrum. Daran erkennt man
+auch, dass AR keine Folge von Fehler so gut beherscht. ARX hingegen keine
+kurzen und plötzlichen Fehler"
+Wir beachten das ARX-Modell, da es die Differenz des gemessenen Fehlers und der
+markierten Werte nimmt, während Methoden wie AR und Screen(kann nicht genutzt
+werden) solche Differenzen ignoriert. Dadurch, dass man die Differenz zwischen
+den Fehler und der fehlerfreien Werten nimmt, können dafür ARX und unser
+empfohlener IMR nicht gut mit Spike Fehler (d.h. Fehler die plötzlich auftreten
+bzw. die Anzahl der aufeinanderfolgenden Fehler gleich 1 beträgt) nicht so gut
+umgehen wie es bei Screen der Fall ist \ref{22}. Nichtsdestrotz zeigt IMR immer
+einen siginifikaten besseres Ergebnis, wenn man eine lange Folge von
+aufeinanderfolgenden Fehler hat (Vergleiche Abb. 9). ARX kann nicht so
+gut aufeinanderfolgende Fehler erkennen, da es nur signifikate Änderungen
+ausführt, welches den Minimimum-Change-Prinzip in der Datenreperatur
+widerspricht, wie es in Abschnitt 1.2 diskutiert wurde.

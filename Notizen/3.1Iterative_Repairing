@@ -25,4 +25,6 @@ In jeder Iteration, der IMR Algorithmus:
     - generiert Kandidaten für die Reperatur,
         y(hut)^(0) = {-,-,-,6.2,7.7,-,5.6,...,7.5,-}
     -wählt eine Repair und formt die neue Sequenz y^(1) = {6, 5.6,...,8.5}
-Die Prodzedur endet bis zur Konvergenz. Das Endresultat ist y^(7) = {6, 5.6,...,8.5} mit dem RMS-Fehler 0.03. Die einzelnen Schritten werden in den Folgenden Beispiele erläutert.
+Die Prodzedur endet bis zur Konvergenz. Das Endresultat ist y^(7) = {6,
+5.6,...,8.5} mit dem RMS-Fehler 0.03. Die einzelnen Schritten werden in den
+Folgenden Beispiele erläutert.
