@@ -1,0 +1,22 @@
+Die Parameterschätzung von Schritt S1 (Zeile 2 im Algorithmus 1) schätzt den
+parameter phi^(k) for ARX(p) durch x und y^(k). Existierende Methoden wie OLS
+\ref{20} oder Yule-Walker Gleichungen \ref{7} können direkt angewandt werden.
+Z.B. haben wir für die OLS:
+    \phi^(k) = ((Z^(k))'Z^(k))^-1 (Z^(k))' V^(k)
+""" ' bedeutet nicht ableitung sondern transponiert.
+    -1 bedeutet die inverse Matrix
+    Z ist eine Matrix mit p Spalten und n - p - 1 Zeilen. Die erste Zeile besteht aus den Differenzen von p bis zum ersten Ersten. Die Zweite Zeile ist eine um eins geshiftet Version, der erste wert ist dann die nächste Differenz.
+    V ist ein Vektor mit den Differenzen von p+1 bis n.
+    phi^(k) ist der Vektor der Parameter
+"""
+Beispiel 6( Parameterschätzung von y^(0), Fortzeung von Beispiel 5) Beachte x =
+{6,...,8.5} und y^(0) = {6,5.6,5.4,...,8.5} "Nur der zweite und dritte Wert ist
+von x verschieden". Durch die Ordnung p = 1 haben wir V^(0) = {-4.4,
+-4.2,0,0,...,0}' mit 11 Zeilen und einer Spalte "Da nur der zweite und dritte
+Wert unterschiedlich ist, werden auch die entsprechenden Differenzen in V^0
+angegeben, alles andere ist 0." und Z^(0) = {0, -4.4, -4.2, 0, ..., 0}' mit 11
+Zeilen und einer Spalte. Das Anwenden der Gleichung 5 führt zum geschätzten
+Parameterwert phi_1^(0) = 0.5. Augrund von den iterativen Reperatur wird das
+immer wieder neuberechnen der parameterschätzung notwendig sein, welches nich
+keinen vorherherigen Forschung untersucht wurde (weiteres siehe unseren Ansatz
+in Abschnitt 5).
