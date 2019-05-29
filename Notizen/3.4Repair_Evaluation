@@ -1,0 +1,26 @@
+Die Reperaturauswertung in S3 (Zeile 4 im Alg) wählt eine Reperatur aus y_hut
+aus. Bezogen auf das Minimum-Change-Prinzip in Data repairing \ref{1}, die
+Reperatur erfolgt durch einen Wert, dessen Wert minimal von der Messung
+abweicht und daher eine höchst zuverlässig ist. Die Ergebnis der Reperatur ist
+in jeder Iteration:
+    - y_t^(k+1) = yhut_t^(k) falls t = argmin_i |yhut_i^(k) - x_i|
+        ansonsten der alte Wert.
+Zu beachten ist, dass das nur der zuverlässigste Wert in jeder Iteration
+repariert wird, was effizienter als das NP-harte Problem der Minimierung über
+alle Ähnderung bezogen auf die Integritätbedingung \ref{1}.
+Beispiel 8 (Mimimum Reperatur yhut_t^(1), Folgerung von Beispiel 7).
+Da es nur eine Reperaturkandidaten in Beispiel 7 gibt, also yhut_4^(0) = 6.2,
+ist dieser die minimale Reperatur über alle Kandidaten. Die Sequenz nach der
+ersten iteration ist daher y^(1) = {6,...,6.2,...,8.5}
+Beachte das das Minimum-Change-Prinzip in Data repairing auf der Intuition
+basiert, die Fehler zu minimieren. Es ist jedoch nicht garantiert, dass das
+Minimum-Change-Prinzip immer Werte repariert, sodass diese mit den wahren
+Werten korrespondiert. Studien bezogen auf das Minimum-Change-Prinzip zeigten,
+dass die Genauigkeit unwahrscheinlich ist um theoretische Garanien zu haben, da
+es keine Bedingung gibt, wie weit die Fehler von der Wahrheit divergieren. Aus
+diesem Grund können wir die Korrektheit nur durch vorgeschlagene Reparierungen
+evaluieren, indemwir  dies mit den wahren Werten vergleichen. Diese
+Vorgehensweise wir auch in \ref{1, 8} gemacht. Nichtsdestotrotz können wir
+zeigen, dass die pruning und inkrementiertes Berechnen sicher ist (propositions
+9 and 10), d.h., die Genauigkeit der Endresultate mit effizienter Berechnung
+ist theoretisch garaniert, sowie ohne Pruning und inkrementale Berechnung.
