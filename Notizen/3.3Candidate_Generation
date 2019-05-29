@@ -1,0 +1,15 @@
+Die generierten Reperaturkandidaten im Schritt S2 (Zeile 3 in Alg. 1) ermittelt
+mit ARX(p) die REperaturkandidaten mihilfe von kandidat = phi * Differenz +
+Messwert, dessen phi durch die Parameterschätzung gewonnn wurde. Für jeden
+Punkt der Schätzung gilt die Formel..." Wichtig ist das y aus den Messungen und
+den wahren Werten besteht. yhut ist die Abschätzung. y verändert sich ständig,
+wohingegen x immer gleich bleibt! " Nur die Kandidaten werden betrachten,
+dessen Abstand von yhut und y größer als tau sind.  
+Beispiel7 (Reperaturkandidaten, Beispiel 6 Fortsetzung). Beachte die Parameter
+phi_1^(0) = 0.5 geschätzt durch Beispiel 6. Sei der Schwellenwert tau = 0.1.
+Bezogen auf die Gleichung 6 haben wir dann yhut_4 = 0.5 * (5-4 -9.6) + 8.3 =
+6.2. Die Distanz von y und yhut ist größer als 0.1, nämlich 0.1. Für yhut_5
+wird das selbe gemacht, nur das 0 rauskommt also nicht mehr betrachtet wird.
+Insgesamt erhalten wir für yhut = {+,+,+,+, 6.3, - , + , - ,...,+} wobei plus
+mit den markierten, Zahlen die Kandidaten und - keine Kandidaten bedeuten.
+Insgesamt brauchen wir also nur einen Kandidaten zu betrachten!
