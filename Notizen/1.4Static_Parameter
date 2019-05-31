@@ -1,0 +1,18 @@
+Wir untersuchen den Speziialfall um die Beziehung zwischen unseren
+vorgeschlagenen IMR und dem extierenden ARX zu illustrieren. Zunächst
+analysierenwir die Konvergenz von IMR (Eigenschaft 1) und dann illustrieren wir
+den Äquivalenz in bestimmten Fall (Eigenschaft 2).
+Anstelle der dynamischen Veränderung des Parameter phi^(k) in jeder Iteration,
+Zeile 2 im Alg1, ein Sonderfall ist einen statischen parameter phi^(k) =
+phi_(0) für alle Iterationen festzulegen.
+
+Proposition 1. Mit einem statischen Parameter phi^(k) = phi für alle k, das
+Reperaturergebnis konvergiert, also "limes k gegen unendlich der Summe von
+ehemaligen Reperarierten und neu reperarierten ist 0".
+Sonderfall von IMR(1)
+Wir zeigen im folgenden, dass für p = 1 der ARX(p)-basierte Reperatur in Abb.
+2.3 ein Sonderfall von unseren vorgeschlagenen IMR(p) mit statischen Parameter
+phi^(0) ist. Diese Äquivalenz zeigt die Vernunft unseres Vorschlag.
+
+Proposition 2.  Für IMR(1) mit statischen Parameter phi^(k) = phi für alle k,
+der Algorithmus 1 ist äquivalent zu ARX(1)-basierten Reperatur.
