@@ -1,0 +1,12 @@
+In diesem Abschnitt analysieren wir die Konvergenz des iterativen Reparieren,
+also lim_k gegen infty sum from i=1 to n (y_i^(k+1) - y_i^(k)) = 0, welcher für
+die Termination des Alg. 1 essentiell ist. Während allgemein das
+Konvergenzsproblem noch offen ist, untersuchen wir die Konvergenuz unseres
+vorgeschlagene Methode in ganz bestimmen Fällen in diesem Abschnitt wegen
+diesen beiden Gründen:
+- wir zeigen in Abschnitt 4.1, dass der ARX-basierte Ansatz ein Speziafall
+  unseres vorgeschlagenen IMR mit statischen Parameter ist (Eigenschaft 2)
+- wir identifizieren einen anderen besonderen Fall mit einer Konvergenzgarantie
+  in Abschnitt 4.2, welcher online über einen Streaming ohne Iteration
+reperariert (siehe auch Abschnitt 4.2.2 und 6.2.2 für weitere Details und
+Experimente)
