@@ -1,0 +1,10 @@
+Wir betrachten nun das dynamische verändern des Parameter phi^(k) in jeder
+Iteration, Zeile 2 im Alg 1. So wie im folgende Proposition 3 zu sehen, falls
+der dynmaische Paramter konvergiert, dann konvergiert ebenfalls die Reperatur.
+Der konvergierte Paramterfall ist interessant, da das zugehörige
+Reperaturergebnis auch ohne das iterative Berechnung in bestimmten Fällen
+direkt berechnet werden kann, wie es unten illustriert wird.
+
+Proposition 3. Falls der Paramter konvergiert, also k gegen unendlich phi^(k) =
+phi, dann konvergiert auch die Reperatur, also Differenz der neuen und alten
+Regeperatur ist gleich 0.
