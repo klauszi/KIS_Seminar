@@ -1,0 +1,22 @@
+Wieder betrachten wir den Spezialfall von IMR(1) mit der Ordnung p = 1. Um zu zeigen, wie wir das Ergebnis ohne Iterationen berechnen können, illustrieren wir, dass jedes y_t(k), welcher durch den Alg. 1 generiert wrid, wie folgt repräsentiert werden kann, a.k.a die Herkunft von y_t(k):
+
+Lemma 4. Für IMR(1) können wir jedes y_t(k) durch
+    "Multiplikation aller Parameter der k Iteration * Differenz des letzten
+vorangegangen wahrer Wert - den zugehörigen Messwert) + Messwert des jetztigen
+Wertes. 
+wobei 0 <k1 < k der Iterationsschritt ist und y_t-s ist wahr markiert und die
+Zeitpunkte t-s+1 bis t nicht wahr markiert sind.
+
+Wir unterteilen die markierten Punkte in mehrere und zusammenhängende Segmente
+(beschrieben durch die Anzahl m). Sei s(j) und e(j) der start und Endpunkt des
+jten Segment mit j = 1,...,m. Zum Beispiel gibt es in Abb.2 drei markierte
+Segmente, nämlich s(1) = 1, e(1) = 2, s(2) = 4, e(2) = 5, s(3) = 9, e(3) = 9.
+Sei z_i = y_i^(0) - x_i für alle markierte Punkte i. Wir setzen z_e_(0) = 0 für
+den undefinierten Segment 0.
+
+Proposition 5. Für IMR(1), falls der Parameter konvergiert, sodass lim k -> infty pih_1(k) = phi_1, dann der konvergierte Reperaturergebnis kann direkt angegeben werden durch:
+    lim k-> infty y_i(k) = y_i,
+wobei y_i = y_i(0) falls es in einem Segment ist.
+ansonsten phi_1 der Iteration, wo der Iterationseinfluss des letzten reperaturwert gibt, * der Differenz dieser zugehörigen Werte plus den eigenen Messwert.
+Der konvergiert Paramter phi_1 lässt sich dann auch wie folgt lösen:
+....
