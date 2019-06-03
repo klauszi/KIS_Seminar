@@ -1,0 +1,17 @@
+Wir betrachten nun den Fall, dass es nur ein Segment der Länge l gibt und dieseram Anfang startet,d.h. y_1^(0) bis y_l^(0) sind markiert. In diesem besoneren Fall kann der konvergierte Parameter und das Reperaturergebnis direkt ohne Iterationen berechnet werden. Dies wird genau dann wichtig, wenn dies als Online-Berechnung angwandt wird und zwar indem alle vergangenen Daten als ein markierter Segment verstanden wird (siehe Abschnitt 6.2.2 für weitere Detials und Auswertung). Zudem braucht man in diesen Fall keinen Schwellenwert zu setzen.
+Die idee ist dabei:
+    - lemma 6 sagt uns, dass der geschätzte paramer in jeder Iteration begrenzt ist für bestimmte Eingaben.
+    - Proposition 7 sagt uns, dass der begrenzte Paramter zu den konvergierten Paramter führt.
+    - Analog zu Proposition 5 können wir nach Proposition 8 die konvergierte Reperatur direkt berechnen.
+
+Lemma 6. Für IMR(1) mit l als die ersten gelabelten Datenpunkte in y^(0). Falls die Eingabe "differenz des ersten Reperaturvorschlag - der Messung multipliziertmit der selben Differenz für den nächsten Datenpunkt absolut größer ist als die erste Differenz zum Quadrat und zwar für alle Datenpunkte von t bis l", dann ist phi_1^(k) kleiner als 1 in der Iterations k. "Hier muss einfach ein Beispiel gezeigt werden, wo das Lemma nicht funktioniert, dann versteht man das glaub ich besser."
+
+Die folgende Schlussfolgerung illustriert, dass mit einen begrenzten Parameter in jeder Iteration, der Paramter konvergiert:
+
+Proposition 7: Falls Lemma 6 gilt, dann konvergiert phi_1^(k) zu einem phi_1.
+
+Die Bedingung einzuhalten ist für reale Daten problemlos möglich. Die Praxis zeigt häufig stationäre Zeitreihen \ref{5}, welcher die Bedingung erfüllt. Sogar für den nicht stationären Fall können wir die Zeitreihe in ein stationären Prozess umformen durch differencing \ref{5}.
+
+Proposition 8: "Dasselbe wie Propostion 5, nur dass Bedingungen für Proposition gilt und daher eingesetzt wird."
+
+Es überrascht nicht, dass der konvergierte Paramter phi_1 in Gleichung 11 in Propsoition 8 genau die selbe Lösung wie Gleichung 9 ist mit m =1 für diesen Spezialfall für ein markiertes Segment.
