@@ -1,0 +1,10 @@
+In Anbetracht der drei Hauptschritte im Alg 1, wo das Generieren von
+Reperaturkandidaten und Auswertung (in Abschnitt 3.3 und 3.4) unvermeidbar für
+die minimale Reperatur sind, zeigen wir in diesem Abschnitt, dass die
+kostenintensive Parameterschätzung phi^(k) (in Abschnitt 3.2) in unserer
+iterativen Reperatur verbessert werden kann. Zunächst identifizieren wir in
+Abschnitt 5.1, dass die Matrizen Z und V für die Parameterschätzung verkürzt
+werden kann, wenn Matrizenzeilen mit den Wert 0 ersetzt werden. Darüberhinaus
+zeigen wir in Abschnitt 5.2, dass die inkrementale Berechnung so geändert
+werden kann, dass die Komplexität der Parameterschätzung von O(n) zu O(1)
+reduziert werden kann.
