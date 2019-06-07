@@ -1,0 +1,29 @@
+Intuition. Wenn man den Parameter phi(k) mit der Gleichung 5 schätzen möchte,
+dann brauchen wir zwei Große Matrizen. Einmal Z^(k) mit einer Größe von (n-p) *
+p und V^(k) mit einer Größe von (n-p) * 1. Der Wert y_i^(k) - x_i in Z^(k) und
+V^(k) bestimmen leidglich die Differenz der markierten/reparierten Werte von
+y_i(k) und der Messung x_i für den Punkt i. In der Praxis ist die Anzahl der
+markierten Daten häufig beschränkt, während die reparierten Daten sich nach dem
+Minimum-Change-Prinzip sich nicht signifikaten ändert. Das ist der Grund warum
+in Z^(k) und V^(k) viele Werte gleich 0 sind. Wir zeigen (unter in Proposition
+9), dass eine lose Matrix verkürzt werden kann, indem die Zeilen mit 0 einfach
+entfernt werden. Sei z_i^(k) = y_i^(k) - x_i für die Einfachheit. Damit können
+wir V^(k) und Z^(k) wie folgt beschreiben:
+    ***Formeln***
+Die folgende Schlussfolgerung sagt aus, dass die phi nach Gleichung 5 ebenfalls
+berechnet werden kann,nachdem man die Zeilen in Z^(k), welche ausschließlich
+0en aufweisen und die entsprechenden Zeilen in V^(k) entfernt.
+Proposition 9.
+Für beliebige Zeilen in Z^(k), bezeich durch Z_r^(k), dessen Zeilen alle mit 0
+vershen sind, d.h. z^(k) r+p-1 = z^(k)_r+p-2 =...=z_r^(k) = 0, dann ist
+essicher die Zeilen in Z_r^(k) zu entfernen mit den gleichen Ergebnis phi^(k).
+Beispiel9 (Parameter schätzen mit Matrixverkürzung, fortsetzung von Beispiel
+6). Beacht wieder x ={6,10,...,} und y^(0) = {6,...,8.5} in Beispiel 6. Mit der
+Ordnung p = 1,haben wir V^(0) = {-4.4,-4.2,0,...0}' mit der Größe 11x1 und
+Z^(0) = {0,-4.4, -4.2, 0, ..., 0}' mit der Größe 11 x 1. Bezogen auf die
+Bedingung 9, alle Zeilen außer "der zweiten und dritten Zeile inZ^(0)" und die
+entsprechenden Zeilen in V^(0) können entfernt werden. Nach der
+Matrixverkürzung haben wir V^(0) = {-4.2,0}' mit der Größe 2x1 und Z^(0) =
+{-4.4, -4.2}'  mit der Größe 2 x 1. Bezogen auf gleichung 5, der Parameter ist
+geschätzt durch phi_1(0) = (-4.4)* (-4.2) / ((-4.4)^2 + (-4.2)^2) = 0.5. Der
+berechnete Paramter ist der selbe wie in Beispiel 6.
