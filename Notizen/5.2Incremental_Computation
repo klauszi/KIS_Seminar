@@ -1,0 +1,10 @@
+Intuition. In jeder Iteration im Alg. 1 wird der Parameter phi^(k) durch
+Gleichung 5 geschätzt bezogen auf die alle n punkte von Z^(k) und V^(k).
+Bezogen auf das Minimum-Change-Prinzip in Abschnitt 3.4, gibt es nur ein Punkt,
+sagen wir r, welcher sich in jeder Iteration ändert, sodass y_r^(k) neq
+y_r^(k-1) gilt. Daher bleiben die meisten Werte in Z^(k) und V^(k) im Vergleich
+zu Z^(k-1) und V^(k-1) gleich. Wir zeigen (in Proposition 10), dass phi^(k)
+inkremental berechnet werden kann, indem man sich auf die geänderten Werte
+fokussiert, anstatt die ganzen Matrizen Z^(k) und V^(k) neu zu berechnen. Die
+Zeitkomplexität der Parameterschätzung wird damit in jeder Iteration reduziert
+und zwar von linarer zu einer konstanten Zeit.
