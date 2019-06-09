@@ -1,0 +1,17 @@
+Um inkremental zu berechnen schreiben wir die Gleichung 5 für die
+Paramterschätzung wie folgt um:
+phi^(k) = (A^(k))^-1 B^(k)
+wobie A^(k) die Multipikation der Inverse mal der Identität von Z^(k) ist,
+und B^(k) die Multiplikation der Inverse von Z^(k) * V^(k) ist.
+"Formel für die Zellenberechnung werdenangegeben"
+Die folgende Schlussfolgerung zheigt, dass A^(k) mit der Grpße pxp und B^(k)
+der Größe px1 können rekursiv durch A^(k-1) und B^(k-1) berechnet werden. Der
+vordeinfierte Ordnung p in Ar(p) bzw. ARX(p) model ist ein fester Wert im
+Algorithmus mit der Bedingung, dass p deutlich keliner als n ist (p<<n). Die
+Berechnungskosten der Gleichung 12 "das mit A^(k) und B^(k) für phi^(k)" wird
+signifikant kleiner als Gleichung 5 bezogenauf Z^(k) und V^(k) über alle n
+punkte.
+Proposition 10. Sei r der geänderte Wert in einer Reperaturiteration, sodass
+y_r^(k) neq y_r^(k-1) oder auch z_r^(k) neq z_r^(k-1). A^(k) und B^(k) können
+rekursiv von k-1 berechnet werden.
+" Es folgen der viele Zellenberechnung."
