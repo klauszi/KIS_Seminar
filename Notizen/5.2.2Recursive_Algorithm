@@ -1,0 +1,27 @@
+Algorithmus 2 zeigt die Prozedur für das inkrementielle Schätzen des Parameter
+phi^(k). Für k = 0 in der ersten Iteration ist das Berechnen von A^(0) und
+B^(0) durch Gleichung 13 und 14 bezogen auf die Matrizen Z^(0) und V^(0)
+unvermeidbar.Nichtsdestotrotz kann das Effiziente Kürzen von Zeilen mit den
+Wert 0 wegen Proposition 9 ausgeführt werden, wie es in Zeile 2 im Alg 2
+gezeigt wird.
+"Es folgt der Algorithmus"
+Für die folgenden Iteration k > 0 werden A^(k) und B^(k) rekursive durch
+A^(k-1) und B^(k-1) durchgeführt. So wie in Proposition 10 gezeigt, können alle
+p^2 + p Werte in A^(k) und B^(k) rekursiv in konstanter Zeit aktualisiert
+werden. Die Konsequenz ist, dass die Komplexität der Parameterschätzung von
+O(n) (bezogen afudie Gleichung 15-17) zu O(1) durch Gleichung 18-20 reduziert
+ist.
+
+Beispiel 10 (Parameterschätzung durchdasNutzen der inkrementalen Berechnung,
+Forsetzung von Beispiel 6). Beachte wieder x = {6,10,...,8.5} und y^(0) =
+{6,5.6,...,8.5} in Beispiel 6. Wir haben dann V^(0) = {-4.4, -4.2,...,0}' und
+Z^(0) = {0,-4.4, -4.2,0,...,0}'. Sei p = 1, dann haben A^(0) und B^(0) nur ein
+Element mit a_11^(0) = ... b_1^(0) = 18.48, initialisiert durch Zeile 2 in Alg
+2.
+In Beispiel 7 und 8 ist der reparierte Punkt y_4^(1) = 6.2. Wir haben dann
+z_4^(1) = 6.2 - 8.3 = -2.1, während z_4^(0) = 0 ist. Zeile 5 in Alg 2 berechnet
+A^(1) und B^(1) von A^(0) und B^(0) mit a_11^(1) = a_1^0 + (-2.1)^2 = 41.41
+wegen der Aktualisierung in Gleichung 18 und b_1^(1) = b_1^0 +(-2.1 - 0... =
+27.3 bezogen auf Gleichung 20. Schließlich wird der Parameter phi_1^(1) durch
+A^(1) und B^(1) berechnet, indem Gleich 12 angewandt wird, sodass phi_1^(1) =
+27.3 / 41.41 = 0.66 ist.
