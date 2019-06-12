@@ -1,0 +1,36 @@
+In diesem Abschnitt vergleichen wir unsere vorgeschlagene Methoden IMR mit den
+State-of-the-art Ansätzen, damit sind folgende Methoden gemeint:
+    - AR \ref{3}
+    - ARX \ref{3}
+    - ARIMA \ref{18, 3}
+    - Tsay \ref{23} als Modell
+    - glättungsbasierte Methode EWMA \ref{13}
+    - der bedingungsbasierte Ansatz SCREEN \ref{22}
+
+GPS Daten mit echten Fehlern. In GPS-Daten sind reale Fehler natürlich und die
+zugehörigen echten Werte werden manuell erfasst. Es sammelt gelesene GPS-daten
+durch eine Person mit einem Smartphone, der sich um einen Campus bewegt. Da wir
+den genauen Bewegungspfad der Person kennen, wurden de Anzahl 186 von 742
+falschen Punkte im Bewegungspfad manuell identifiziert. Wahre Orte der falschen
+Punkte wurden auch manuell markiert und zwar als Bodenwahrheit. (Siehe
+Hauptresultate in Abschnitt 6.1) 
+
+ILD Daten mit künstlichen Fehler. Der Intel Lab Dat enthält eine Anzahl von
+Messen von 54 Sensoren für jede 31 Sekunden über 38 Tagen. Nimmt man 31
+Sekunden als eine Epoche und lässt fehlende Daten weg, so werden 4912
+Datenpunkte im Sensor 1 vom 29. Feb bis 1. März generiert. Wir fügen künstliche
+Fehler hinzu, indem gewisse dreier-Werte  mit Varianz 0.1 unter der gaussischen
+Verteilung verschoben wurde (Siehe Beispiele in Abb. 8). Solche
+Verschiebungsfehler treten häufig in der Praxis auf, z.B. weil ein Sensor
+feststeckt für eine kurze Zeit oder Einheitsfehler in Perioden geschehen.
+(Siehe Hauptergebnis in Abschnit 6.2) 
+
+Kriterium. RMS Fehler \ref{15} werden eingesetzt um die Reperatur auszuwerten.
+Sei x^truth die Grundwahrheit von einer korrekten Sequenz, x^dirty die
+beobachtende Sequenz mit Fehlern und x^repair sei die reperatierte Sequenz. Der
+RMS Fehler in \ref{15} ist gegeben durch:
+    delta(x^truth, x^repair) = sqrt( 1/n ....)
+"RMS ist einfach gemittelter Fehler"
+
+Der Messwert wertet die Distanz zwischen der Grundwahrheit und des
+Reperaturergbnis aus. Kleine RMS-Fehler sind zu bevorzugen.

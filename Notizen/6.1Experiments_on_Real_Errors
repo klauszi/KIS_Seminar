@@ -1,0 +1,6 @@
+Die Experimente auf reale Daten über GPS Daten wird unter folgenden Einstellungen berücksichtigt:
+- Die Ordnung p
+- Den Konvergenzschwellenwert tau
+- max-num-iterations "tau kann beliebige aber komplextheoretische Iterationen"
+- Labelrate "Also Verhältnis von wahren Werte zu Messwerte"
+Ähnliche Ergebnisse sich auch in ILD berücksichtigt worden und werden daher weggelassen.
