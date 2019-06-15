@@ -1,0 +1,13 @@
+Abb 5 zeigt uns die Ergebnisse für verschiedene Schwellenwerte tau, dabei ist
+die Ordnung immer p = 3. Durch das Setzen kleiner taus braucht IMR mehr
+Iterationen um zu konvergieren. Die entsprechenden Zeitkosten sind in 5(b)
+daher höher. Bessere Reperaturergebnisse werden von IMR mit kleinen taus
+erreicht, wie es in Abb. 5(a) zu sehen ist. Dabei werden für kleiner
+Schwellenwerte, z.B. von 0.1 bis 0.01, die Reperaturgenauigkeit kaum weiter
+verbessert, während die entsprechenden Iterationen und Zeitkosten signifikant
+steigt. Anderseits wird durch das Erhöhen des Schwellenwertes tau die
+Zeitkosten reduziert. Daher steht der Schwellenwert tau als ein Trad-off
+zwischen Reperaturgenaugikeit und Zeitkosten für das IMR. Zusammenfassend lässt
+sich sagen, dass kleine Schwellenwerte zu besseren Ergebnisse führen (kleine
+RMS Fehler) und dabei mehr Iteration benötigt (höhere Laufzeitkosten). Siehe
+Abb. 11 bezogen auf ILD für die klare Auswirkung von den Schwellenwerte.
