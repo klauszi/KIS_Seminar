@@ -1,0 +1,20 @@
+Abb. 7 zeigt die Ergebnisse für unterschiedliche Lablingraten. Eine Lablingrate
+von 0.1 bedeutet, dass 10 % mit wahren Werte versehen ist. Es ist nicht
+überraschend, dass bei steigender Lablingrate die Reperaturperformance von IMR
+und ARX besser wird, da sie die markierten Wahrheitswerte nutzen, wie man in
+Abb. 7 (a) sehen kann. Ein interessantes Ergebnis ist, dass mit steigender
+Lablingrate, die zugehörigen Laufzeitkosten in Abb 7(b) zunächst ansteigen
+lässt und dann fällt. Der ist is, dass für kleine Lablingraten (sagen wir 0.06)
+mit Punkten kaum verändert, die iterative Reperatur schnell konvergieren kann,
+wobei falsche Daten häufig unverändert bleiben. Der zugehörige RMS Fehler ist
+in diesen Fall höher wie in Abb. 7(a) zu sehen ist. Je mehr Daten markiert
+sind, desto mehr falsche Daten werden identifiziert und werden vom Alg.
+reperariert, dass wiederum zu hohen Berechnungskosten führen. Wenn die
+Lablingrate großn ist, sagen wir 0.25, dann sind eine große Anzahl von falschen
+Daten markiert. Daher kovengiert IMR wieder schnell.  
+Bei Anomalienerkennungsmethoden sind die Ergebnisse generell gleich. SCREEn und
+EWMA werden nicht von der Ordnung p, den Schwellenwert tau und der Lablingrate
+beeinflusst. Es ist nicht überraschend, dass Screen schlecht performt, das
+damit auch  unsere Motivation und Analyse in der Einführung bestätigt. Ähnlich
+ist es bei Ewma. dA EWMA die markierten Wahrheitswerte nicht benutzt, ist seine
+Performnance schlecht.

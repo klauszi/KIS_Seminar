@@ -1,0 +1,24 @@
+Abb. 4 zeigt die Ergebnisse von unterschiedlichen Ordnungen p für AR(p), ARX(p)
+und IMR(p)."EWMA und Screen bleiben konstant, weil sie keine solche Ordnung
+haben siehe Glättungs- und bedingungsbasierte Verfahren" Als erstes sieht man
+in Abb 4(a), dass die AR-basierten Verfahren bessere Ergebnisse liefern je
+größer die Ordnung p ist. Mehrere historische Werte verbessertt daher die
+Vorhersage der Werte. Ein zu großes p würde keine weitere Verbesserung
+herbeiführen, da die komplizierte Semantike in einem großen Fenster durch
+dieses einfache Modell nicht übernommen wird. Ähnliches Ergebnis wird auch in
+ARX wegen den selben Grund beobachtet. Bemerkenswert ist die iterative
+Strategie mit minimaler Reperatur in jeder Iteration, da der vorgeschagene IMR
+sogar einen geringen RMS-Fehler mit der Ordnung p erreicht. Diese Ergebnisse
+führten zu der Analyse von den Spezialfall IMR(1) mit p = 1 in Abschnitt 4.
+Es ist nicht überraschend, dass der iterative IMR mehr Zeit in Abb. 4 benötigt,
+da die anderen Methoden nur einmal durch die Daten gehen. Neben den originalen
+IMR in Alg1 präsentieren wir die Ergebnisse von IMR mit Matrix Pruning "also
+das entfernen von Zeilen mit 0" und inkrementalen Berechnung "also das
+Beibehalten der meisten Werte aus der letzten Iteration, anstelle neuer
+Berechnung". Beide effiziente Schätzmethoden verbesserten die Laufzeit in Abb.
+4(b). Besonder IMR-IC für die inkrementale Parameterschätzung mit konstanter
+Laufzeit reduzierte signifikant die Laufzeit.
+Zusammengefasst zeigen und Abb. 4 für GPS und 10 für ILD Datensätze, dass unser
+vorgeschlagener IMR keinen klar bevorzugte Ordnung p für die
+Reperaturgenauigkeit hat, während eine große Ordnung p mit einer erhöhten
+Laufzeit verbunden ist.
