@@ -1,0 +1,217 @@
+\documentclass[12pt,twoside]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Meta informations:
+\newcommand{\trauthor}{Master Project Human-Robot Interaction 2018/19}
+\newcommand{\trtype}{Seminararbeit} %{Seminararbeit} %{Proseminararbeit}
+\newcommand{\trcourse}{Integration Komplexe Information Systeme}
+\newcommand{\trtitle}{title}
+\newcommand{\trmatrikelnummer}{matrikle}
+\newcommand{\tremail}{rmail}
+\newcommand{\trarbeitsbereich}{Datenbanken und Information Systeme}
+\newcommand{\trdate}{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Languages:
+% If the thesis is written in English:
+\usepackage[english]{babel} 						
+\selectlanguage{english}
+\usepackage[numbers]{natbib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bind packages:
+\usepackage{acronym}                    % Acronyms
+\usepackage{algorithmic}								% Algorithms and Pseudocode
+\usepackage{algorithm}									% Algorithms and Pseudocode
+\usepackage{amsfonts}                   % AMS Math Packet (Fonts)
+\usepackage{amsmath}                    % AMS Math Packet
+\usepackage{amssymb}                    % Additional mathematical symbols
+\usepackage{amsthm}
+\usepackage{booktabs}                   % Nicer tables
+%\usepackage[font=small,labelfont=bf]{caption} % Numbered captions for figures
+\usepackage{color}                      % Enables defining of colors via \definecolor
+\definecolor{uhhRed}{RGB}{254,0,0}		  % Official Uni Hamburg Red
+\definecolor{uhhGrey}{RGB}{122,122,120} % Official Uni Hamburg Grey
+\usepackage{fancybox}                   % Gleichungen einrahmen
+\usepackage{fancyhdr}										% Packet for nicer headers
+%\usepackage{fancyheadings}             % Nicer numbering of headlines
+
+%\usepackage[outer=3.35cm]{geometry} 	  % Type area (size, margins...) !!!Release version
+%\usepackage[outer=2.5cm]{geometry} 		% Type area (size, margins...) !!!Print version
+%\usepackage{geometry} 									% Type area (size, margins...) !!!Proofread version
+\usepackage[outer=3.15cm]{geometry} 	  % Type area (size, margins...) !!!Draft version
+\geometry{a4paper,body={5.8in,9in}}
+
+\usepackage{graphicx}                   % Inclusion of graphics
+%\usepackage{latexsym}                  % Special symbols
+\usepackage{longtable}									% Allow tables over several parges
+\usepackage{listings}                   % Nicer source code listings
+\usepackage{multicol}										% Content of a table over several columns
+\usepackage{multirow}										% Content of a table over several rows
+\usepackage{rotating}										% Alows to rotate text and objects
+\usepackage[hang]{subfigure}            % Allows to use multiple (partial) figures in a fig
+%\usepackage[font=footnotesize,labelfont=rm]{subfig}	% Pictures in a floating environment
+
+\usepackage{tabularx}										% Tables with fixed width but variable rows
+\usepackage{url,xspace,boxedminipage}   % Accurate display of URLs
+\usepackage[font=small,labelfont=bf]{caption}
+% subcaption broke
+% \usepackage{subcaption}
+\usepackage{placeins} %need floatbarriers
+%\usepackage[toc,symbols,nomain]{glossaries} %glossary
+%%%% PHRI PACKAGES %%%%%
+\usepackage{svg}
+\usepackage{pdfpages} %for inserting pdfs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurationen:
+
+\hyphenation{whe-ther} 									% Manually use: "\-" in a word: Staats\-ver\-trag
+
+%\lstloadlanguages{C}                   % Set the default language for listings
+\DeclareGraphicsExtensions{.pdf,.svg,.jpg,.png,.eps} % first try pdf, then eps, png and jpg
+\graphicspath{{./src/}} 								% Path to a folder where all pictures are located
+\pagestyle{fancy} 											% Use nicer header and footer
+
+% Redefine the environments for floating objects:
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.9} 			  %Standard: 0.7
+\renewcommand{\bottomfraction}{0.5}		  %Standard: 0.3
+\renewcommand{\textfraction}{0.1}		  	%Standard: 0.2
+\renewcommand{\floatpagefraction}{0.8} 	%Standard: 0.5
+
+% Tables with a nicer padding:
+\renewcommand{\arraystretch}{1.2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Additional 'theorem' and 'definition' blocks:
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{theorem}{Satz}[section]		% Wenn in Deutsch geschrieben wird.
+\newtheorem{axiom}{Axiom}[section] 	
+%\newtheorem{axiom}{Fakt}[chapter]			% Wenn in Deutsch geschrieben wird.
+%Usage:%\begin{axiom}[optional description]%Main part%\end{fakt}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+%Additional types of axioms:
+\newtheorem{lemma}[axiom]{Lemma}
+\newtheorem{observation}[axiom]{Observation}
+
+%Additional types of definitions:
+\theoremstyle{remark}
+%\newtheorem{remark}[definition]{Bemerkung} % Wenn in Deutsch geschrieben wird.
+\newtheorem{remark}[definition]{Remark} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Provides TODOs within the margin:
+\newcommand{\TODO}[1]{\marginpar{\emph{\small{{\bf TODO: } #1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abbreviations and mathematical symbols
+\newcommand{\modd}{\text{ mod }}
+\newcommand{\RS}{\mathbb{R}}
+\newcommand{\NS}{\mathbb{N}}
+\newcommand{\ZS}{\mathbb{Z}}
+\newcommand{\dnormal}{\mathit{N}}
+\newcommand{\duniform}{\mathit{U}}
+
+\newcommand{\erdos}{Erd\H{o}s}
+\newcommand{\renyi}{-R\'{e}nyi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom newcommands
+\newcommand{\tb}[1]{\textbf{#1}}
+
+% Document:
+\begin{document}
+\renewcommand{\headheight}{14.5pt}
+
+
+\fancyhead{}
+\fancyhead[LE]{ \slshape \trauthor}
+\fancyhead[LO]{}
+\fancyhead[RE]{}
+\fancyhead[RO]{ \slshape\shorttitle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Header:
+\begin{titlepage}
+	\begin{flushleft}
+		Universit\"at Hamburg\\
+		Department Informatik\\
+		\trarbeitsbereich\\
+	\end{flushleft}
+	\vspace{2.5cm}
+	\begin{center}
+		\huge \trtitle\\
+	\end{center}
+	\vspace{1.5cm}
+	\begin{center}
+		\normalsize\trtype\\
+		[0.2cm]
+		\Large\trcourse\\
+		[1.0cm]
+        \normalsize Jose: \\
+		[0.2cm]
+        \normalsize Klaus: \\
+		[0.2cm]
+		\Large \trdate
+	\end{center}
+	\vfill
+\end{titlepage}
+
+%backsite of cover sheet is empty!
+\thispagestyle{empty}
+\hspace{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract:
+
+% Abstract gives a brief summary of the main points of a paper:
+\section*{Abstract}
+OOPS
+\pagenumbering{gobble}
+
+% Lists:
+\newpage
+\setcounter{tocdepth}{3}% depth of the table of contents (for Seminars 2 is recommented)
+\tableofcontents
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Content:
+
+% the actual content, usually separated over a number of sections
+% each section is assigned a label, in order to be able to put a
+% crossreference to it
+
+
+% The introduction motivates the research question. Ideally it describes the field, the specific open problem, why this is important, and -- most importantly -- what answer/approach/idea could possibly solve the problem. Keep in mind: Already in the introduction, every claim or idea that is not your (the author's) claim/idea needs a reference!
+% In addition, the introduction outlines the main ideas of the following paper and what are the main contributions of the paper. Remember: The main goal of the seminar paper is NOT to repeat the content of a textbook, but to provide an OWN view on different very recent solutions for an open problem.
+% If the paper has more than 4 pages, a reader's guide is recommenced. In a short paragraph an outline of the content of the next sections.
+\section{Introduction and Outline}
+\input{introduction}
+% A brief section giving background information may be absolutely necessary, especially if your work spans across two or more traditional fields. That means that your readers may not have any experience with some of the material needed to follow your paper, so you need to provide the most important foundations. A different title than that given above is usually better; e.g., "A Brief Review of Frammis Algebra."
+\section{Background and Related Work} 
+\input{background}
+\section{Methods and Procedures}
+\label{sec:methods}
+%This section covers the evaluation of our experiment and the conclusions which can be drawn from the results.
+\input{results}
+% At the end, there is a final section concluding and summarizing a paper, putting the entire work into perspective and explaining, on a larger level, what the consequence of the models/approaches/methods are and how this answers the research question that has been raised in the introduction.
+\input{conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{apa}
+\bibliographystyle{ieeetr}
+\addcontentsline{toc}{section}{References}% Add to the TOC
+%source for the reason we used roulette AND tournament selection
+%https://www.hindawi.com/journals/mpe/2016/3672758/
+\bibliography{bib}
+%\printglossary
+\end{document}
+
+
