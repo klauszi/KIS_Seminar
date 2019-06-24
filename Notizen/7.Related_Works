@@ -1,0 +1,1 @@
+Die Idee der Durchführung von mehreren Iterationen wurde schon untersucht \ref{24}, wo vergange Reperaturwerte für zukünftige Werte bezüglich der Genauigkeit eingesetzt wird. Der kontinuierliche Datacleaningansatz\ref{24} ist jedoch auf unseren Problem nicht direkt anwendbar, da es FD-Bedingungen einsetzt, die bei Zeitreihen nicht gelten.
