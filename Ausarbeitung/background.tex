@@ -1,0 +1,31 @@
+\subsection{Problemstellung der Reparatur}
+
+Es sei $x = x[1],..,x[n]$ eine Zeitreihe, die aus einer Messung erhoben wurde und tendenziell unkorrekte Werte enthalten können. Kurz wird ein Datenpunkt $x[i] \in \mathbb{R}$ mit $x_i$ für jedes $i \in \{1,2,...,n\}$ bezeichnet. Zudem sei $y_{\text{truth}} = y_{\text{truth}}[1],...,y_{\text{truth}}[n]$ dieselbe Zeitreihe mit korrekten Werten, falls diese bekannt sind.
+\[
+    y_{\text{truth}}[i] = \left\{
+\begin{array}{ll}
+y_{\textbf{truth}}[i] \in \mathbb{R},& \text{falls ein korrekter Datenpunkt für den Zeitpunkt }\\
+& i \text{ bekannt ist.}\\
+\text{None},& \text{ansonsten}
+\end{array}
+ \right.
+\]
+Neben diesen beiden Zeitreihen sei $y_{\text{truth*}}$ die vollständig bekannte
+und korrekte Zeitreihe. Gesucht ist ein Verfahren, das für zwei beliebige
+Zeitreihe $x$ und $y_{\text{truth}}$ eine reparierte Zeitreihe $y$ ermittelt,
+sodass der Fehler im Vergleich zu $y_{\text{truth*}}$ minimal ausfällt. Jeder
+bekannte Wert von $y_{\text{truth}}$ ist dann in $y$ enthalten. Lediglich
+Werte, die in $y_{\text{truth}}$ unbekannt bzw. auf None gesetzt sind, sind die
+reparierten Werte von $x$.
+\\
+\\
+Ein Fehler ist hierbei minimal, wenn der RMS-Fehler $\Delta$ minimal ist:
+\[
+    \Delta\left(y_{\text{truth}}, y\right) = \sqrt{\frac{1}{n} \sum_{i=1}^n\left(y_{\text{truth}_i} - y_i\right)^2}
+\]
+\subsection{State-of-the-art Repariermethoden}
+\subsubsection{AR}
+\subsubsection{ARX}
+\subsubsection{SCREEN}
+\subsubsection{EWMA}
+
