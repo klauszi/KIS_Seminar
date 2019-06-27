@@ -1,0 +1,3 @@
+Bedingungsbasiertes Reparieren ist weit bekannt für das Cleaning von fehlerhaften Daten, indem die repararierten Daten bestimmte Bedingungen erfüllen muss und die Reperaturverännderung minimal bleibt \ref{1,8}. Um sequentielle Daten zu reinigen, extierende Untersuchungen \ref{22} beschäftigen sich mit einer Klasse von Geschwindigkeitsbedingungen, dass die Wertegeschwindigkeit begrenzt. Die Reperatur erfolgt indem die Sequenz so verändert wird, dass diese Geschwindigkeitsbedingungen gelten. Die bedingungsbasierten Reparaturen verfehlen bei folgenden zwei Aspekten:
+    - es kann keine aufeinanderfolgende Fehler behandeln
+    - die markierten Werte werden nicht genutzt
