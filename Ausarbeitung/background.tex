@@ -1,3 +1,10 @@
+In diesen Kapitel wird die Problemstellung der Reparatur und die im Paper als
+state-of-the-art bekannten Reparaturmethoden vorgestellt.  Die Reparatur mit
+der Anomalienerkennung ARX wird im zweiten Kapitel wichtig, da die im Paper als
+neue Methodik vorgestelltes IMR iterativ auf ARX aufbaut.  Die Stellvertreter
+der anderen Methoden werden zusätzlich bei der Evaluierung von IMR zum
+Vergleich herangezogen.
+
 \subsection{Problemstellung der Reparatur}
 
 Es sei $x = x[1],\dots,x[n]$ eine Zeitreihe, die aus einer Messung erhoben
@@ -117,19 +124,18 @@ erkennen, dass Messfehler bei den Zeitpunkten 2 bis 5 durch eine nach oben
 angeordnete Verschiebung der Werte auftreten.  Zudem lassen sich zwei Vorteile
 von markierten Werten $y^{\text{truth}}$ erkennen.  Einerseits können die Werte
 direkt in die Reparatur $y$ einfliessen, andererseits kann durch die
-Ermittelung der Abweichungen zu den Messungen geschlussgefolgert werden, dass
-die umliegenden Zeitpunkte einen ähnlichen oder keinen Fehler aufweisen.
-Letzteres wird ebenfalls von ARX und das darauf aufbauende IMR ausgenutzt
-(siehe Kapitel \ref{sec:anomalienerkennung} und \ref{sec:IMR}). In der
-Darstellung stimmen die Messungen bei 6 und 12 mit den markierten Werten
-überein, sodass die Annahme gemacht werden kann, dass die Messungen 7 bis 11
-mit hoher Wahrscheinlichkeit ebenfalls korrekt sind.  Aufgrund des absteigend
-großen Fehler von Zeipunkt 2 bis 3 lässt sich die Vermutung aufstellen, dass
-die Zeitpunkte 4 und 5 ebenfalls absteigend fehlerbehaftet sind. Die Reparatur
-$y$, welcher mithilfe des Verfahrens IMR bestimmt wurde, setzt diese
-Vermutungen um. In der Darstellung kann lediglich ein geringer Fehler der
-Reparatur $y$ bei Zeitpunkt 5 festgestellt werden. Der RMS-Fehler $\Delta$
-liegt hier bei $0.03$.   
+Ermittelung der Abweichungen zu den Messungen geschlussfolgert werden, dass die
+umliegenden Zeitpunkte einen ähnlichen oder keinen Fehler aufweisen.  Letzteres
+wird ebenfalls von ARX und das darauf aufbauende IMR ausgenutzt (siehe Kapitel
+\ref{sec:anomalienerkennung} und \ref{sec:IMR}). In der Darstellung stimmen die
+Messungen bei 6 und 12 mit den markierten Werten überein, sodass die Annahme
+gemacht werden kann, dass die Messungen 7 bis 11 mit hoher Wahrscheinlichkeit
+ebenfalls korrekt sind.  Aufgrund von den zu beobachtenden absteigenden großen
+Fehler von Zeipunkt 2 bis 3 lässt sich die Vermutung aufstellen, dass die
+Zeitpunkte 4 und 5 ebenfalls absteigend fehlerbehaftet sind. Die Reparatur $y$,
+welcher mithilfe des Verfahrens IMR bestimmt wurde, setzt diese Vermutungen um.
+In der Darstellung kann lediglich ein geringer Fehler der Reparatur $y$ bei
+Zeitpunkt 5 festgestellt werden. Der RMS-Fehler $\Delta$ liegt hier bei $0.03$.   
 
 \subsection{State-of-the-art Repariermethoden}
 \subsubsection{Reparatur mit Anomalienerkennung}\label{sec:anomalienerkennung}
