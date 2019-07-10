@@ -1,20 +1,17 @@
 \documentclass[12pt,twoside]{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Meta informations:
-\newcommand{\trauthor}{Master Project Human-Robot Interaction 2018/19}
+\newcommand{\trauthor}{Klaus Ziegert, Jose Rodriguez Parra}
 \newcommand{\trtype}{Seminararbeit} %{Seminararbeit} %{Proseminararbeit}
 \newcommand{\trcourse}{Integration Komplexe Information Systeme}
-\newcommand{\trtitle}{title}
-\newcommand{\trmatrikelnummer}{matrikle}
-\newcommand{\tremail}{rmail}
+\newcommand{\trtitle}{Time Series Data Cleaning: From Anomaly Detection to
+Anomaly Repairing}
 \newcommand{\trarbeitsbereich}{Datenbanken und Information Systeme}
 \newcommand{\trdate}{\today}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Languages:
-% If the thesis is written in English:
-\usepackage[english]{babel} 						
-\selectlanguage{english}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
 \usepackage[numbers]{natbib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bind packages:
@@ -132,7 +129,7 @@
 
 
 \fancyhead{}
-\fancyhead[LE]{\slshape \trauthor}
+\fancyhead[LE]{\slshape \trtitle}
 \fancyhead[LO]{}
 \fancyhead[RE]{}
 \fancyhead[RO]{\slshape\shorttitle}
@@ -182,7 +179,7 @@ OOPS
 \setcounter{tocdepth}{3}% depth of the table of contents (for Seminars 2 is recommented)
 \tableofcontents
 \pagenumbering{arabic}
-
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Content:
 

@@ -141,22 +141,48 @@ ein geringer Fehler der Reparatur $y$ bei Zeitpunkt 5 festgestellt werden. Der
 RMS-Fehler $\Delta$ liegt hier bei $0.03$.   
 
 \subsection{State-of-the-art Repariermethoden}
+Die Qualität der Daten spielt eine wichtige Rolle für die Korrektheit
+eines statistischen Modells. Um besser vorhersagen zu können, sollte ein Model
+von saubere Daten lernen. Deswegen müssen immer Datensätze auf Qualität geprüft
+werden und entsprechend bereinigt werden. Durch die hohe Menge an Daten, die
+wir heutzutage haben, ist die automatische Erkennung und Reparatur von
+fehlerhafte Datensätze von große Bedeutung.
+
 \subsubsection{Reparatur mit Anomalienerkennung}\label{sec:anomalienerkennung}
-    \begin{itemize}
-        \item Was ist Reparatur mit Anomalienerkennung (siehe 1.1, 1.2, 7.1 im Paper) 
-        \item AR und ARX (siehe 2.2 und 2.3); ARX wird wichtig für IMR, da darauf basierend.
-    \end{itemize}
+Unter Anomalienerkennung versteht man die Suche nach unerwartete Daten in einem
+Datensatz. Diese unerwartete Werte können sowohl stark als auch schwach von dem
+erwarteten Wert abweichen. Die unsaubere Daten werden erst nach bestimmten
+Kriterien als Anomalien erkannt. Oft wird ein Wert als Anomalie gekennzeichnet,
+falls der betrachtete Wert $x[i]$ sich vom erwartetem $y[i]$ um eine Konstant
+$\tau$ unterscheidet. Für die Zeitreihenvorhersage gib es zwei gut etablierte
+Modelle (AR und ARX), die den erwarteten Wert $y[i]$ für den Zeitpunkt $i$ vorhersagen
+können. Außerdem sind beide dieser Methoden modifizierbar um mögliche Anomalien
+zu reparieren.
+\begin{itemize}
+  \item \textbf{Autoregressives Model (AR)}\\
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth,keepaspectratio]{../plots/ar_sauber_verschmutze_daten.pdf}
+      \caption{ar model}
+    \end{figure}
+  \item \textbf{Autoregressives exogenes Modell (ARX)}\\
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth,keepaspectratio]{../plots/arx_sauber_verschmutze_daten.pdf}
+      \caption{ar model}
+    \end{figure}
+  AR und ARX (siehe 2.2 und 2.3); ARX wird wichtig für IMR, da darauf basierend.
+  train how much error in signal
+\end{itemize}
 \subsubsection{Bedingungsbasierte Reparatur}
-
-    \begin{itemize}
-        \item Was ist Bedingungsbasierte Reparatur (siehe 7.3)
-        \item SCREEN (vgl.\ referenzierte Papers) 
-    \end{itemize}
-
+Es gibt auch Daten, die vom erwartete Werte abweichen. 
+\begin{itemize}
+  \item Was ist Bedingungsbasierte Reparatur (siehe 7.3)
+  \item SCREEN (vgl.\ referenzierte Papers) 
+\end{itemize}
 \subsubsection{Glättungsbasierte Reparatur}
-
-    \begin{itemize}
-        \item Was ist Glättungsbasierte Reparatur (siehe 7.2)
-        \item EWMA (vgl.\ referenzierte Papers) 
-    \end{itemize}
+\begin{itemize}
+  \item Was ist Glättungsbasierte Reparatur (siehe 7.2)
+  \item EWMA (vgl.\ referenzierte Papers) 
+\end{itemize}
 
