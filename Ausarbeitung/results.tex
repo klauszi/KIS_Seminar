@@ -1,0 +1,156 @@
+Die Anomalienerkennung mit ARX als Reparaturverfahren hat den Vorteil, dass die
+markierten Werte effektiv für die Reparatur ausgenutzt werden, indem der
+Fehlerverlauf auf zukünftige und unmarkierte Datenpunkte berücksichtigt wird.
+Wie im Kapitel \ref{sec:grundlagen} vorgestellt, führt die Anwendung von
+ARX dennoch zu drastischen Veränderungen der Messungen, obwohl z.B. GPS- oder
+Sensorenaufnahmen häufig auch im Fehlerfall beinahe korrekte Werte liefern.
+Daher wird das Minimum-Change-Prinzip gefordert, dass Messungen nur relativ
+leicht modifiziert.  Die gewünschte Vereinbarung des Erkennen von natürlichen
+Fehlerverläufen in der Anomalienerkennung und das  Minimum-Change-Prinzip
+bewegte die Autoren des Papers zu der Entwicklung von Iterative Minimum
+Repairing (kurz IMR).  Dieses Kapitel beschäftigt sich mit den
+allgemeinen Fall und zwei laufzeitbedingte Optimierungen von IMR. Ein Nachteil
+von IMR ist jedoch die hohe geforderte Laufzeit - auch im Falle beider
+Optimierungen -, sodass IMR als Online-Algorithmus eigentlich nicht angewandt
+werden kann. Durch zusätzliche Annahmen lässt sich jedoch ein
+Online-Algorithmus formulieren, dass diesen Anforderungen genügt. Die
+vorgestellten Versionen des IMR werden im Kapitel \ref{sec:evaluation}
+miteinander als auch mit den State-of-art Verfahren aus Kapitel
+\ref{sec:grundlagen} gegenübergestellt.
+
+\subsection{Allgemeines IMR}
+
+Der Algorithmus IMR ist im Alg. \ref{alg:imr} hinterlegt.  Sei $y^{(k)}$ die
+Reparatur in der k.ten Iteration. Initialisiert wird $y^{(0)}$ mit der Messung
+x, wenn kein markierte Wert vorliegt, ansonsten wird der markierte Wert
+benutzt. Während der Prozedur bleiben die markierten Werte in $y^{(k)}$
+unverändert.  Grundsätzlich lässt sich eine Iteration des Algorithmus in
+folgende Schritte unterteilen:
+\begin{enumerate}
+    \item Parameterschätzung (Zeile 4): Der Parametervektor $\phi^{(k)}$ für ARX(p) wird
+bestimmt.
+    \item Kandidaten für die Reparatur (Zeile 5): Nach ARX(p) werden für die unmarkierten
+        Werte Vorhersagewerte $\hat{y}$ als mögliche Reparaturkandidaten ermittelt.
+    \item Reparatur (Zeile 6): Ausschließlich ein Reparaturwert wird
+        ausgewählt, sodass nach den Minimum-Change-Prinzip das temporäre
+        Reparaturergebnis $y^{(k)}$ gering von der Messung $x$ abweicht. Die
+        Abweichung des Reparaturwert muss jedoch größer als der gewählter
+        Schwellenwert $\tau$ sein.
+\end{enumerate}
+Dabei gibt es zwei Bedingungen für die Terminierung. Entweder gab es keinen
+Erfolg für die Reparatur, d.h. die Repaturergebnisse haben sich nicht
+signifikant bezüglich $\tau$ geändert, so wird die letzte Reparatursequenz
+ausgegeben. Die Problemstellung der Konvergenz ist für den allgemeinen Fall
+jedoch nicht gezeigt. In den Experimenten, präsentiert in Kapitel
+\ref{sec:evaluation}, hat IMR stets konvergiert. Aus praktischer Sicht braucht
+man dennoch eine Garantie der Terminierung, weshalb eine ober Schranke der Iteration
+max-num-iterations als zweite Option benötigt wird. 
+
+\begin{algorithm}
+\caption{IMR}
+\label{alg:imr}
+    \begin{algorithmic}[1]
+\STATE \textbf{Eingabe}: Messung $x$, markierte Werte $x^{\text{truth}}$, Ordnung $p$ und Schwellenwert $\tau$
+\STATE \textbf{Ausgabe}: Reparatur $y$ mit unveränderten markierten Werte 
+\FOR{$k \gets 0$ \TO max-num-iterations}
+\STATE {$\phi^{(k)} \gets$ Estimate$(x,y^{(k)})$}
+    \STATE { $\hat{y} \gets$ Candidate$(x,y^{(k)}, phi^{(k)})$}
+    \STATE { $y^{(k+1)} \gets$ Evaluate$(x,y^{(k)}, \hat{y})$}
+        \IF{ Converge($y^{(k)}, y^{(k+1)}$) }
+        \STATE {\textbf{break}}
+        \ENDIF
+ \ENDFOR
+    \RETURN $y^{(k)}$
+\end{algorithmic}
+\end{algorithm}
+~\\
+\textbf{Beispiel 2} Es seien $x$, $x^{\text{truth}}$ und $x^{\text{truth}*}$ wie in Beispiel 1. Zusätzlich sei für IMR die Ordnung $p=1$ und der Schwellenwert $\tau$ gegeben.
+Nach dem IMR im Alg. \ref{alg:imr} wird $y^{(0)}$ zunächst wie folgt initialisiert: 
+\[
+     y^{(0)} =          \{6, 5.6, 5.4, 8.3, 7.7, 5.4, 5.6, 5.9, 6.3, 6.8, 7.5, 8.5\}
+\]
+Durch die Parameterschätzung hat sich ein Wert von $\phi^{(1)} = 0.5$ ergeben.
+Nach ARX(1) ergeben sich die Reparaturkandidaten $\hat{y}$ wie in Abb.
+\ref{fig:2}.  In der Darstellung lässt sich erkennen, dass jeder
+Reparaturkandidat mit der Messung $x$ außer an Stelle 4 übereinstimmt. Jene
+Werte können daher nicht in die Reparatur einfliessen, da der Abstand zu der
+Messung nicht größer als $\tau = 0.1$ ist. Der einzige Kandidat ist daher
+$\hat{y}_4 = 6.2$, welcher dann für $y^{(1)}$ ausgewählt wird, da $|y^{(0)}_4 -
+\hat{y}_4| > \tau$ ist. Gäbe es noch weitere Kandidaten mit dieser Eigenschaft,
+so würde der Kandidat herangezogen werden, der an der Messung $x$ am nächsten kommt.
+Aufgrund dieser Reparatur an der Stelle 4 wird in der nächsten Iteration der
+Reparaturkandidat an der Stelle 5 wegen seiner Nachbarschaft zu 4 ebenfalls
+beeinflusst, wohingegen die anderen unmarkierten Werte unberührt bleiben. Das
+Ergebnis bis zur Konvergenz, also bis kein Reparaturkandidant größer als $\tau$
+abweicht, ist in der Abb. \ref{fig:1} nachzuvollziehen.
+
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth,
+    height=.5\textwidth,
+xlabel=Zeitpunkt,
+ylabel=Datenpunkt,
+legend pos=outer north east,
+xmin=1,
+xmax=12
+]
+\addplot[only marks, olive,mark size=5.0pt] table{
+Zeitpunkt Wert 
+4 6.2
+5 7.7
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+};
+    \addlegendentry{$\hat{y}$}
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+Zeitpunkt Wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+ \addlegendentry{$x$}
+    \addplot[blue,mark size=5.0pt] table{
+Zeitpunkt Wert 
+1 6
+2 5.6
+3 5.4
+4 5.2
+5 5.3
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x^{\text{truth*}}$}
+\addplot[only marks, red, mark size=5.0pt] table{
+Zeitpunkt Wert 
+1 6
+2 5.6
+3 5.4
+6 5.4
+12 8.5
+};
+\addlegendentry{$x^{\text{truth}}$}
+% if you have the file, you can do
+% \addplot table {datafile.csv};
+\end{axis}
+\end{tikzpicture}
+    \caption{Beispiel 2.}\label{fig:2}
+\end{figure}
+
+\subsection{MP-IMR}
