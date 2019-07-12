@@ -142,10 +142,10 @@ RMS-Fehler $\Delta$ liegt hier bei $0.03$.
 
 \subsection{State-of-the-art Repariermethoden}
 Die Qualität der Daten spielt eine wichtige Rolle für die Korrektheit
-eines statistischen Modells. Um besser vorhersagen zu können, sollte ein Model
+eines statistischen Modells. Um besser vorhersagen zu können, sollte ein Modell
 von saubere Daten lernen. Deswegen müssen immer Datensätze auf Qualität geprüft
 werden und entsprechend bereinigt werden. Durch die hohe Menge an Daten, die
-wir heutzutage haben, ist die automatische Erkennung und Reparatur von
+man heutzutage hat, ist die automatische Erkennung und Reparatur von
 fehlerhafte Datensätze von große Bedeutung.
 
 \subsubsection{Reparatur mit Anomalienerkennung}\label{sec:anomalienerkennung}
@@ -153,27 +153,50 @@ Unter Anomalienerkennung versteht man die Suche nach unerwartete Daten in einem
 Datensatz. Diese unerwartete Werte können sowohl stark als auch schwach von dem
 erwarteten Wert abweichen. Die unsaubere Daten werden erst nach bestimmten
 Kriterien als Anomalien erkannt. Oft wird ein Wert als Anomalie gekennzeichnet,
-falls der betrachtete Wert $x[i]$ sich vom erwartetem $y[i]$ um eine Konstant
+falls der betrachtete Wert $x_t$ sich vom erwartetem $x_t'$ um eine Konstant
 $\tau$ unterscheidet. Für die Zeitreihenvorhersage gib es zwei gut etablierte
-Modelle (AR und ARX), die den erwarteten Wert $y[i]$ für den Zeitpunkt $i$ vorhersagen
+Modelle (AR und ARX), die den erwarteten Wert $x_t'$ für den Zeitpunkt $t$ vorhersagen
 können. Außerdem sind beide dieser Methoden modifizierbar um mögliche Anomalien
 zu reparieren.
 \begin{itemize}
-  \item \textbf{Autoregressives Model (AR)}\\
-  run
-    \begin{figure}[h]
+  \item \textbf{Autoregressives Modell (AR)}\\
+  Dieses Modell ist nichts anderes als ein Art Lineare Regression. Die Ausgabe $x_t'$
+  ist linear abhängig von den vergangenen Werten $x_{t-i}$ für $i\in[1,..,p]$ und
+  eine Zufallsvariable $\epsilon_t$. Diese Zufallsvariable wird normalerweise
+  als Weißrausch bezeichnet ($\epsilon_t \sim \mathcal{N}(0,\,\sigma^{2}) $).
+  Das Modell AR(p) ist definiert durch:
+  \[
+  x_t'=\sum_{i=1}^{p}\phi_ix_{t-i}+\epsilon_t
+  \] 
+  \begin{figure}[h]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{../plots/ar_sauber_verschmutze_daten.pdf}
-      \caption{ar model}
-    \end{figure}
-  \item \textbf{Autoregressives exogenes Modell (ARX)}\\
+      \caption{Beispiel eines AR(30) Modells}
+  \end{figure}
+  Die Parameter $\phi_i$ können analytisch mit der Hilfe der Methode der
+  kleinsten Quadrate errechnet werden. Zuerst werden alle $x_t$ durch $y_t$
+  getauscht für alle markierte $x_t$. Sei $x^{truth}$ eine Liste von den
+  markierten Werte in $x$, dann kann man diese Werte für das lernen der
+  Parameter $\phi$ benutzen um eine genauere Vorhersage der Werte ohne
+  Markierung $x\setminus x^{truth}$ vorzunehmen. Um mit AR eine Reparatur
+  vornehmen zu können, vergleicht man den Abstand einer nicht markierten Wert
+  $x_t$ zu $x_t'$ mit einem Schwellenwert $\tau$. Falls diese den Schwellenwert
+  überschreitet, repariert man den gegebenen Wert mit der Vorhersage $x_t'$.
+  Anderseits lässt man den alten Wert $x_t$ stehen. Also,
+  \[
+    y_t= 
+    \begin{cases}
+    x_t'& \text{falls} \,|x_t'-x_t|>\tau\\
+    x_r              & \text{sonst}
+    \end{cases}
+  \]
+    \item \textbf{Autoregressives exogenes Modell (ARX)}\\
     \begin{figure}[h]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{../plots/arx_sauber_verschmutze_daten.pdf}
       \caption{ar model}
     \end{figure}
   AR und ARX (siehe 2.2 und 2.3); ARX wird wichtig für IMR, da darauf basierend.
-  train how much error in signal
 \end{itemize}
 \subsubsection{Bedingungsbasierte Reparatur}
 Es gibt auch Daten, die vom erwartete Werte abweichen. 
