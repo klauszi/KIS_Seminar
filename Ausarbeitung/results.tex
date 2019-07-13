@@ -152,5 +152,80 @@ Zeitpunkt Wert
 \end{tikzpicture}
     \caption{Beispiel 2.}\label{fig:2}
 \end{figure}
+~\\
+Wohingegen das Ermitteln der Reparaturkandidaten und die Auswahl einer dieser Reparaturkandidaten laufzeittechnisch als unproblematisch beurteilt werden kann,
+ist die Laufzeit der Parameterschätzung kritisch. Wie im Kapitel \ref{sec:grundlagen} zu sehen, kann die Parameterschätzung durch die Yule-Walker Gleichung oder durch den Satz der kleinsten Quadrate approximiert gelöst werden. In IMR hat man sich dafür entschieden, den Satz der kleinsten Quadrate für das Lösen von $\phi$ anzuwenden:
+\[
+    \phi^{(k)} = \left(\left(Z^{(k)}\right)' Z^{(k)} \right)^{-1} \left(Z^{(k)}\right)'V^{(k)}
+\]
+mit
+\[
+    V^{(k)} = \left(\begin{matrix}
+        y^{(k)}_{p+1} - x_{p+1}\\
+        y^{(k)}_{p+2} - x_{p+2}\\
+        \vdots\\
+        y^{(k)}_{n} - x_{n}
+    \end{matrix}\right),~~~~~~~
+    \phi^{(k)} = \left(\begin{matrix}
+        \phi_1^{(k)}\\
+        \phi_2^{(k)}\\
+        \vdots\\
+        \phi_p^{(k)}\\
+    \end{matrix}\right)
+\]
+~\\
+~\\
+\[
+    Z^{(k)} = \left(\begin{matrix}
+        y_{p}^{(k)} - x_{p} & y_{p-1}^{(k)} - x_{p-1} & \cdots & y_{1}^{(k)} - x_{1}\\
+        y_{p+1}^{(k)} - x_{p+1} & y_{p}^{(k)} - x_{p} & \cdots & y_{2}^{(k)} - x_{2}\\
+        \vdots & \vdots & \ddots & \vdots \\
+        y_{n-1}^{(k)} - x_{n-1} & y_{n-2}^{(k)} - x_{n-2} & \cdots & y_{n-p}^{(k)} - x_{n-p}\\
+    \end{matrix}\right)
+\]
+Die Notiz des Hochkommata an den Matrizen, wie z.B. $\left(Z^{(k)}\right)'$ bedeuten, dass die Matrizen transponiert sind.
+\\
+\\
+\textbf{Beispiel 3.} Es seien alle Zeitreihen aus Beispiel 2 gegeben. Mit den
+Satz der kleinsten Quadrate soll nun der Parameter $\phi$ geschätzt werden,
+dass in Beispiel 2 mit $0.5$ angegeben wurde. Hieraus ergeben sich folgende Matrizen:
+\begin{itemize}
+    \item $ V^{(0)}= \{-4.4, -4.2, 0, 0, 0, 0, 0, 0, 0, 0, 0\}$
+    \item $Z^{(0)} = \{0, -4.4, -4.2, 0, 0, 0, 0, 0, 0, 0, 0\}$
+\end{itemize}
+Hieraus ergibt sich folgende Schätzung:
+\[
+    \phi^{(0)} = \frac{-4.4 * (-4.2)}{(-4.4)^2 + (-4.2)^2} = 0.5
+\]
+
 
 \subsection{MP-IMR}
+
+Um IMR von der Laufzeit zu optimieren, bietet es sich an, den Fokus auf die
+Parameterschätzung zu setzen. Wie im Beipiel 3 zu vermerken, enthalten viele
+Einträgen in der Matrix $V^{(0)}$ und $Z^{(0)}$ den Wert 0. Schaut man sich den
+entsprechenden Aufbau beider Matrizen an, so bestehen alle Einträge aus den
+Wert $y^{(k)}_i - x_i$. Da in der Praxis sehr wenig markierte Daten zur
+Verfügung stehen und selbst die markierten Werte relativ nahe an der Messung
+sind -- ansonsten würde man das Minimum-Change-Prinzip garnicht berücksichtigen
+-- werden die Matrixen mit hoher Wahrscheinlichkeit dünnbesetzt sein. Wenn
+ganze Zeilen aus 0en bestehen, so lassen sich diese auch einfach entfernen.
+Diese Variante des IMR wird Matrix-Pruning-IMR (MP-IMR) genannt. Sei $z^{(k)} =
+y^{(k)}_i - x_i$, dann lässt sich folgender Satz formulieren:
+\begin{theorem}
+    Für jede beliebige Zeile in $Z^{(k)}$, bezeichnet durch $Z^{(k)}_r$ mit $r$
+    als der Zeilenindex, dessen Werte ausschließlich aus 0en besteht, d.h.
+    $z^{(k)}_r+p-1 = z^{(k)}_r+p-2 = \cdots = z_r^{(k)} = 0$,  dann ist
+    garantiert, dass das Löschen dieser Zeile und die zugehörige Zeile in
+    $V_r^{(k)} = \left(z^{(k)}_{p+r}\right)$ in $V^{(k)}$ und $Z^{(k)}$ zu der
+    selben Parameterschätzung $\phi^{(k)}$ führt.
+    \label{theorem:mp}
+\end{theorem}
+~\\
+\textbf{Beispiel 4.} Wie in Beispiel 3 soll $\phi$ abgeschätzt werden; diesmal
+mit MP-IMR.  Sowohl $V^{(0)}$ und $Z^{(0)}$ haben die Größe 11 x 1. Nach Satz
+\ref{theorem:mp} können die Zeilen 1 und ab Zeile 3 entfernt werden, sodass man
+die reduzierten Matrizen $V^{(0)} = \{-4.2, 0\}'$ und $V^{(0)} = \{-4.2, 0\}'$
+mit einer Größe von 2x1 erhält. Hieraus ergibt sich der selbe Berechnung wie in
+Beispiel 3.
+
