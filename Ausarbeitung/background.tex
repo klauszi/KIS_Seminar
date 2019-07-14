@@ -266,26 +266,49 @@ Zeitreihen setzen sich aus verschiedenen Frequenzen zusammen. Mit Hilfe der
 Fourier Transformation kann man das Frequenzspektrum von eine Zeitreihe
 darstellen. Höhe Frequenzen bzw. Frequenzen die ganz rechts in dem
 Frequenzspektrum liegen, erzeugen diese Spitzen in der Daten. Oft sind diese
-Spitzen fehlerhafte Daten, wie in Abbildung \ref{fig:ar} zu sehen ist. Deswegen
-ist es manchmal sinnvoll diese höhe Frequenzen zu entfernen.
+Spitzen fehlerhafte Daten bzw. Anomalien, wie in Abbildung \ref{fig:ar} zu
+sehen ist. Deswegen ist es manchmal sinnvoll diese höhe Frequenzen aus der
+Zeitreihe zu entfernen.
 \begin{itemize}
   \item \textbf{Gleitender Mittelwert}\\
-Der Gleitender Mittelwert definiert als 
+Der Gleitender Mittelwert (GM) ist definiert als die Summe 
 \[
-    y_j = \frac{1}{k}\sum_{i=1}^{k}x_{i-j} \quad j \in \{j,..,n\}
+    y_j = \frac{1}{k}\sum_{i=1}^{k}x_{i-j} \quad j \in \{k,..,n\}
 \] 
-ist ein Filter, welcher nur Signale mit tiefen Frequenzen durchläßt
+Der GM ist ein Filter, welcher nur Signale mit tiefen Frequenzen durchläßt
 (normalerweise $k=4$). In Abbildung \ref{fig:rolling} kann man sehen, wie
 unterschiedliche Fenstergroßen $k$ die Daten glätten können. In andere Worte,
-die Signale mit höhere Frequenzen werden raus gefiltert.
+die Signale mit höhere Frequenzen werden raus gefiltert und dabei wird erwartet
+, dass die Anomalien entfernt werden.
 \begin{figure}[h]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{../plots/Gleitender_Mittelwert.pdf}
-      \caption{Beispiel mehrere Gleitender Mittelwert der 
-      Verschmutze Daten mit Fenster Große 3, 10 und 20}
+      \caption{Beispiel mehrere Gleitender Mittelwerte der 
+      Verschmutze Daten mit Fenstern Großen 3, 10 und 20}
       \label{fig:rolling}
 \end{figure}
-  \item  \textbf{Exponentially Weighted Moving Average (EWMA)}\\
-  blub
+  \item  \textbf{Exponentiell Gewichteten Gleitender Mittelwert (EWMA)}\\
+  Ein Ähnliches Verfahren wie GM ist EWMA. Die Gleichung für das Modell ist
+  \[
+    v_j = \sum_{i=0}^{n}(\beta-1)\beta^{i}x_{j-i}\quad mit\,\,j-i>0
+  \]
+  Wie zu erkennen ist, der Unterschied liegt an dem Faktor
+  $(\beta-1)\beta^{i}$. Dadurch werden die Vergangene Werte exponentiell
+  gewichtet  und nicht mehr gleich wie bei GM. Der Parameter $\beta$ kann man
+  als eine Zeitfenster betrachtet werden, welche besagt in wie Weit die
+  vergangene Werte $x_i$ zu dem gewichteten Mittelwert dazu zählen. Zusätzlich
+  kann man die Gleichung als eine Rekursive Funktion wie folgt auffassen:
+  \[
+   v_j = \beta v_{j-1} + (1-\beta)x_j \quad mit\,\, V_0=0
+  \]
+  Dieser Form bietet eine effiziente Berechnung von EMWA bei der Ausnutzung vom
+  Dynamisches Programierung.
+\begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth,keepaspectratio]{../plots/EWMA.pdf}
+      \caption{Beispiel von dem EWMA Modell mit unterschiedlichen betas}
+      \label{fig:ewma}
+    \end{figure}
+
  \end{itemize}
 

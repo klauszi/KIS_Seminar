@@ -19,7 +19,7 @@ miteinander als auch mit den State-of-art Verfahren aus Kapitel
 \ref{sec:grundlagen} gegenübergestellt.
 
 \subsection{Allgemeines IMR}
-
+\label{sec:allgemeinimr}
 Der Algorithmus IMR ist im Alg. \ref{alg:imr} hinterlegt.  Sei $y^{(k)}$ die
 Reparatur in der k.ten Iteration. Initialisiert wird $y^{(0)}$ mit der Messung
 x, wenn kein markierte Wert vorliegt, ansonsten wird der markierte Wert
@@ -228,4 +228,10 @@ mit MP-IMR.  Sowohl $V^{(0)}$ und $Z^{(0)}$ haben die Größe 11 x 1. Nach Satz
 die reduzierten Matrizen $V^{(0)} = \{-4.2, 0\}'$ und $V^{(0)} = \{-4.2, 0\}'$
 mit einer Größe von 2x1 erhält. Hieraus ergibt sich der selbe Berechnung wie in
 Beispiel 3.
-
+\subsection{Inkrementelle Berechnung}
+Als in Abschnitt \ref{sec:allgemeinimr} schon erklärt, IMR basiert auf ARX,
+welches in Abschnitt \ref{sec:anomalienerkennung} präsentiert wurde. Aufgrund
+dessen muss IMR den Parameter $\phi^{(k)}$ nach jedem Iteration bestimmt
+werden, siehe Algorithmus \ref{alg:imr}. Nach dem Minimum-Change-Prinzip wird nur
+einen Wert nach jeder Iteration geändert, deswegen bleiben die meisten Werte von 
+$V^{(k)}$, $Z^{(k)}$ und $V^{(k-1)}$, $Z^{(k-1)}$ gleich. 
