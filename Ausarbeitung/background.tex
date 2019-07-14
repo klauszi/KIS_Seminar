@@ -184,34 +184,34 @@ zu reparieren.
   gegeben, wo $Y$ ein Vektor der Länge $|n-p|$ ist 
   \[
     Y = 
-    \begin{bmatrix}
+   \left(\begin{matrix}
     x_{p+1}\\
     x_{p+2}\\
     \vdots\\
     x_{n-1}\\
     x_{n}
-    \end{bmatrix}
+    \end{matrix}\right)
   \]
   , der eingangs Vektor $X$ mit Zeit verzögerte Werte 
   \[
     X = 
-    \begin{bmatrix}
+    \left(\begin{matrix}
     x_{p}&x_{p-1}&\hdots&x_{1}\\
     x_{p+1}&x_{p}&\hdots&x_{2}\\
     \vdots&\vdots&\ddots&\vdots\\
     x_{n-2}&x_{n-3}&\hdots&x_{p+1}\\
     x_{n-1}&x_{n-2}&\hdots&x_{n-p}
-    \end{bmatrix}
+    \end{matrix}\right)
   \]
   und \[
   \phi=
-    \begin{bmatrix}
+    \left(\begin{matrix}
     \phi_{1}\\
     \phi_{2}\\
     \vdots\\
     \phi_{p-1}\\
     \phi_{p}
-    \end{bmatrix}
+    \end{matrix}\right)
   \]
   Um eine Reparation der Werte durchzuführen, werden zuerst alle $x_t$ durch
   $y_t$ getauscht für alle markierte $x_t$. Sei $x^{truth}$ eine Liste von den
@@ -261,8 +261,23 @@ Die reparierte Reihe y
   \item SCREEN (vgl.\ referenzierte Papers) 
   nimm in betrach nur ein punkt
 \end{itemize}
-\subsubsection{Glättungsbasierte Reparatur}
-Gleitender Mittelwert
+\subsubsection{Reparatur durch Glättungsverfahren}
+Zeitreihen setzen sich aus verschiedenen Frequenzen zusammen. Mit Hilfe der
+Fourier Transformation kann man das Frequenzspektrum von eine Zeitreihe
+darstellen. Höhe Frequenzen bzw. Frequenzen die ganz rechts in dem
+Frequenzspektrum liegen, erzeugen diese Spitzen in der Daten. Oft sind diese
+Spitzen fehlerhafte Daten, wie in Abbildung \ref{fig:ar} zu sehen ist. Deswegen
+ist es manchmal sinnvoll diese höhe Frequenzen zu entfernen.
+\begin{itemize}
+  \item \textbf{Gleitender Mittelwert}\\
+Der Gleitender Mittelwert definiert als 
+\[
+    y_j = \frac{1}{k}\sum_{i=1}^{k}x_{i-j} \quad j \in \{j,..,n\}
+\] 
+ist ein Filter, welcher nur Signale mit tiefen Frequenzen durchläßt
+(normalerweise $k=4$). In Abbildung \ref{fig:rolling} kann man sehen, wie
+unterschiedliche Fenstergroßen $k$ die Daten glätten können. In andere Worte,
+die Signale mit höhere Frequenzen werden raus gefiltert.
 \begin{figure}[h]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{../plots/Gleitender_Mittelwert.pdf}
@@ -270,8 +285,7 @@ Gleitender Mittelwert
       Verschmutze Daten mit Fenster Große 3, 10 und 20}
       \label{fig:rolling}
 \end{figure}
-\begin{itemize}
-  \item Was ist Glättungsbasierte Reparatur (siehe 7.2)
-  \item EWMA (vgl.\ referenzierte Papers) 
-\end{itemize}
+  \item  \textbf{Exponentially Weighted Moving Average (EWMA)}\\
+  blub
+ \end{itemize}
 
