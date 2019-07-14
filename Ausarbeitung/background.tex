@@ -164,18 +164,57 @@ zu reparieren.
   ist linear abhängig von den vergangenen Werten $x_{t-i}$ für $i\in[1,..,p]$ und
   eine Zufallsvariable $\epsilon_t$. Diese Zufallsvariable wird normalerweise
   als Weißrausch bezeichnet ($\epsilon_t \sim \mathcal{N}(0,\,\sigma^{2}) $).
-  Das Modell AR(p) ist definiert durch:
+  Das Modell $AR(p)$ ist definiert durch:
   \[
   x_t'=\sum_{i=1}^{p}\phi_ix_{t-i}+\epsilon_t
   \] 
   \begin{figure}[h]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{../plots/ar_sauber_verschmutze_daten.pdf}
-      \caption{Beispiel eines AR(30) Modells}
+      \caption{Beispiel eines AR(30) Modells an eine Sinuskurve(Links) und eine
+      Sinuskurve mit Rausch(Rechts)}
+      \label{fig:ar}
   \end{figure}
   Die Parameter $\phi_i$ können analytisch mit der Hilfe der Methode der
-  kleinsten Quadrate errechnet werden. Zuerst werden alle $x_t$ durch $y_t$
-  getauscht für alle markierte $x_t$. Sei $x^{truth}$ eine Liste von den
+  kleinsten Quadrate errechnet werden, siehe Abbildung \ref{fig:ar}. Die Lösung den Parametern $\phi$ ist
+  durch die Gleichung
+  \[
+    \phi = (X^TX)^{-1}X^TY
+  \]
+  gegeben, wo $Y$ ein Vektor der Länge $|n-p|$ ist 
+  \[
+    Y = 
+    \begin{bmatrix}
+    x_{p+1}\\
+    x_{p+2}\\
+    \vdots\\
+    x_{n-1}\\
+    x_{n}
+    \end{bmatrix}
+  \]
+  , der eingangs Vektor $X$ mit Zeit verzögerte Werte 
+  \[
+    X = 
+    \begin{bmatrix}
+    x_{p}&x_{p-1}&\hdots&x_{1}\\
+    x_{p+1}&x_{p}&\hdots&x_{2}\\
+    \vdots&\vdots&\ddots&\vdots\\
+    x_{n-2}&x_{n-3}&\hdots&x_{p+1}\\
+    x_{n-1}&x_{n-2}&\hdots&x_{n-p}
+    \end{bmatrix}
+  \]
+  und \[
+  \phi=
+    \begin{bmatrix}
+    \phi_{1}\\
+    \phi_{2}\\
+    \vdots\\
+    \phi_{p-1}\\
+    \phi_{p}
+    \end{bmatrix}
+  \]
+  Um eine Reparation der Werte durchzuführen, werden zuerst alle $x_t$ durch
+  $y_t$ getauscht für alle markierte $x_t$. Sei $x^{truth}$ eine Liste von den
   markierten Werte in $x$, dann kann man diese Werte für das lernen der
   Parameter $\phi$ benutzen um eine genauere Vorhersage der Werte ohne
   Markierung $x\setminus x^{truth}$ vorzunehmen. Um mit AR eine Reparatur
@@ -191,20 +230,46 @@ zu reparieren.
     \end{cases}
   \]
     \item \textbf{Autoregressives exogenes Modell (ARX)}\\
+    Ebenso, wie beim AR(p), kann man das lineare Modell ARX benutzen um eine
+    Reparatur der Daten durchzuführen. Wie schon erwähnt, AR(p) nimm im
+    Betracht die vergangene Werte $x_i$ für $i<t$ als Parameter um die nächste
+    Wert $x_t$ zu bestimmen. Im Gegensatz zu AR(p), ARX(p) nutz die information
+    von $y_i$ für $i<t$ aus. Sei $y$ die liste mit den reparierte bzw. als
+    Wahrheit markierte Werte von $x$, dann ist ARX(p) (Abildung \ref{fig:arx})
+    definiert als, 
+    \[
+      y_t'=\sum_{i=1}^{p}\phi_i(y_{t-i}-x_{t-i})+\epsilon_t\quad.
+    \]
     \begin{figure}[h]
       \centering
       \includegraphics[width=\textwidth,keepaspectratio]{../plots/arx_sauber_verschmutze_daten.pdf}
-      \caption{ar model}
+      \caption{Beispiel eines AR(30) Modells an eine Sinuskurve(Links) und eine
+      Sinuskurve mit Rausch(Rechts)}
+      \label{fig:arx}
     \end{figure}
-  AR und ARX (siehe 2.2 und 2.3); ARX wird wichtig für IMR, da darauf basierend.
+    Die Reparatur der Reihe funktioniert dann genauso wie beim AR Modell.
 \end{itemize}
 \subsubsection{Bedingungsbasierte Reparatur}
-Es gibt auch Daten, die vom erwartete Werte abweichen. 
+Es gibt auch Daten, die vom erwartete Werte abweichen aber die abweichung is
+nicht so startk. 
+Es werden nicht alle daten benutz
+Hinterienander fehlerhafte Daten können falsch interretiert werden
+Die reparierte Reihe y
+
 \begin{itemize}
   \item Was ist Bedingungsbasierte Reparatur (siehe 7.3)
   \item SCREEN (vgl.\ referenzierte Papers) 
+  nimm in betrach nur ein punkt
 \end{itemize}
 \subsubsection{Glättungsbasierte Reparatur}
+Gleitender Mittelwert
+\begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth,keepaspectratio]{../plots/Gleitender_Mittelwert.pdf}
+      \caption{Beispiel mehrere Gleitender Mittelwert der 
+      Verschmutze Daten mit Fenster Große 3, 10 und 20}
+      \label{fig:rolling}
+\end{figure}
 \begin{itemize}
   \item Was ist Glättungsbasierte Reparatur (siehe 7.2)
   \item EWMA (vgl.\ referenzierte Papers) 
