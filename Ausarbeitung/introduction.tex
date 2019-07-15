@@ -1,0 +1,20 @@
+Sequenzen von Messungen unterliegen häufig Fehler, wie z.B. beim GPS-Tracking,
+Sensordaten oder Aktienwerte. Diese Fehler sind meistens verrauscht oder
+einfach unpräzise gewonnen worden. Daher bietet es sich an, eine
+Anomalienerkennung auf diese Zeitreihen anzuwenden, damit man solche Fehler
+erkennt. In bestimmten Anwendungen, wie z.B. bei Klassifkation- und
+Mustererkennungsanwendungen, werden die als fehlerhaft ermittelten Daten
+einfach aus der Zeitreihe entfernt. Wenn jedoch die Anzahl der
+aufeinanderfolgende Fehler signifikant hoch ist, dann führt es unvermeidlich zu
+einer Unzuverlässigkeit der Anwendung. Ein besserer Ansatz ist die fehlerhaften
+Daten zu reparieren; hierfür gibt es Ansätze wie das bedingungsbasierte
+Verfahren SCREEN. Eine Reparatur mit Anomalienerkennung, wie z.B. ARX, sind
+bekannt, verfolgen aber nicht das Minimum-Change-Prinzip, da sie die Messungen
+drastisch verändern. Im vorliegenden Paper "Time Series Data Cleaning: From
+Anomly Detection to Anomaly Reparing" \cite{zhang17} werden das Anerkennen von Fehlerverläufen
+der Anomalienerkennung und das Minimum-Change-Prinzip miteinander vereinbart,
+dass zu einer signifikanten Verbesserung der Datenreparatur führt. Diese
+Abwicklung geschieht im genannten Paper, indem auf iterative Weise nur mit den
+Minimum-Change-Prinzip mögliche Teilreparaturen vorgenommen werden. Hierbei ist
+es auch interessant, inwiefern das neu entwickelte Verfahren gegen die als
+State-of-the-art Verfahren ankommt.
