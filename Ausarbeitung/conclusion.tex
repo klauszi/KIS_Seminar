@@ -1,0 +1,28 @@
+Erkennung und Bereinigung von Anomalien ist ein sehr schweres Problem. In ein
+System können Fehler  aus unterschiedlichen Quellen und zur
+unterschiedlichen Zeiten auftreten. Daraufhin wird dieses Problem
+eingeschränkt, indem man Zusätzliche Informationen, wie die im Vorfeld richtige
+Kennzeichnung der Werte, ausnutzt. 
+
+Bedingungsbasierte Verfahren nutzen keine vollständige temporäre
+Eigenschaft der Zeitreihen aus, dennoch wenden das
+Minimum-Change-Prinzip an. Im Gegensatz, Modelle, die die Historie der Daten 
+nutzen, wie AR oder ARX, implementieren das Minimum-Change-Prinzip nicht.
+Darüber hinaus können AR und ARX modifiziert werden um die erkannte Anomalien
+zu korrigieren, leider können diese Modelle Daten deutlich ändern. Im Paper
+wird IMR vorgestellt, welche beide Ansätze implementiert. Durch die minimale
+Änderungen der Daten (nach jede Iteration), ergibt sich eine höhere Genauigkeit
+in der Auswertung der Reparation. Danach gehen die Autoren noch eine Stufe weiter und
+entwerfen zwei weitere Erweiterungen um die Komplexität von IMR erheblich zu
+reduzieren, ohne die Genauigkeit zu beeinträchtigen. Am Ende zeigen die
+Experimente, wie die Metaparametern sich zu RMSE und Laufzeit verhalten.
+Interessanterweise der Parameter $p$ aus $ARX(p)$ braucht ein niedrigen Wert um
+höhe Genauigkeit zu erlangen.
+
+Schlussendlich in diesem Paper wird nur über lineare Modelle gesprochen. Oft
+hat man das Problem, dass Datensätze nicht linear abzubilden sind. Ein
+interessanter Versuch wäre mit unterschiedliche Modelle IMR zu implementieren.
+Als Beispiele könnte man ein Auto-Encoder entwickeln, welcher aus der Daten
+eine nicht lineare Rekonstruktion lernt. Dazu könnte man die markierte Daten
+benutzen um das Modell online zu trainieren um die Genauigkeit der Reparation
+zu erhöhen.

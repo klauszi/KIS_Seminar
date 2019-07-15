@@ -85,71 +85,73 @@ Ergebnis bis zur Konvergenz, also bis kein Reparaturkandidant größer als $\tau
 abweicht, ist in der Abb. \ref{fig:1} nachzuvollziehen.
 
 \begin{figure}
-\begin{tikzpicture}
-\begin{axis}[width=\textwidth,
-    height=.5\textwidth,
-xlabel=Zeitpunkt,
-ylabel=Datenpunkt,
-legend pos=outer north east,
-xmin=1,
-xmax=12
-]
-\addplot[only marks, olive,mark size=5.0pt] table{
-Zeitpunkt Wert 
-4 6.2
-5 7.7
-7 5.6
-8 5.9
-9 6.3
-10 6.8
-11 7.5
-};
-    \addlegendentry{$\hat{y}$}
-\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
-Zeitpunkt Wert 
-1 6
-2 10
-3 9.6
-4 8.3
-5 7.7
-6 5.4
-7 5.6
-8 5.9
-9 6.3
-10 6.8
-11 7.5
-12 8.5
-};
- \addlegendentry{$x$}
-    \addplot[blue,mark size=5.0pt] table{
-Zeitpunkt Wert 
-1 6
-2 5.6
-3 5.4
-4 5.2
-5 5.3
-6 5.4
-7 5.6
-8 5.9
-9 6.3
-10 6.8
-11 7.5
-12 8.5
-};
-\addlegendentry{$x^{\text{truth*}}$}
-\addplot[only marks, red, mark size=5.0pt] table{
-Zeitpunkt Wert 
-1 6
-2 5.6
-3 5.4
-6 5.4
-12 8.5
-};
-\addlegendentry{$x^{\text{truth}}$}
-% if you have the file, you can do
-% \addplot table {datafile.csv};
-\end{axis}
-\end{tikzpicture}
+%\begin{tikzpicture}
+%\begin{axis}[width=\textwidth,
+%    height=.5\textwidth,
+%xlabel=Zeitpunkt,
+%ylabel=Datenpunkt,
+%legend pos=outer north east,
+%xmin=1,
+%xmax=12
+%]
+%\addplot[only marks, olive,mark size=5.0pt] table{
+%Zeitpunkt Wert 
+%4 6.2
+%5 7.7
+%7 5.6
+%8 5.9
+%9 6.3
+%10 6.8
+%11 7.5
+%};
+%    \addlegendentry{$\hat{y}$}
+%\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+%Zeitpunkt Wert 
+%1 6
+%2 10
+%3 9.6
+%4 8.3
+%5 7.7
+%6 5.4
+%7 5.6
+%8 5.9
+%9 6.3
+%10 6.8
+%11 7.5
+%12 8.5
+%};
+% \addlegendentry{$x$}
+%    \addplot[blue,mark size=5.0pt] table{
+%Zeitpunkt Wert 
+%1 6
+%2 5.6
+%3 5.4
+%4 5.2
+%5 5.3
+%6 5.4
+%7 5.6
+%8 5.9
+%9 6.3
+%10 6.8
+%11 7.5
+%12 8.5
+%};
+%\addlegendentry{$x^{\text{truth*}}$}
+%\addplot[only marks, red, mark size=5.0pt] table{
+%Zeitpunkt Wert 
+%1 6
+%2 5.6
+%3 5.4
+%6 5.4
+%12 8.5
+%};
+%\addlegendentry{$x^{\text{truth}}$}
+%% if you have the file, you can do
+%% \addplot table {datafile.csv};
+%\end{axis}
+%\end{tikzpicture}
+      \centering
+      \includegraphics[width=\textwidth,keepaspectratio]{../plots/beispiel2_data.pdf}
     \caption{Beispiel 2.}\label{fig:2}
 \end{figure}
 ~\\
@@ -228,10 +230,13 @@ mit MP-IMR.  Sowohl $V^{(0)}$ und $Z^{(0)}$ haben die Größe 11 x 1. Nach Satz
 die reduzierten Matrizen $V^{(0)} = \{-4.2, 0\}'$ und $V^{(0)} = \{-4.2, 0\}'$
 mit einer Größe von 2x1 erhält. Hieraus ergibt sich der selbe Berechnung wie in
 Beispiel 3.
-\subsection{Inkrementelle Berechnung}
-Als in Abschnitt \ref{sec:allgemeinimr} schon erklärt, IMR basiert auf ARX,
+\subsection{Inkrementelle Berechnung (IMR-IC)}
+Als in Abschnitt \ref{sec:allgemeinimr} schon erklärt, IMR basiert sich auf ARX,
 welches in Abschnitt \ref{sec:anomalienerkennung} präsentiert wurde. Aufgrund
-dessen muss IMR den Parameter $\phi^{(k)}$ nach jedem Iteration bestimmt
+dessen muss den Parameter $\phi^{(k)}$ nach jedem Iteration neu bestimmt
 werden, siehe Algorithmus \ref{alg:imr}. Nach dem Minimum-Change-Prinzip wird nur
 einen Wert nach jeder Iteration geändert, deswegen bleiben die meisten Werte von 
-$V^{(k)}$, $Z^{(k)}$ und $V^{(k-1)}$, $Z^{(k-1)}$ gleich. 
+$V^{(k)}$, $Z^{(k)}$ und $V^{(k-1)}$, $Z^{(k-1)}$ gleich. In folge dessen kann
+das Parameter $\phi^{(k)}$ aus $V^{(k-1)}$ und $Z^{(k-1)}$ iterativ erzeugt
+werden. Die Eigenschaft von Minimum-Change-Prinzip wird ausgenutzt um die
+Komplexität von jedem Iteration auf konstante Laufzeit zu reduzieren. 

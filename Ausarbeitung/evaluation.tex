@@ -53,13 +53,27 @@ verbessert oder verschlechtert, wohingegen die Laufzeit stark zunimmt. Daher
 ist der Fall $p=1$ für den Online-Algorithmus als unterschungswert einzustufen.
 
 \subsection{Vergleich mit unterschiedlichen Schwellenwerte}
+In der Abb.~\ref{varying_threshold} wird der Effekt des Metaparameters $\tau$
+dargestellt. $\tau$ erzeugt ein Trade-off zwischen Genauigkeit (niedrige
+RMS-Fehler) und Laufzeit. Man kann in dem selben Bild erkennen, wie die drei
+Varianten von IMR die gleiche Genauigkeit für unterschiedliche Schwellenwerte
+besitzen. Jedoch bei einem Schwellenwert kleiner als $0.5$ IMR-IC zeigt eine
+niedrigere Laufzeit.  Des Weiteren wird ein kleineren Reparaturfehler mit ein
+niedrigen $\tau$ erreicht. Ein konservatives Reparation der Daten erfordert
+dazu eine längere Rechenzeit. 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{../plots/varying_threshold.png}
     \caption{Unterschiedliche Schwellenwerte $\tau$ über GPS-Daten mit $p$ = 3, Datengröße 750 und Markierungsrate 0.2}%
     \label{varying_threshold}
 \end{figure}
-\subsection{Vergleich mit unterschiedlichen maximaler Anzahl von Iterationen}
+\subsection{Vergleich mit unterschiedlichen Max. Anzahl von Iterationen}
+Es gibt zwei Bedingungen in\ref{alg:imr} um aus der Schleife zu brechen: eine
+feste programmierte maximale Anzahl von Iterationen und nach der Konvergenz von
+$y^{(k)}$ mit $y^{(k-1)}$. Der Abb.\ref{varying_threshold} zeigt wie IMR schon
+nach ein paar Tausende Iterationen eine relativ höhe Genauigkeit erreicht, die
+sogar Konvergiert. Natürlicherweise steigt die Laufzeit von IMR linear mit der
+Nummer von Iterationen hoch.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{../plots/varying_maximum_number.png}

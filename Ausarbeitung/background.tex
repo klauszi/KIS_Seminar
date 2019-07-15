@@ -47,76 +47,77 @@ Im Gegensatz zu der euklidischen Distanz als Abweichungsfunktion werden bei RMS 
     \item $y =  \{6, 5.6, 5.4,  5.2, 5.4, 5.4, 5.6, 5.9, 6.3, 6.8, 7.5, 8.5\}$
 \end{itemize}
 \begin{figure}
-\begin{tikzpicture}
-\begin{axis}[width=\textwidth,
-    height=.5\textwidth,
-xlabel=Zeitpunkt,
-ylabel=Datenpunkt,
-legend pos=outer north east,
-xmin=1,
-xmax=12
-]
-\addplot[olive,mark size=5.0pt, mark=x] table{
-Zeitpunkt Wert 
-1 6
-2 5.6
-3 5.4
-4 5.2
-5 5.4
-6 5.4
-7 5.6
-8 5.9
-9 6.3
-10 6.8
-11 7.5
-12 8.5
-};
-\addlegendentry{$y$}
-\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
-Zeitpunkt Wert 
-1 6
-2 10
-3 9.6
-4 8.3
-5 7.7
-6 5.4
-7 5.6
-8 5.9
-9 6.3
-10 6.8
-11 7.5
-12 8.5
-};
- \addlegendentry{$x$}
-    \addplot[blue,mark size=5.0pt] table{
-Zeitpunkt Wert 
-1 6
-2 5.6
-3 5.4
-4 5.2
-5 5.3
-6 5.4
-7 5.6
-8 5.9
-9 6.3
-10 6.8
-11 7.5
-12 8.5
-};
-\addlegendentry{$x^{\text{truth*}}$}
-\addplot[only marks, red, mark size=5.0pt] table{
-Zeitpunkt Wert 
-1 6
-2 5.6
-3 5.4
-6 5.4
-12 8.5
-};
-\addlegendentry{$x^{\text{truth}}$}
-% if you have the file, you can do
-% \addplot table {datafile.csv};
-\end{axis}
-\end{tikzpicture}
+%\begin{tikzpicture}
+%\begin{axis}[width=\textwidth,
+%    height=.5\textwidth,
+%xlabel=Zeitpunkt,
+%ylabel=Datenpunkt,
+%legend pos=outer north east,
+%xmin=1,
+%xmax=12
+%]
+%\addplot[olive,mark size=5.0pt, mark=x] table{
+%Zeitpunkt Wert 
+%1 6
+%2 5.6
+%3 5.4
+%4 5.2
+%5 5.4
+%6 5.4
+%7 5.6
+%8 5.9
+%9 6.3
+%10 6.8
+%11 7.5
+%12 8.5
+%};
+%\addlegendentry{$y$}
+%\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+%Zeitpunkt Wert 
+%1 6
+%2 10
+%3 9.6
+%4 8.3
+%5 7.7
+%6 5.4
+%7 5.6
+%8 5.9
+%9 6.3
+%10 6.8
+%11 7.5
+%12 8.5
+%};
+% \addlegendentry{$x$}
+%    \addplot[blue,mark size=5.0pt] table{
+%Zeitpunkt Wert 
+%1 6
+%2 5.6
+%3 5.4
+%4 5.2
+%5 5.3
+%6 5.4
+%7 5.6
+%8 5.9
+%9 6.3
+%10 6.8
+%11 7.5
+%12 8.5
+%};
+%\addlegendentry{$x^{\text{truth*}}$}
+%\addplot[only marks, red, mark size=5.0pt] table{
+%Zeitpunkt Wert 
+%1 6
+%2 5.6
+%3 5.4
+%6 5.4
+%12 8.5
+%};
+%\addlegendentry{$x^{\text{truth}}$}
+%% if you have the file, you can do
+%% \addplot table {datafile.csv};
+%\end{axis}
+%\end{tikzpicture}
+      \includegraphics[width=\textwidth,keepaspectratio]{../plots/beispiel1_data.pdf}
     \caption{Beispiel 1.}\label{fig:1}
 \end{figure}
 ~\\
@@ -248,18 +249,6 @@ zu reparieren.
       \label{fig:arx}
     \end{figure}
     Die Reparatur der Reihe funktioniert dann genauso wie beim AR Modell.
-\end{itemize}
-\subsubsection{Bedingungsbasierte Reparatur}
-Es gibt auch Daten, die vom erwartete Werte abweichen aber die abweichung is
-nicht so startk. 
-Es werden nicht alle daten benutz
-Hinterienander fehlerhafte Daten können falsch interretiert werden
-Die reparierte Reihe y
-
-\begin{itemize}
-  \item Was ist Bedingungsbasierte Reparatur (siehe 7.3)
-  \item SCREEN (vgl.\ referenzierte Papers) 
-  nimm in betrach nur ein punkt
 \end{itemize}
 \subsubsection{Reparatur durch Glättungsverfahren}
 Zeitreihen setzen sich aus verschiedenen Frequenzen zusammen. Mit Hilfe der
