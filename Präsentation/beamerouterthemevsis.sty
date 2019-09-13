@@ -1,0 +1,112 @@
+% LaTeX-Beamer-Theme for VSIS: http://vsis-www.informatik.uni-hamburg.de/
+%
+% Created by Kristof Hamann <http://www.korelstar.de/>
+% based on work by Till Tantau (beamerouterthemesmoothbars.sty)
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\newif\ifbeamer@sb@subsection
+
+\DeclareOptionBeamer{subsection}[true]{\csname beamer@sb@subsection#1\endcsname}
+\ExecuteOptionsBeamer{subsection=true}
+\ProcessOptionsBeamer
+
+
+
+\mode<presentation>
+
+\beamer@compresstrue
+
+\AtBeginDocument{
+  {
+    \colorlet{global.bg}{bg}
+    \usebeamercolor{title in head/foot}
+    \usebeamercolor{author in head/foot}
+    \pgfdeclarehorizontalshading{beamer@footshade}{0.8cm}{%
+      color(0pt)=(title in head/foot.bg);%
+      color(\paperwidth)=(author in head/foot.bg)%
+    }
+    \pgfdeclarehorizontalshading{beamer@titleshade}{0.1cm}{%
+      color(0.3cm)=(title in head/foot.bg);%
+      color(\paperwidth-0.3cm)=(author in head/foot.bg)%
+    }
+  }
+}
+
+\defbeamertemplate*{headline}{vsis theme}
+{%
+  \begin{beamercolorbox}[ht=2.25ex,dp=3.75ex]{section in head/foot}
+    \insertnavigation{\paperwidth}
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+
+
+\defbeamertemplate*{frametitle}{vsis theme}
+{%
+  \usebeamerfont{headline}%
+  \vskip1.5ex
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=.3cm,rightskip=.3cm plus1fil,vmode]{frametitle}
+    \usebeamerfont*{frametitle}\insertframetitle%
+      \ifx\insertframesubtitle\@empty%
+        \strut\par%
+      \else
+        \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par}%
+      \fi%%
+    \usebeamerfont{headline}%
+    \vskip.5ex  
+  \end{beamercolorbox}%
+  \vskip.5ex
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=.5ex,dp=0ex]{empty}
+    \pgfuseshading{beamer@titleshade}%
+  \end{beamercolorbox}%
+  \vskip-1.5ex
+}
+  
+ 
+
+
+\defbeamertemplate*{footline}{vsis theme}
+{%
+  \pgfuseshading{beamer@footshade}%
+  \vskip-0.8cm
+  \includegraphics[width=0.8cm,height=0.8cm]{vsis.pdf}
+  \hfill
+  \includegraphics[width=0.8cm,height=0.8cm]{uhh.pdf}
+
+  \vskip-0.8cm
+\begin{beamercolorbox}[ignorebg,wd=0.5\textwidth,ht=0.25cm,dp=0.15cm,leftskip=1cm]{title in head/foot}%
+\usebeamerfont{title in head/foot}%
+\insertshorttitle%
+\end{beamercolorbox}%
+\vspace*{-0.4cm}\hspace*{0.5\textwidth}%
+\begin{beamercolorbox}[ignorebg,wd=0.5\textwidth,ht=0.25cm,dp=0.15cm,right,rightskip=1cm]{author in head/foot}%
+\usebeamerfont{author in head/foot}%
+\insertshortauthor%
+\end{beamercolorbox}%
+
+\begin{beamercolorbox}[ignorebg,wd=0.5\textwidth,ht=0.25cm,dp=0.15cm,leftskip=1cm]{title in head/foot}%
+\usebeamerfont{title in head/foot}%
+\insertdate%
+\end{beamercolorbox}%
+\vspace*{-0.4cm}\hspace*{0.5\textwidth}%
+\begin{beamercolorbox}[ignorebg,wd=0.5\textwidth,ht=0.25cm,dp=0.15cm,right,rightskip=1cm]{author in head/foot}%
+\usebeamerfont{author in head/foot}%
+\insertframenumber%
+\end{beamercolorbox}%
+}
+
+
+\setbeamersize{text margin left=.5cm,text margin right=.5cm}
+
+
+\mode<all>

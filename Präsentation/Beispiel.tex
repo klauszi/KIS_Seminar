@@ -1,0 +1,48 @@
+\documentclass{beamer}
+%\documentclass[handout]{beamer}
+
+\usepackage[ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% VSIS-Theme verwenden
+\usetheme{vsis}
+
+% Vor jedem neuen Teil (\part) eine Folie mit Titel anzeigen
+\AtBeginPart{\frame{\partpage}}
+
+% Vor jedem neuen Abschnitt (\section) eine Folie mit Gliederung für diesen Abschnitt zeigen
+\AtBeginSection{\frame{\frametitle{\insertsection}\tableofcontents[currentsection,hideothersubsections]}}
+
+% für Grafik-Beispiel:
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,fit,backgrounds,shapes}
+
+% Daten dieser Präsentation
+\title{Cleaning von Zeitreihen}
+\subtitle{Von der Anomalienerkennung zur Anomalienreparatur}
+\author[Jose, Klaus]{Jose Rodriguez Parra Flores \\ Klaus-Johan Ziegert}
+%\date{9.\ April 2009}
+%\institute[Uni-HH]{Universität Hamburg \\ Fakultät für Mathematik, Informatik und Naturwissenschaften \\ Department Informatik \\ Zentrum für Verteilte Informations- und Kommunikationssysteme \\ Arbeitsbereich Verteilte Systeme und Informationssysteme}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+
+\include{Einleitung}
+\include{Grundlagen}
+\include{IMR}
+\include{Evaluierung}
+\include{Schluss}
+
+
+\end{document}

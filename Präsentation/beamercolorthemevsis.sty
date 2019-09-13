@@ -1,0 +1,40 @@
+% LaTeX-Beamer-Theme for VSIS: http://vsis-www.informatik.uni-hamburg.de/
+%
+% Created by Kristof Hamann <http://www.korelstar.de/>
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\mode<presentation>
+
+\definecolor{vsisbright}{RGB}{238,238,248}
+\definecolor{vsisdark}{RGB}{100,118,205}
+\definecolor{vsistext}{RGB}{51,51,153}
+
+\setbeamercolor{normal text}{fg=vsistext!25!black,bg=white}
+\setbeamercolor{structure}{fg=vsistext}
+
+\setbeamercolor{palette primary}{fg=white,bg=vsisdark!70!vsisbright}
+\setbeamercolor{palette secondary}{fg=white,bg=vsisdark!80!vsisbright}
+\setbeamercolor{palette tertiary}{fg=white,bg=vsisdark!90!vsisbright}
+\setbeamercolor{palette quaternary}{fg=white,bg=vsisdark}
+
+\setbeamercolor{frametitle}{fg=vsistext,bg=white}
+
+\setbeamercolor{block title}{fg=white,bg=vsisdark}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg!75!bg}
+\setbeamercolor{block title example}{use=example text,fg=white,bg=example text.fg!75!bg}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!15!vsisbright}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!25!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!25!bg}
+
+\setbeamercolor{section in head/foot}{fg=white,bg=vsisdark}
+\setbeamercolor{author in head/foot}{fg=vsistext,bg=vsisbright}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\mode<all>

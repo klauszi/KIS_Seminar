@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Beispiel.aux
+A level-1 auxiliary file: Einleitung.aux
+A level-1 auxiliary file: Grundlagen.aux
+A level-1 auxiliary file: IMR.aux
+A level-1 auxiliary file: Evaluierung.aux
+A level-1 auxiliary file: Schluss.aux
+The style file: plain.bst
+Database file #1: Beispiel.bib
+Warning--I didn't find a database entry for "aalst02"
+Warning--I didn't find a database entry for "alonso04"
+Warning--I didn't find a database entry for "tanenbaum07"
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            512 strings with 4281 characters,
+and the built_in function-call counts, 433 in all, are:
+= -- 41
+> -- 23
+< -- 0
++ -- 9
+- -- 8
+* -- 39
+:= -- 78
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 11
+empty$ -- 30
+format.name$ -- 8
+if$ -- 83
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 5
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 7
+stack$ -- 0
+substring$ -- 36
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 0
+while$ -- 4
+width$ -- 2
+write$ -- 13
+(There were 3 warnings)
