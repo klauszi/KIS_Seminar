@@ -3,17 +3,56 @@
 \subsection{Motivation}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Themenbereich}
+  \begin{block}<+->{Messger‰te liefern unzuverl‰ssige Daten}
     \begin{itemize}
-      \item Warum ist das Thema interessant?
-      \item Wo liegt das Problem?
+      \item GPS Tracker sind unzuverl‰ssig in der N‰he von Geb‰uden
+      \item Sensoren sind empfindlich gegen¸ber ‰uﬂere Einfl¸sse
+          \begin{itemize}
+              \item Z.B. starker Fall der Temperaturen bei einem Windzug.
+          \end{itemize}
     \end{itemize}
   \end{block}
-  \begin{block}<+->{Anwendungsbeispiel}
-    \begin{itemize}
-      \item Wann tritt das Problem auf?
-    \end{itemize}
+\begin{figure}
+    \includegraphics[width=\textwidth]{GPS_Motivation_Example.png}
+    \caption{GPS-Tracking auf dem Campus der Tsinghua Universit‰t \cite{Shaoxu17}}
+
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+  \begin{block}<+->{Ans‰tze mit den Umgang von unzuverl‰ssigen Daten}
+    \begin{enumerate}
+        \item Unzuverl‰ssige Datenpunkte mit der Anomalienerkennung entfernen
+            \begin{itemize}
+                \item Einzelne Ausreiﬂer werden entfernt  \neutranie
+                \item Entfernen langer Folgen von Ausreiﬂer machen Ergebnis unbrauchbar \frownie
+                \item Lange Folgen von Ausreiﬂer werden als solche ggf. nicht erkannt \frownie
+            \end{itemize}
+        \item Unzuverl‰ssige Datenpunkte mit der Anomalienerkennung reparieren
+            \begin{itemize}
+                \item Einzelne Ausreiﬂer werden korrigiert \smiley
+                \item Lange Folgen von Ausreiﬂer werden zu stark ver‰ndert (widerspricht den Minimum-Change-Prinzip) \neutranie
+                \item Lange Folgen von Ausreiﬂer werden als solche ggf. nicht ver‰ndert \frownie
+            \end{itemize}
+    \end{enumerate}
   \end{block}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+    \begin{block}<+->{Hinzunahme von als wahr markierte Werte}
+    \begin{enumerate}
+        \item Markierung durch den Benutzer
+            \begin{itemize}
+            \item Z.B. markiert der Benutzer in unregelm‰ﬂigen Zeitabst‰nden seinen aktuellen Standort
+            \end{itemize}
+        \item Pr‰zise Messger‰te liefern in periodischen Zeitabst‰nde korrekte Werte
+    \end{enumerate}
+  \end{block}
+\begin{figure}
+    \includegraphics[width=\textwidth]{markierte_GPS_Motivation_Example.png}
+    \caption{GPS-Tracking mit markierten Werte auf dem Campus der Tsinghua Universit‰t}
+\end{figure}
 \end{frame}
 
 
@@ -23,8 +62,16 @@
 \begin{frame}{\insertsubsection}
   \begin{block}<+->{Ziel der Arbeit}
     \begin{itemize}
-      \item Was ist das Ziel der Arbeit?
-      \item Was soll erreicht werden?
+      \item Einfliessen der markierten Werte in die Anomalienerkennung
+            \begin{itemize}
+                \item lange Folgen von Ausreiﬂer sollen identifiziert werden
+            \end{itemize}
+      \item Anomalienerkennung mit den Minimum-Change-Prinzip vereinbaren   
+            \begin{itemize}
+                \item keine drastische Ver‰nderungen der Messwerte
+            \end{itemize}
+      \item Einfliessen der markierten Werte in die anderen State-of-Art Verfahren
+      \item Neues Verfahren mit den anderen Verfahren empirisch vergleichen
     \end{itemize}
   \end{block}
 \end{frame}
