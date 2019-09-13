@@ -3,16 +3,17 @@
 \BOOKMARK [3][]{Outline0.1.2.7}{Zielsetzung}{Outline0.1}% 3
 \BOOKMARK [2][]{Outline0.2}{Grundlagen}{}% 4
 \BOOKMARK [3][]{Outline0.2.1.9}{Problemstellung}{Outline0.2}% 5
-\BOOKMARK [3][]{Outline0.2.2.10}{bekannte Verfahren}{Outline0.2}% 6
-\BOOKMARK [2][]{Outline0.3}{Iterative Minimum Repairing}{}% 7
-\BOOKMARK [3][]{Outline0.3.1.12}{allgemeines IMR}{Outline0.3}% 8
-\BOOKMARK [3][]{Outline0.3.2.13}{Matrix-Pruning IMR}{Outline0.3}% 9
-\BOOKMARK [3][]{Outline0.3.3.14}{Incremental-Computation IMR}{Outline0.3}% 10
-\BOOKMARK [2][]{Outline0.4}{Evaluierung}{}% 11
-\BOOKMARK [3][]{Outline0.4.1.16}{Ordnung}{Outline0.4}% 12
-\BOOKMARK [3][]{Outline0.4.2.17}{Schwellenwert}{Outline0.4}% 13
-\BOOKMARK [3][]{Outline0.4.3.18}{maximale Anzahl von Iterationen}{Outline0.4}% 14
-\BOOKMARK [3][]{Outline0.4.4.19}{Markierungsrate}{Outline0.4}% 15
-\BOOKMARK [2][]{Outline0.5}{Schluss}{}% 16
-\BOOKMARK [3][]{Outline0.5.1.21}{Zusammenfassung und Ausblick}{Outline0.5}% 17
-\BOOKMARK [3][]{Outline0.5.2.23}{Literatur}{Outline0.5}% 18
+\BOOKMARK [3][]{Outline0.2.2.10}{Anomalienreparaturen}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.3.11}{andere Verfahren}{Outline0.2}% 7
+\BOOKMARK [2][]{Outline0.3}{Iterative Minimum Repairing}{}% 8
+\BOOKMARK [3][]{Outline0.3.1.13}{allgemeines IMR}{Outline0.3}% 9
+\BOOKMARK [3][]{Outline0.3.2.14}{Matrix-Pruning IMR}{Outline0.3}% 10
+\BOOKMARK [3][]{Outline0.3.3.15}{Incremental-Computation IMR}{Outline0.3}% 11
+\BOOKMARK [2][]{Outline0.4}{Evaluierung}{}% 12
+\BOOKMARK [3][]{Outline0.4.1.17}{Ordnung}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.2.18}{Schwellenwert}{Outline0.4}% 14
+\BOOKMARK [3][]{Outline0.4.3.19}{maximale Anzahl von Iterationen}{Outline0.4}% 15
+\BOOKMARK [3][]{Outline0.4.4.20}{Markierungsrate}{Outline0.4}% 16
+\BOOKMARK [2][]{Outline0.5}{Schluss}{}% 17
+\BOOKMARK [3][]{Outline0.5.1.22}{Zusammenfassung und Ausblick}{Outline0.5}% 18
+\BOOKMARK [3][]{Outline0.5.2.24}{Literatur}{Outline0.5}% 19

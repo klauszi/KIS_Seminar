@@ -5,10 +5,10 @@
 \begin{frame}{\insertsubsection}
   \begin{block}<+->{Messgeräte liefern unzuverlässige Daten}
     \begin{itemize}
-      \item GPS Tracker sind unzuverlässig in der Nähe von Gebäuden
+      \item GPS Tracker sind nahe von Gebäuden unzuverlässig
       \item Sensoren sind empfindlich gegenüber äußere Einflüsse
           \begin{itemize}
-              \item Z.B. starker Fall der Temperaturen bei einem Windzug.
+              \item Z.B. starker Fall der Temperaturen bei einem Windzug
           \end{itemize}
     \end{itemize}
   \end{block}
@@ -21,19 +21,18 @@
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Ansätze mit den Umgang von unzuverlässigen Daten}
+  \begin{block}<+->{Umgang von unzuverlässigen Daten mit Anomalienerkennung}
     \begin{enumerate}
-        \item Unzuverlässige Datenpunkte mit der Anomalienerkennung entfernen
+        \item Unzuverlässige Datenpunkte entfernen
             \begin{itemize}
-                \item Einzelne Ausreißer werden entfernt  \neutranie
-                \item Entfernen langer Folgen von Ausreißer machen Ergebnis unbrauchbar \frownie
-                \item Lange Folgen von Ausreißer werden als solche ggf. nicht erkannt \frownie
+                \item Ausreißer werden entfernt  \smiley
+                \item Entfernen aufeinanderfolgende Fehler machen Ergebnis unbrauchbar \textbf{oder}
+                 werden als solche ggf. nicht erkannt \frownie
             \end{itemize}
-        \item Unzuverlässige Datenpunkte mit der Anomalienerkennung reparieren
+        \item Unzuverlässige Datenpunkte reparieren
             \begin{itemize}
-                \item Einzelne Ausreißer werden korrigiert \smiley
-                \item Lange Folgen von Ausreißer werden zu stark verändert (widerspricht den Minimum-Change-Prinzip) \neutranie
-                \item Lange Folgen von Ausreißer werden als solche ggf. nicht verändert \frownie
+                \item Einzelne Ausreißer werden leicht korrigiert \neutranie
+                \item Aufeinanderfolgende Fehler werden zu stark verändert (In der Praxis liegen die Messungen nahe bei den korrekten Werten) \neutranie
             \end{itemize}
     \end{enumerate}
   \end{block}
@@ -44,15 +43,12 @@
     \begin{enumerate}
         \item Markierung durch den Benutzer
             \begin{itemize}
-            \item Z.B. markiert der Benutzer in unregelmäßigen Zeitabständen seinen aktuellen Standort
+            \item Z.B. markiert der Benutzer in beliebigen Zeitabständen seinen aktuellen Standort
             \end{itemize}
-        \item Präzise Messgeräte liefern in periodischen Zeitabstände korrekte Werte
+        \item Präzise Messgeräte liefern in längeren Zeitabstände korrekte Werte
     \end{enumerate}
   \end{block}
-\begin{figure}
     \includegraphics[width=\textwidth]{markierte_GPS_Motivation_Example.png}
-    \caption{GPS-Tracking mit markierten Werte auf dem Campus der Tsinghua Universität}
-\end{figure}
 \end{frame}
 
 
@@ -61,18 +57,18 @@
 
 \begin{frame}{\insertsubsection}
   \begin{block}<+->{Ziel der Arbeit}
-    \begin{itemize}
+    \begin{enumerate}
       \item Einfliessen der markierten Werte in die Anomalienerkennung
             \begin{itemize}
-                \item lange Folgen von Ausreißer sollen identifiziert werden
+                \item Aufeinanderfolgende Fehler sollen besser abgeschätzt werden
             \end{itemize}
-      \item Anomalienerkennung mit den Minimum-Change-Prinzip vereinbaren   
+      \item Anomalienreparatur mit den Minimum-Change-Prinzip vereinbaren   
             \begin{itemize}
-                \item keine drastische Veränderungen der Messwerte
+                \item Keine drastische Veränderungen der Messwerte
             \end{itemize}
       \item Einfliessen der markierten Werte in die anderen State-of-Art Verfahren
-      \item Neues Verfahren mit den anderen Verfahren empirisch vergleichen
-    \end{itemize}
+      \item Neue Anomalienreparatur mit den anderen Verfahren empirisch vergleichen
+    \end{enumerate}
   \end{block}
 \end{frame}
 
