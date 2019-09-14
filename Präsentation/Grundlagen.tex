@@ -3,11 +3,18 @@
 \subsection{Problemstellung}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
+  \begin{block}<+->{Zeitreihenreparatur}
     \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten \cite{zhang17}
+        \item Gegeben:
+            \begin{itemize}
+                \item Eine fehlerbehafte Messung $x = x[1],\dots,x[n]$
+                \item Eine unvollständige, aber dafür ausschließlich korrekte Messung $x^{\text{truth}}$
+            \end{itemize}
+        \item Gesucht:
+            \begin{itemize}
+                \item Reparatur $y$ mit minimalen RMS-Fehler $\Delta(x^{\text{truth*}}, y)$
+                \item $\Delta(x^{\text{truth*}}, y) = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left(x_i^{\text{truth*}} - y_i\right)^2 }$
+            \end{itemize}
     \end{itemize}
   \end{block}
 \end{frame}
