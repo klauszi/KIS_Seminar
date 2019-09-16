@@ -1,37 +1,336 @@
 \section{Iterative Minimum Repairing}
 
-\subsection{allgemeines IMR}
+\subsection{IMR}
 
-\begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
-    \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten
-    \end{itemize}
-  \end{block}
+\begin{frame}
+    \begin{block}{Intuitiver Ansatz von IMR}
+        \begin{itemize}
+            \item ARX nutzt markierte Werte effizient, \textbf{aber} verändert die Werte zu drastisch.
+            \item IMR Ansatz:
+                \begin{enumerate}
+                    \item Wende ARX an
+                    \item Wähle Reparaturwert aus mit minimalen Abstand zur Messung
+                    \item Wiederhole Prozedur
+                \end{enumerate}
+            \item Motivation: Reparierte Werte verbessern zukünftige Reparaturen 
+        \end{itemize}
+    \end{block}
 \end{frame}
 
-\subsection{Matrix-Pruning IMR}
-
-\begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
-    \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten
-    \end{itemize}
-  \end{block}
+\begin{frame}[fragile]{\insertsubsection\ = ARX + Minimum-Change-Prinzip}
+    \begin{algorithm}[H]
+    \begin{algorithmic}[1]
+\STATE \textbf{Eingabe}: Messung $x$, markierte Werte $x^{\text{truth}}$, Ordnung $p$, Schwellenwert $\tau$ und max-num-iterations
+\STATE \textbf{Ausgabe}: Reparatur $y$ 
+        \STATE {$y^{(0)} \gets$ Initialize$(x,x^{\text{truth}})$}
+\FOR{$k \gets 0$ \TO max-num-iterations}
+\STATE {$\phi^{(k)} \gets$ Estimate$(x,y^{(k)})$}
+    \STATE { $\hat{y} \gets$ Candidate$(x,y^{(k)}, \phi^{(k)})$}
+    \STATE { $y^{(k+1)} \gets$ Evaluate$(x,y^{(k)}, \hat{y})$}
+        \IF{ Converge($y^{(k)}, y^{(k+1)}$) }
+        \STATE {\textbf{break}}
+        \ENDIF
+ \ENDFOR
+    \RETURN $y^{(k)}$
+\end{algorithmic}
+\end{algorithm}
 \end{frame}
 
-\subsection{Incremental-Computation IMR}
-
-\begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
-    \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten
-    \end{itemize}
-  \end{block}
+\begin{frame}[fragile]{\insertsubsection:\ Initialisierung}
+    \begin{algorithm}[H]
+    \begin{algorithmic}[1]
+\STATE \textbf{Eingabe}: Messung $x$, markierte Werte $x^{\text{truth}}$, Ordnung $p$, Schwellenwert $\tau$ und max-num-iterations
+\STATE \textbf{Ausgabe}: Reparatur $y$ 
+        \STATE \colorbox{blue!30}{{$y^{(0)} \gets$ Initialize$(x,x^{\text{truth}})$}}
+\FOR{$k \gets 0$ \TO max-num-iterations}
+\STATE {$\phi^{(k)} \gets$ Estimate$(x,y^{(k)})$}
+    \STATE { $\hat{y} \gets$ Candidate$(x,y^{(k)}, \phi^{(k)})$}
+    \STATE { $y^{(k+1)} \gets$ Evaluate$(x,y^{(k)}, \hat{y})$}
+        \IF{ Converge($y^{(k)}, y^{(k+1)}$) }
+        \STATE {\textbf{break}}
+        \ENDIF
+ \ENDFOR
+    \RETURN $y^{(k)}$
+\end{algorithmic}
+\end{algorithm}
 \end{frame}
+
+\begin{frame}[fragile]{\insertsubsection:\ Initialisierung}
+    \begin{block}{Initiale Reparatur}
+        Initiale Reparatur $y^{(0)}$ ist Messung $x$ und übernimmt die markierten Werte aus $x^{\text{truth}}$
+    \end{block}
+    \begin{tikzpicture}
+\begin{axis}[width=.8\textwidth,
+   height=.5\textwidth,
+xlabel=Zeitpunkt,
+ylabel=Datenpunkt,
+legend pos=outer north east,
+xmin=0,
+xmax=12,
+ymin=5
+]
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+zeitpunkt wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x$}
+\addplot[only marks, red, mark size=5.0pt] table{
+zeitpunkt wert 
+1 6
+2 5.6
+3 5.4
+6 5.4
+12 8.5
+};
+\addlegendentry{$x^{\text{truth}}$}
+    \addplot[olive,mark size=5.0pt, mark=x, line width=1.5pt] table{
+    zeitpunkt wert 
+    1 6
+    2 5.6
+    3 5.4
+4 8.3
+5 7.7
+    6 5.4
+    7 5.6
+    8 5.9
+    9 6.3
+    10 6.8
+    11 7.5
+    12 8.5
+    };
+    \addlegendentry{$y^{0}$}
+\end{axis}
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]{\insertsubsection: ARX auf aktuelle Reparatur anwenden}
+    \begin{algorithm}[H]
+    \begin{algorithmic}[1]
+\STATE \textbf{Eingabe}: Messung $x$, markierte Werte $x^{\text{truth}}$, Ordnung $p$, Schwellenwert $\tau$ und max-num-iterations
+\STATE \textbf{Ausgabe}: Reparatur $y$ 
+        \STATE {$y^{(0)} \gets$ Initialize$(x,x^{\text{truth}})$}
+\FOR{$k \gets 0$ \TO max-num-iterations}
+        \STATE \colorbox{blue!30}{{$\phi^{(k)} \gets$ Estimate$(x,y^{(k)})$}}
+        \STATE \colorbox{blue!30}{{ $\hat{y} \gets$ Candidate$(x,y^{(k)}, \phi^{(k)})$}}
+    \STATE { $y^{(k+1)} \gets$ Evaluate$(x,y^{(k)}, \hat{y})$}
+        \IF{ Converge($y^{(k)}, y^{(k+1)}$) }
+        \STATE {\textbf{break}}
+        \ENDIF
+ \ENDFOR
+    \RETURN $y^{(k)}$
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}[fragile]{\insertsubsection:\ ARX auf aktuelle Reparatur anwenden}
+    \begin{block}{Kandidaten}
+        \begin{itemize}
+            \item Parameterschätzung $\phi$: aktuelle Reparatur $y^{(k)}$ wird als $x^{\text{truth}}$ interpretiert.
+            \item Reparatur sind Kandidaten $\hat{y}$ (angewendetes ARX kennt vorangegangene Aktualisierung nicht)
+        \end{itemize}
+    \end{block}
+\begin{tikzpicture}
+\begin{axis}[width=.8\textwidth,
+   height=.40\textwidth,
+xlabel=Zeitpunkt,
+ylabel=Datenpunkt,
+legend pos=outer north east,
+xmin=0,
+xmax=12,
+ymin=5
+]
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+Zeitpunkt Wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x$}
+\addplot[only marks, red, mark size=5.0pt] table{
+Zeitpunkt Wert 
+1 6
+2 5.6
+3 5.4
+6 5.4
+12 8.5
+};
+\addlegendentry{$x^{\text{truth}}$}
+\addplot[only marks, olive,mark size=5.0pt] table{
+Zeitpunkt Wert 
+4 6.2
+5 7.7
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+};
+   \addlegendentry{$\hat{y}$}
+% if you have the file, you can do
+% \addplot table {datafile.csv};
+\end{axis}
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]{\insertsubsection: Minimum-Change}
+    \begin{algorithm}[H]
+    \begin{algorithmic}[1]
+\STATE \textbf{Eingabe}: Messung $x$, markierte Werte $x^{\text{truth}}$, Ordnung $p$, Schwellenwert $\tau$ und max-num-iterations
+\STATE \textbf{Ausgabe}: Reparatur $y$ 
+        \STATE {$y^{(0)} \gets$ Initialize$(x,x^{\text{truth}})$}
+\FOR{$k \gets 0$ \TO max-num-iterations}
+\STATE {$\phi^{(k)} \gets$ Estimate$(x,y^{(k)})$}
+    \STATE { $\hat{y} \gets$ Candidate$(x,y^{(k)}, \phi^{(k)})$}
+        \STATE { \colorbox{blue!30}{$y^{(k+1)} \gets$ Evaluate$(x,y^{(k)}, \hat{y})$}}
+        \IF{ Converge($y^{(k)}, y^{(k+1)}$) }
+        \STATE {\textbf{break}}
+        \ENDIF
+ \ENDFOR
+    \RETURN $y^{(k)}$
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}[fragile]{\insertsubsection:\ Minimum-Change}
+    \begin{block}{Minimum-Change}
+        \begin{itemize}
+            \item Zu geringe Änderungen werden herausgefiltert $|y^{(k)}_i - \hat{y}_i| > \tau$
+            \item Geringste Änderung zu Messung $x$ wird als Kandidaten herangezogen
+        \end{itemize}
+    \end{block}
+\begin{tikzpicture}
+\begin{axis}[width=.8\textwidth,
+   height=.40\textwidth,
+xlabel=Zeitpunkt,
+ylabel=Datenpunkt,
+legend pos=outer north east,
+xmin=0,
+xmax=12,
+ymin=5
+]
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+Zeitpunkt Wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x$}
+\addplot[only marks, red, mark size=5.0pt] table{
+Zeitpunkt Wert 
+1 6
+2 5.6
+3 5.4
+6 5.4
+12 8.5
+};
+\addlegendentry{$x^{\text{truth}}$}
+\addplot[olive,mark size=5.0pt, mark=x, line width=1.5pt] table{
+Zeitpunkt Wert 
+    1 6
+    2 5.6
+    3 5.4
+4 6.2
+5 7.7
+    6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+    \addlegendentry{$y^{(1)}$}
+% if you have the file, you can do
+% \addplot table {datafile.csv};
+\end{axis}
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]{\insertsubsection: Terminierung}
+    \begin{algorithm}[H]
+    \begin{algorithmic}[1]
+\STATE \textbf{Eingabe}: Messung $x$, markierte Werte $x^{\text{truth}}$, Ordnung $p$, Schwellenwert $\tau$ und max-num-iterations
+\STATE \textbf{Ausgabe}: Reparatur $y$ 
+        \STATE {$y^{(0)} \gets$ Initialize$(x,x^{\text{truth}})$}
+        \FOR{\colorbox{blue!30}{$k \gets 0$ \TO max-num-iterations}}
+\STATE {$\phi^{(k)} \gets$ Estimate$(x,y^{(k)})$}
+    \STATE { $\hat{y} \gets$ Candidate$(x,y^{(k)}, \phi^{(k)})$}
+    \STATE { $y^{(k+1)} \gets$ Evaluate$(x,y^{(k)}, \hat{y})$}
+        \IF{\colorbox{blue!30}{Converge($y^{(k)}, y^{(k+1)}$) }}
+        \STATE {\colorbox{blue!30}{\textbf{break}}}
+        \ENDIF
+ \ENDFOR
+    \RETURN $y^{(k)}$
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}{\insertsubsection: Terminierung}
+    \begin{block}{Terminierung}
+        \begin{itemize}
+            \item Zwei Möglichkeiten der Terminierung:
+        \begin{itemize}
+            \item Maximale Anzahl der Iterationen wird erreicht
+            \item Konvergenz: Neue Reparatur $y^{(k+1)}$ ist gleich aktuelle Reparatur $y^{(k)}$
+        \end{itemize}
+    \item Allgemeine Konvergenzfrage ist noch offen
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\subsection{Optimierung 1: Matrix-Pruning IMR}
+\begin{frame}{Motivation von Matrix-Pruning IMR}
+    \begin{block}{Laufzeitproblem}
+        \begin{itemize}
+            \item Parameterschätzung beansprucht viel Zeit 
+            \item Matrizen V und Z bestehen aus $y_i^{(k)} - x_i$:
+                \begin{itemize}
+                    \item wenige markierte Werte vorhanden
+                    \item markierte Werte häufig identisch zur Messung
+                    \item Reparaturwerte ändern sich nicht signifkant
+                    \item $\rightarrow$ dünnbesetzte Matrizen
+                \end{itemize}
+            \item Matrix-Pruning: Löschen von Zeilen mit 0en
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Matrix Pruning IMR Beispiel}
+    \begin{block}{Beispiel}
+        Beispiel
+    \end{block}
+\end{frame}
+

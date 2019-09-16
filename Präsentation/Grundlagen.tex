@@ -6,9 +6,10 @@
   \begin{block}<+->{Zeitreihenreparatur}
     \begin{itemize}
         \item Gegeben:
-            \begin{itemize}
-                \item Eine fehlerbehafte Messung $x = x[1],\dots,x[n]$
-                \item Eine unvollständige, aber dafür ausschließlich korrekte Messung $x^{\text{truth}}$
+           \begin{itemize}
+                \item Unzuverlässige Messung $x = x[1],\dots,x[n]$
+                \item Unvollständige, aber dafür ausschließlich korrekte Messung $x^{\text{truth}}$
+                \item (Nur bei der Evaluierung: vollständige, korrekte Messung $x^{\text{truth*}}$)
             \end{itemize}
         \item Gesucht:
             \begin{itemize}
@@ -20,6 +21,197 @@
 \end{frame}
 
 \subsection{Anomalien}
+\begin{frame}[fragile]{\insertsubsection:\ Beispiel\ Eingabe}
+\begin{tikzpicture}
+\begin{axis}[width=.8\textwidth,
+   height=0.8\textheight,
+xlabel=Zeit,
+ylabel=Datenwert,
+legend pos=outer north east,
+xmin=0,
+ymin=5,
+xmax=12
+]
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+zeitpunkt wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x$}
+\addplot[only marks, red, mark size=5.0pt] table{
+zeitpunkt wert 
+1 6
+2 5.6
+3 5.4
+6 5.4
+12 8.5
+};
+\addlegendentry{$x^{\text{truth}}$}
+% if you have the file, you can do
+% \addplot table {datafile.csv};
+\end{axis}
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}[fragile]{\insertsubsection:\ Beispiel\ Eingabe \& Reperatur}
+\begin{tikzpicture}
+\begin{axis}[width=.8\textwidth,
+   height=0.8\textheight,
+xlabel=Zeit,
+ylabel=Datenwert,
+legend pos=outer north east,
+xmin=0,
+xmax=12,
+ymin=5
+]
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+zeitpunkt wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x$}
+\addplot[only marks, red, mark size=5.0pt] table{
+zeitpunkt wert 
+1 6
+2 5.6
+3 5.4
+6 5.4
+12 8.5
+};
+\addlegendentry{$x^{\text{truth}}$}
+    \addplot[olive,mark size=5.0pt, mark=x, line width=1.5pt] table{
+    zeitpunkt wert 
+    1 6
+    2 5.6
+    3 5.4
+    4 5.2
+    5 5.4
+    6 5.4
+    7 5.6
+    8 5.9
+    9 6.3
+    10 6.8
+    11 7.5
+    12 8.5
+    };
+    \addlegendentry{$y$}
+\end{axis}
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}[fragile]{\insertsubsection:\ Beispiel Eingabe \& Reparatur}
+\begin{tikzpicture}
+\begin{axis}[width=.8\textwidth,
+   height=0.8\textheight,
+xlabel=Zeit,
+ylabel=Datenwert,
+ymin=5,
+legend pos=outer north east,
+xmin=0,
+xmax=12
+]
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+zeitpunkt wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x$}
+\addplot[only marks, red, mark size=5.0pt] table{
+zeitpunkt wert 
+1 6
+2 5.6
+3 5.4
+6 5.4
+12 8.5
+};
+\addlegendentry{$x^{\text{truth}}$}
+    \addplot[olive,mark size=5.0pt, mark=x, line width=1.5pt] table{
+    zeitpunkt wert 
+    1 6
+    2 5.6
+    3 5.4
+    4 5.2
+    5 5.4
+    6 5.4
+    7 5.6
+    8 5.9
+    9 6.3
+    10 6.8
+    11 7.5
+    12 8.5
+    };
+    \addlegendentry{$y$}
+   \addplot[blue,mark size=5.0pt, line width=1.5pt] table{
+zeitpunkt wert 
+1 6
+2 5.6
+3 5.4
+4 5.2
+5 5.3
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x^{\text{truth*}}$}
+% if you have the file, you can do
+% \addplot table {datafile.csv};
+\end{axis}
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{\insertsubsection:\ Beispiel\ Zahlen \& Bewertung}
+  \begin{block}<+->{Zeitreihen vom Beispiel}
+    \begin{itemize}
+    \item $x =                 \{6, 10, 9.6, 8.3, 7.7, 5.4, 5.6, 5.9, 6.3, 6.8, 7.5, 8.5\}$
+    \item $x^{\text{truth}} =  \{6, 5.6, 5.4,  \_\_, \_\_,5.4, \_\_,\_\_,\_\_,\_\_,\_\_,8.5\}$
+    \item $y =  \{6, 5.6, 5.4, \underline{5.2, {\color{red}5.4}}, 5.4, \underline{5.6, 5.9, 6.3, 6.8, 7.5,} 8.5\}$
+    \item $x^{\text{truth*}} =  \{6, 5.6, 5.4,  \underline{5.2, {\color{red}5.3}}, 5.4,\underline{ 5.6, 5.9, 6.3, 6.8, 7.5}, 8.5\}$
+    \end{itemize}
+  \end{block}
+    \begin{block}{Bewertung des Beispiels}
+        \[\Delta(x^{\text{truth*}}, y) =\]
+        \[
+        \sqrt{\frac{1}{12} \left( (6 - 6)^2 + \dots +  (5.3 - 5.4)^2 + \dots + (8.5-8.5)^2\right) } \approx 0.03\]
+    \end{block}
+\end{frame}
+
+
+\subsection{Anomalienreparaturen}
 
 \begin{frame}{\insertsubsection}
   \begin{block}<+->{Anomalien}
@@ -27,7 +219,6 @@
       \item Wikipedia: Abweichung von der Regel
       \item Werte $x_i$ mit Abweichung $\tau$ (Bsp. $\tau = 2 \sigma$):\\
           \quad\quad$|x_i-x_i^{\text{truth*}}|>\tau$\\
-    \includegraphics[height=10cm,width=0.3\textwidth,keepaspectratio]{./plots/anom.pdf}
     \end{itemize}
   \end{block}
 \end{frame}
