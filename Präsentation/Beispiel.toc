@@ -8,14 +8,14 @@
 \beamer@subsectionintoc {2}{2}{Anomalien}{10}{0}{2}
 \beamer@subsectionintoc {2}{3}{Anomalienreparaturen}{14}{0}{2}
 \beamer@subsectionintoc {2}{4}{Reparatur durch Anomalienerkennung}{15}{0}{2}
-\beamer@sectionintoc {3}{Iterative Minimum Repairing}{17}{0}{3}
-\beamer@subsectionintoc {3}{1}{IMR}{18}{0}{3}
-\beamer@subsectionintoc {3}{2}{Optimierung 1: Matrix-Pruning IMR}{28}{0}{3}
-\beamer@sectionintoc {4}{Evaluierung}{30}{0}{4}
-\beamer@subsectionintoc {4}{1}{Ordnung}{31}{0}{4}
-\beamer@subsectionintoc {4}{2}{Schwellenwert}{32}{0}{4}
-\beamer@subsectionintoc {4}{3}{maximale Anzahl von Iterationen}{33}{0}{4}
-\beamer@subsectionintoc {4}{4}{Markierungsrate}{34}{0}{4}
-\beamer@sectionintoc {5}{Schluss}{35}{0}{5}
-\beamer@subsectionintoc {5}{1}{Zusammenfassung und Ausblick}{36}{0}{5}
-\beamer@subsectionintoc {5}{2}{Literatur}{38}{0}{5}
+\beamer@sectionintoc {3}{Iterative Minimum Repairing}{18}{0}{3}
+\beamer@subsectionintoc {3}{1}{IMR}{19}{0}{3}
+\beamer@subsectionintoc {3}{2}{Optimierung 1: Matrix-Pruning IMR}{29}{0}{3}
+\beamer@sectionintoc {4}{Evaluierung}{31}{0}{4}
+\beamer@subsectionintoc {4}{1}{Ordnung}{32}{0}{4}
+\beamer@subsectionintoc {4}{2}{Schwellenwert}{33}{0}{4}
+\beamer@subsectionintoc {4}{3}{maximale Anzahl von Iterationen}{34}{0}{4}
+\beamer@subsectionintoc {4}{4}{Markierungsrate}{35}{0}{4}
+\beamer@sectionintoc {5}{Schluss}{36}{0}{5}
+\beamer@subsectionintoc {5}{1}{Zusammenfassung und Ausblick}{37}{0}{5}
+\beamer@subsectionintoc {5}{2}{Literatur}{39}{0}{5}

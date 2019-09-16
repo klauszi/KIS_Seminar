@@ -218,7 +218,7 @@ zeitpunkt wert
     \begin{itemize}
       \item Wikipedia: Abweichung von der Regel
       \item Werte $x_i$ mit Abweichung $\tau$ (Bsp. $\tau = 2 \sigma$):\\
-          \quad\quad$|x_i-x_i^{\text{truth*}}|>\tau$\\
+          \quad\quad$|x_i-x_i^{\text{truth}}|>\tau$\\
     \end{itemize}
   \end{block}
 \end{frame}
@@ -250,8 +250,80 @@ zeitpunkt wert
             y_t'& \text{falls} \,\,kein\, Label\, und \,|y_t'-x_t|>\tau\\
             y_t              & \text{sonst}
           \end{cases}\]
-
-      \item Fakten
+      \item 
     \end{itemize}
   \end{block}
 \end{frame}
+
+\begin{frame}[fragile]{ARX Reparatur Beispiel}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+ARX(1) mit \\
+$p=1$, $\phi=0.5$ und $\tau=0.1$ \\ 
+$y_4'=8.3 + 0.5 \cdot (5.4 - 9.6)$ \\ 
+$y_4' = 6.2$\\
+$|6.2 - 8.3| = 2.1 > 0.1$\\
+$y_4=y_4'=6.2$
+\end{column}
+\begin{column}{0.6\textwidth}  %%<--- here
+ \begin{tikzpicture}
+\begin{axis}[width=\textwidth,
+   height=0.8\textheight,
+xlabel=Zeit,
+ylabel=Datenwert,
+ymin=5,
+xmin=0,
+xmax=12
+]
+\addplot[black, line width=2.0pt, mark size=2.0pt, mark=*]  table{
+zeitpunkt wert 
+1 6
+2 10
+3 9.6
+4 8.3
+5 7.7
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x$}
+\addplot[only marks, red, mark size=5.0pt] table{
+zeitpunkt wert 
+3 5.4
+};
+\addlegendentry{$x^{\text{truth}}$}
+    \addplot[olive,mark size=5.0pt, mark=x, line width=1.5pt] table{
+    zeitpunkt wert 
+    4 6.2 
+    };
+    \addlegendentry{$y$}
+   \addplot[blue,mark size=5.0pt, line width=1.5pt] table{
+zeitpunkt wert 
+1 6
+2 5.6
+3 5.4
+4 5.2
+5 5.3
+6 5.4
+7 5.6
+8 5.9
+9 6.3
+10 6.8
+11 7.5
+12 8.5
+};
+\addlegendentry{$x^{\text{truth*}}$}
+% if you have the file, you can do
+% \addplot table {datafile.csv};
+\end{axis}
+\end{tikzpicture}
+   
+\end{column}
+\end{columns}
+\end{frame}
+
+
