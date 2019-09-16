@@ -19,25 +19,47 @@
   \end{block}
 \end{frame}
 
-\subsection{Anomalienreparaturen}
+\subsection{Anomalien}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
+  \begin{block}<+->{Anomalien}
     \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten \cite{zhang17}
+      \item Wikipedia: Abweichung von der Regel
+      \item Werte $x_i$ mit Abweichung $\tau$ (Bsp. $\tau = 2 \sigma$):\\
+          \quad\quad$|x_i-x_i^{\text{truth*}}|>\tau$\\
+    \includegraphics[height=10cm,width=0.3\textwidth,keepaspectratio]{./plots/anom.pdf}
     \end{itemize}
   \end{block}
 \end{frame}
 
-\subsection{andere Verfahren}
+\subsection{Reparatur durch Anomalienerkennung}
 
-\begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
+\begin{frame}{Reparatur durch Anomalienerkennung}
+  \begin{block}<+->{Autoregressive Modell $AR(p)$}
     \begin{itemize}
-      \item Fakten
-      \item Fakten
+      \item Lineare Regression der letze $p$ Werte:\\
+        \[x_t'=\sum_{i=1}^{p}\phi_ix_{t-i}+\epsilon_t\]
+      \item Reparatur:
+        \[y_t= 
+          \begin{cases}
+            x_t'& \text{falls} \,\,kein\, Label\, und \,|x_t'-x_t|>\tau\\
+            x_t              & \text{sonst}
+          \end{cases}\]
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{Reparatur durch Anomalienerkennung}
+  \begin{block}<+->{Autoregressives exogenes Modell $ARX(p)$}
+    \begin{itemize}
+      \item Exogenes Variabel $y$\\
+      \[y_t'=x_t+\sum_{i=1}^{p}\phi_i(y_{t-i}-x_{t-i})+\epsilon_t\]
+      \item $y_t'$ Mögliche Reparatur:
+        \[y_t= 
+          \begin{cases}
+            y_t'& \text{falls} \,\,kein\, Label\, und \,|y_t'-x_t|>\tau\\
+            y_t              & \text{sonst}
+          \end{cases}\]
+
       \item Fakten
     \end{itemize}
   \end{block}
