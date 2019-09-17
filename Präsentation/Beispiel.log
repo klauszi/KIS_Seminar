@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.10.7)  16 SEP 2019 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.10.7)  17 SEP 2019 10:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,27 +1081,27 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 )))
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 29.
+(hyperref)                removing `\\' on input line 47.
 
 (./Beispiel.aux (./Einleitung.aux) (./Grundlagen.aux) (./IMR.aux)
 (./Evaluierung.aux) (./Schluss.aux))
 \openout1 = `Beispiel.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1172,7 +1172,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box84
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1182,60 +1182,60 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count183
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
 
 (./Beispiel.out) (./Beispiel.out)
 \@outlinefile=\write5
 \openout5 = `Beispiel.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 63.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 81.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 63.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 81.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 63.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 81.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 63.
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 81.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 63.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 81.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 63.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 63.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 81.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 63.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 63.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 81.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 63.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 63.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 81.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 63.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 63.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 81.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 63.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 81.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 63.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmr/bx/n on input line 63.
+(Font)                  OT1/lmss/bx/n --> T1/lmr/bx/n on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 63.
+(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 63.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 63.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 81.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 63.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1261,84 +1261,84 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 63.
+LaTeX Info: Redefining \includegraphics on input line 81.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into 
 your preamble.
- on input line 63.
+ on input line 81.
 
-(./Beispiel.nav) <vsis.pdf, id=97, 774.57924pt x 774.62788pt>
+(./Beispiel.nav) <vsis.pdf, id=93, 774.57924pt x 774.62788pt>
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 63.
+Package pdftex.def Info: vsis.pdf used on input line 81.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 
-<uhh.pdf, id=98, 96.36pt x 97.36375pt>
+<uhh.pdf, id=94, 96.36pt x 97.36375pt>
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 63.
+Package pdftex.def Info: uhh.pdf used on input line 81.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
 
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 65--65
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 83--83
 []| []  
  []
 
 File: vsis.pdf Graphic file (type pdf)
 <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 65.
+Package pdftex.def Info: vsis.pdf used on input line 83.
 (pdftex.def)             Requested size: 42.66699pt x 42.67912pt.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 65.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 83.
 
  (/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 65.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 83.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 65.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 83.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 65.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 83.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 65.
+(Font)              <10.95> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 65.
+(Font)              <8> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 65.
-LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+(Font)              <6> on input line 83.
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 65.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 65.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 65.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 83.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 65.
+Package pdftex.def Info: uhh.pdf used on input line 83.
 (pdftex.def)             Requested size: 42.23825pt x 42.67912pt.
 
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 65--65
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 83--83
 []| [][]  
  []
 
@@ -1348,11 +1348,11 @@ Overfull \hbox (14.22636pt too wide) in paragraph at lines 65--65
  <./uhh.pdf>] (./Beispiel.toc)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 69.
+Package pdftex.def Info: vsis.pdf used on input line 87.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 69.
+Package pdftex.def Info: uhh.pdf used on input line 87.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [2
 
@@ -1363,17 +1363,17 @@ Package pdftex.def Info: uhh.pdf used on input line 69.
 (./Einleitung.tex (./Beispiel.toc)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 1.
+Package pdftex.def Info: vsis.pdf used on input line 3.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 1.
+Package pdftex.def Info: uhh.pdf used on input line 3.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [3
 
 
 ]
-<GPS_Motivation_Example.png, id=304, 329.7921pt x 98.769pt>
+<GPS_Motivation_Example.png, id=353, 329.7921pt x 98.769pt>
 File: GPS_Motivation_Example.png Graphic file (type png)
 
 <use GPS_Motivation_Example.png>
@@ -1406,7 +1406,7 @@ Package pdftex.def Info: uhh.pdf used on input line 39.
  [5
 
 ]
-<markierte_GPS_Motivation_Example.png, id=397, 329.7921pt x 98.769pt>
+<markierte_GPS_Motivation_Example.png, id=475, 329.7921pt x 98.769pt>
 File: markierte_GPS_Motivation_Example.png Graphic file (type png)
 
 <use markierte_GPS_Motivation_Example.png>
@@ -1424,7 +1424,19 @@ Package pdftex.def Info: uhh.pdf used on input line 52.
 
 [6
 
- <./markierte_GPS_Motivation_Example.png>]
+ <./markierte_GPS_Motivation_Example.png>] (./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 56.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+
+<use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 56.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [7
+
+]
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
 Package pdftex.def Info: vsis.pdf used on input line 73.
@@ -1433,22 +1445,22 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 73.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
-
-[7
+ [8
 
 ])
 \openout2 = `Grundlagen.aux'.
 
- (./Grundlagen.tex (./Beispiel.toc)
+ (./Grundlagen.tex
+(./Beispiel.toc)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 1.
+Package pdftex.def Info: vsis.pdf used on input line 3.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 1.
+Package pdftex.def Info: uhh.pdf used on input line 3.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [8
+ [9
 
 
 
@@ -1466,27 +1478,12 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 21.
 File: vsis.pdf Graphic file (type pdf)
-
-<use vsis.pdf>
+ <use vsis.pdf>
 Package pdftex.def Info: vsis.pdf used on input line 21.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 21.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [9
-
-]
-\openout4 = `Beispiel.vrb'.
-
- (./Beispiel.vrb)
-File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 64.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 64.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
 
 [10
@@ -1497,11 +1494,11 @@ Package pdftex.def Info: uhh.pdf used on input line 64.
  (./Beispiel.vrb)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 120.
+Package pdftex.def Info: vsis.pdf used on input line 63.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 120.
+Package pdftex.def Info: uhh.pdf used on input line 63.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [11
 
@@ -1512,135 +1509,170 @@ Package pdftex.def Info: uhh.pdf used on input line 120.
 File: vsis.pdf Graphic file (type pdf)
 
 <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 195.
+Package pdftex.def Info: vsis.pdf used on input line 119.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 195.
+Package pdftex.def Info: uhh.pdf used on input line 119.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [12
 
 ]
+\openout4 = `Beispiel.vrb'.
+
+ (./Beispiel.vrb)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 211.
+Package pdftex.def Info: vsis.pdf used on input line 194.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 211.
+
+<use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 194.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [13
 
 ]
 File: vsis.pdf Graphic file (type pdf)
-
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 224.
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 210.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 224.
+Package pdftex.def Info: uhh.pdf used on input line 210.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [14
 
-]
+] (./Beispiel.toc)
 File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 241.
+
+<use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 213.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 241.
+Package pdftex.def Info: uhh.pdf used on input line 213.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [15
 
 ]
 File: vsis.pdf Graphic file (type pdf)
-
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 256.
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 223.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 256.
+Package pdftex.def Info: uhh.pdf used on input line 223.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [16
 
 ]
-\openout4 = `Beispiel.vrb'.
-
- (./Beispiel.vrb
-Overfull \hbox (6.57582pt too wide) in paragraph at lines 11--67
-[][]  
- []
-
-)
 File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 326.
+
+<use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 237.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 326.
+Package pdftex.def Info: uhh.pdf used on input line 237.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [17
 
 ]
-Overfull \vbox (0.57932pt too high) detected at line 353
- []
-
 File: vsis.pdf Graphic file (type pdf)
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 353.
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 252.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 353.
+Package pdftex.def Info: uhh.pdf used on input line 252.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [18
 
 ]
-Overfull \vbox (0.57932pt too high) detected at line 353
+\openout4 = `Beispiel.vrb'.
+
+
+(./Beispiel.vrb
+Overfull \hbox (6.57582pt too wide) in paragraph at lines 13--69
+[][]  
  []
 
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 324.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 324.
 File: vsis.pdf Graphic file (type pdf)
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 353.
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 324.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 353.
+Package pdftex.def Info: uhh.pdf used on input line 324.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [19
 
-]
-Overfull \vbox (0.57932pt too high) detected at line 353
- []
-
-File: vsis.pdf Graphic file (type pdf)
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 353.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 353.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [20
-
-])
-\openout2 = `IMR.aux'.
-
- (./IMR.tex (./Beispiel.toc)
+] (./Beispiel.toc)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 1.
+Package pdftex.def Info: vsis.pdf used on input line 325.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
 
 <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 1.
+Package pdftex.def Info: uhh.pdf used on input line 325.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [20
+
+]
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 347.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 347.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [21
+
+]
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 347.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+
+<use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 347.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [22
+
+]
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 354.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 354.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [23
+
+])
+\openout2 = `IMR.aux'.
+
+ (./IMR.tex
+(./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 3.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 3.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [24
 
 
 
@@ -1650,10 +1682,11 @@ File: vsis.pdf Graphic file (type pdf)
 Package pdftex.def Info: vsis.pdf used on input line 18.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
+
+<use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 18.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [22
+ [25
 
 ]
 \openout4 = `Beispiel.vrb'.
@@ -1670,7 +1703,7 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 37.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [23
+ [26
 
 ]
 \openout4 = `Beispiel.vrb'.
@@ -1687,24 +1720,22 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 56.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [24
+ [27
 
 ]
 \openout4 = `Beispiel.vrb'.
 
  (./Beispiel.vrb)
-Overfull \vbox (6.99391pt too high) detected at line 116
- []
-
 File: vsis.pdf Graphic file (type pdf)
-<use vsis.pdf>
+ <use vsis.pdf>
 Package pdftex.def Info: vsis.pdf used on input line 116.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
+
+<use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 116.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [25
+ [28
 
 ]
 \openout4 = `Beispiel.vrb'.
@@ -1721,24 +1752,22 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 135.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [26
+ [29
 
 ]
 \openout4 = `Beispiel.vrb'.
 
  (./Beispiel.vrb)
-Overfull \vbox (5.72437pt too high) detected at line 195
- []
-
 File: vsis.pdf Graphic file (type pdf)
-<use vsis.pdf>
+ <use vsis.pdf>
 Package pdftex.def Info: vsis.pdf used on input line 195.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
+
+<use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 195.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [27
+ [30
 
 ]
 \openout4 = `Beispiel.vrb'.
@@ -1755,7 +1784,7 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 214.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [28
+ [31
 
 ]
 \openout4 = `Beispiel.vrb'.
@@ -1770,7 +1799,7 @@ File: uhh.pdf Graphic file (type pdf)
 <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 279.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [29
+ [32
 
 ]
 \openout4 = `Beispiel.vrb'.
@@ -1787,7 +1816,7 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 298.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [30
+ [33
 
 ]
 File: vsis.pdf Graphic file (type pdf)
@@ -1798,61 +1827,94 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 312.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [31
-
-]
-File: vsis.pdf Graphic file (type pdf)
-
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 329.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 329.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [32
-
-]
-File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 335.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 335.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [33
-
-])
-\openout2 = `Evaluierung.aux'.
-
-
-(./Evaluierung.tex (./Beispiel.toc)
-File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 1.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 1.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [34
 
-
-
 ]
+(./Beispiel.toc)
 File: vsis.pdf Graphic file (type pdf)
-
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 13.
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 314.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 13.
+Package pdftex.def Info: uhh.pdf used on input line 314.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [35
 
 ]
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 329.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+
+<use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 329.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [36
+
+]
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 384.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 384.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [37
+
+])
+\openout2 = `Evaluierung.aux'.
+
+ (./Evaluierung.tex
+File: GPS_Motivation_Example.png Graphic file (type png)
+
+<use GPS_Motivation_Example.png>
+Package pdftex.def Info: GPS_Motivation_Example.png used on input line 12.
+(pdftex.def)             Requested size: 335.74263pt x 100.55313pt.
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 12.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 12.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [38
+
+
+
+]
+(./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 14.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 14.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [39
+
+]
+<../plots/varying_order_p.png, id=2491, 1240.635pt x 545.03625pt>
+File: ../plots/varying_order_p.png Graphic file (type png)
+
+<use ../plots/varying_order_p.png>
+Package pdftex.def Info: ../plots/varying_order_p.png used on input line 23.
+(pdftex.def)             Requested size: 335.74263pt x 147.49442pt.
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 23.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 23.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [40
+
+ <../plots/varying_order_p.png>] (./Beispiel.toc)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
 Package pdftex.def Info: vsis.pdf used on input line 25.
@@ -1861,73 +1923,137 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 25.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [36
-
-]
-File: vsis.pdf Graphic file (type pdf)
-
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 37.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 37.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [37
-
-]
-File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 49.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 49.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [38
-
-])
-\openout2 = `Schluss.aux'.
-
-
-(./Schluss.tex (./Beispiel.toc)
-File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 1.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 1.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [39
-
-
-
-]
-File: vsis.pdf Graphic file (type pdf)
-
-<use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 16.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 16.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [40
-
-]
-File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 16.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 16.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [41
 
 ]
-(./Beispiel.bbl)
+<../plots/varying_threshold.png, id=2618, 1228.59pt x 553.06625pt>
+File: ../plots/varying_threshold.png Graphic file (type png)
+
+<use ../plots/varying_threshold.png>
+Package pdftex.def Info: ../plots/varying_threshold.png used on input line 34.
+(pdftex.def)             Requested size: 335.74263pt x 151.13585pt.
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 34.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 34.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [42
+
+ <../plots/varying_threshold.png>] (./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 36.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 36.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [43
+
+]
+<../plots/varying_maximum_number.png, id=2745, 1310.8975pt x 532.99126pt>
+File: ../plots/varying_maximum_number.png Graphic file (type png)
+
+<use ../plots/varying_maximum_number.png>
+Package pdftex.def Info: ../plots/varying_maximum_number.png used on input line
+ 45.
+(pdftex.def)             Requested size: 335.74263pt x 136.50873pt.
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 45.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 45.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [44
+
+ <../plots/varying_maximum_number.png>] (./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 47.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+
+<use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 47.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [45
+
+]
+<../plots/varying_labeling_rate.png, id=2871, 1268.74pt x 566.115pt>
+File: ../plots/varying_labeling_rate.png Graphic file (type png)
+
+<use ../plots/varying_labeling_rate.png>
+Package pdftex.def Info: ../plots/varying_labeling_rate.png used on input line 
+56.
+(pdftex.def)             Requested size: 335.74263pt x 149.8038pt.
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 56.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 56.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [46
+
+ <../plots/varying_labeling_rate.png>])
+\openout2 = `Schluss.aux'.
+
+ (./Schluss.tex (./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+
+<use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 3.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 3.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [47
+
+
+
+]
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 16.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 16.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [48
+
+]
+File: vsis.pdf Graphic file (type pdf)
+
+<use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 16.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 16.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [49
+
+] (./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 20.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+
+<use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 20.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [50
+
+] (./Beispiel.bbl)
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
 Package pdftex.def Info: vsis.pdf used on input line 29.
@@ -1936,7 +2062,7 @@ File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 29.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [42
+ [51
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonbook.pdf>])
 \tf@nav=\write6
@@ -1948,72 +2074,43 @@ Package pdftex.def Info: uhh.pdf used on input line 29.
 \tf@snm=\write8
 \openout8 = `Beispiel.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
  (./Beispiel.aux (./Einleitung.aux) (./Grundlagen.aux) (./IMR.aux) (./Evaluieru
-ng.aux) (./Schluss.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
-
-
-Package rerunfilecheck Warning: File `Beispiel.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Beispiel.out':
-(rerunfilecheck)             Before: 3C56B940DBC46C0205A04225E821F5AC;1188
-(rerunfilecheck)             After:  B5D60A373FC62CAC292EA68DC74AB9D5;1188.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
+ng.aux)
+(./Schluss.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package rerunfilecheck Info: File `Beispiel.out' has not changed.
+(rerunfilecheck)             Checksum: 25C93F6E21CCC49E3FDF80BA282B0864;1133.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 33606 strings out of 493064
- 815935 string characters out of 6138159
- 1043985 words of memory out of 5000000
- 36240 multiletter control sequences out of 15000+600000
- 75314 words of font info for 65 fonts, out of 8000000 for 9000
+ 33701 strings out of 493064
+ 817805 string characters out of 6138159
+ 1057456 words of memory out of 5000000
+ 36298 multiletter control sequences out of 15000+600000
+ 81929 words of font info for 71 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 72i,24n,112p,738b,2428s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Outline0.5.2.41} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.5.1.39} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.4.4.37} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.4.3.36} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.4.2.35} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.4.1.34} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.3.2.31} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.3.1.21} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive
-/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fon
-ts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-
-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/lm/lmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/lm/lmsso10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/lm/lmsso8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Beispiel.pdf (42 pages, 2771925 bytes).
+ 72i,24n,112p,738b,2430s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texli
+ve/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts
+/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/l
+m-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</
+usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/lm/lmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/lm/lmsso10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/lm/lmsso12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lms
+so8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Beispiel.pdf (51 pages, 3164423 bytes).
 PDF statistics:
- 2133 PDF objects out of 2487 (max. 8388607)
- 1993 compressed objects within 20 object streams
- 114 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3319 PDF objects out of 3580 (max. 8388607)
+ 3134 compressed objects within 32 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

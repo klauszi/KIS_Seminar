@@ -210,7 +210,7 @@ zeitpunkt wert
 \end{frame}
 
 
-\subsection{Anomalienreparaturen}
+\subsection{Reparatur durch Anomalienerkennung}
 
 \begin{frame}{\insertsubsection}
   \begin{block}<+->{Anomalien}
@@ -221,9 +221,6 @@ zeitpunkt wert
     \end{itemize}
   \end{block}
 \end{frame}
-
-\subsection{Reparatur durch Anomalienerkennung}
-
 \begin{frame}{Reparatur durch Anomalienerkennung}
   \begin{block}<+->{Autoregressive Modell $AR(p)$}
     \begin{itemize}
@@ -254,15 +251,17 @@ zeitpunkt wert
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{ARX Reparatur Beispiel}
+\begin{frame}[fragile]{$ARX(1)$ Reparatur Beispiel}
 \begin{columns}
 \begin{column}{0.4\textwidth}
-ARX(1) mit \\
+\begin{block}{Autoregressives exogenes Modell $ARX(p)$}
+$ARX(1)$ mit \\
 $p=1$, $\phi=0.5$ und $\tau=0.1$ \\ 
 $y_4'=8.3 + 0.5 \cdot (5.4 - 9.6)$ \\ 
 $y_4' = 6.2$\\
 $|6.2 - 8.3| = 2.1 > 0.1$\\
 $y_4=y_4'=6.2$
+\end{block}
 \end{column}
 \begin{column}{0.6\textwidth}  %%<--- here
  \begin{tikzpicture}
@@ -323,7 +322,8 @@ zeitpunkt wert
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}{Andere Reparaturen}
+\subsection{Andere Reparatur Methoden}
+\begin{frame}{Glättungsverfahren}
   \begin{block}<+->{Gleitender Mittelwert}
     \begin{itemize}
       \item 
@@ -338,12 +338,14 @@ zeitpunkt wert
   \[
     v_j = \sum_{i=0}^{n}(\beta-1)\beta^{i}x_{j-i}\quad j \in \{k,..,n\}
   \]
-  as
+    \item Effizient durch Dynamischesprogrammierung:
   \[
    v_j = \beta v_{j-1} + (1-\beta)x_j \quad mit\,\, V_0=0
   \]
     \end{itemize}
   \end{block}
+\end{frame}
+\begin{frame}{Bedingung basiert Verfahren}
   \begin{block}<+->{SCREEN}
     \begin{itemize}
       \item 

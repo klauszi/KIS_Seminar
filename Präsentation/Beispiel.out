@@ -1,19 +1,18 @@
 \BOOKMARK [2][]{Outline0.1}{Einf\374hrung}{}% 1
-\BOOKMARK [3][]{Outline0.1.1.4}{Motivation}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.1.3}{Motivation}{Outline0.1}% 2
 \BOOKMARK [3][]{Outline0.1.2.7}{Zielsetzung}{Outline0.1}% 3
 \BOOKMARK [2][]{Outline0.2}{Grundlagen}{}% 4
 \BOOKMARK [3][]{Outline0.2.1.9}{Problemstellung}{Outline0.2}% 5
-\BOOKMARK [3][]{Outline0.2.2.10}{Anomalien}{Outline0.2}% 6
-\BOOKMARK [3][]{Outline0.2.3.14}{Anomalienreparaturen}{Outline0.2}% 7
-\BOOKMARK [3][]{Outline0.2.4.15}{Reparatur durch Anomalienerkennung}{Outline0.2}% 8
-\BOOKMARK [2][]{Outline0.3}{Iterative Minimum Repairing}{}% 9
-\BOOKMARK [3][]{Outline0.3.1.22}{IMR}{Outline0.3}% 10
-\BOOKMARK [3][]{Outline0.3.2.32}{Optimierung 1: Matrix-Pruning IMR}{Outline0.3}% 11
-\BOOKMARK [2][]{Outline0.4}{Evaluierung}{}% 12
-\BOOKMARK [3][]{Outline0.4.1.35}{Ordnung}{Outline0.4}% 13
-\BOOKMARK [3][]{Outline0.4.2.36}{Schwellenwert}{Outline0.4}% 14
-\BOOKMARK [3][]{Outline0.4.3.37}{maximale Anzahl von Iterationen}{Outline0.4}% 15
-\BOOKMARK [3][]{Outline0.4.4.38}{Markierungsrate}{Outline0.4}% 16
-\BOOKMARK [2][]{Outline0.5}{Schluss}{}% 17
-\BOOKMARK [3][]{Outline0.5.1.40}{Zusammenfassung und Ausblick}{Outline0.5}% 18
-\BOOKMARK [3][]{Outline0.5.2.42}{Literatur}{Outline0.5}% 19
+\BOOKMARK [3][]{Outline0.2.2.15}{Reparatur durch Anomalienerkennung}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.3.20}{Andere Reparatur Methoden}{Outline0.2}% 7
+\BOOKMARK [2][]{Outline0.3}{Iterative Minimum Repairing}{}% 8
+\BOOKMARK [3][]{Outline0.3.1.24}{IMR}{Outline0.3}% 9
+\BOOKMARK [3][]{Outline0.3.2.35}{Optimierung 1: Matrix-Pruning IMR}{Outline0.3}% 10
+\BOOKMARK [2][]{Outline0.4}{Evaluierung}{}% 11
+\BOOKMARK [3][]{Outline0.4.1.39}{Ordnung}{Outline0.4}% 12
+\BOOKMARK [3][]{Outline0.4.2.41}{Schwellenwert}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.3.43}{Maximale Anzahl von Iterationen}{Outline0.4}% 14
+\BOOKMARK [3][]{Outline0.4.4.45}{Markierungsrate}{Outline0.4}% 15
+\BOOKMARK [2][]{Outline0.5}{Schluss}{}% 16
+\BOOKMARK [3][]{Outline0.5.1.47}{Zusammenfassung und Ausblick}{Outline0.5}% 17
+\BOOKMARK [3][]{Outline0.5.2.50}{Literatur}{Outline0.5}% 18
