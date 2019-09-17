@@ -17,7 +17,25 @@
 \AtBeginPart{\frame{\partpage}}
 
 % Vor jedem neuen Abschnitt (\section) eine Folie mit Gliederung für diesen Abschnitt zeigen
-\AtBeginSection{\frame{\frametitle{\insertsection}\tableofcontents[currentsection,hideothersubsections]}}
+% \AtBeginSubsection{\frame{\frametitle{\insertsection}\tableofcontents[currentsection,hideothersubsections]}}
+
+\AtBeginSubsection[
+  {\frame<beamer>{\frametitle{Outline}
+    \tableofcontents[
+     currentsection,
+        currentsubsection,
+        subsectionstyle=show/shaded/hide
+    ]}}]%
+{
+  \frame<beamer>{
+    \frametitle{Überblick}
+    \tableofcontents[
+     currentsection,
+        currentsubsection,
+        subsectionstyle=show/shaded/hide
+]}
+}
+
 
 % für Grafik-Beispiel:
 \usepackage{tikz}
