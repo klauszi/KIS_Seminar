@@ -253,8 +253,7 @@ zeitpunkt wert
 \begin{frame}[fragile]{$ARX(1)$ Reparatur Beispiel}
 \begin{columns}
 \begin{column}{0.4\textwidth}
-\begin{block}{Autoregressives exogenes Modell $ARX(p)$}
-$ARX(1)$ mit \\
+\begin{block}{$ARX(1)$ Reparatur Beispiel}
 $p=1$, $\phi=0.5$ und $\tau=0.1$ \\ 
 $y_4'=8.3 + 0.5 \cdot (5.4 - 9.6)$ \\ 
 $y_4' = 6.2$\\
@@ -364,7 +363,7 @@ y-x &= \{0, -4.4, -4.2, 0, 0, 0, 0, 0, 0, 0, 0\}\\
 \begin{frame}{Glättungsverfahren}
   \begin{block}<+->{Gleitender Mittelwert}
     \begin{itemize}
-      \item Reparatur alle Werte durch $y_i$
+      \item Reparatur alle Werte durch $y_j$
       \[
     y_j = \frac{1}{k}\sum_{i=1}^{k}x_{j-i} \quad j \in \{k,..,n\}
       \] 

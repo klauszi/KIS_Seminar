@@ -382,4 +382,75 @@ Zeitpunkt Wert
         \]
     \end{block}
 \end{frame}
+\subsection{Optimierung 2: Inkrementelle Berechnung}
+\begin{frame}{Inkrementelle Berechnung (IMR-IC)}
+\begin{block}<-+>{Intuition}
+\begin{itemize}
+\item IMR Algorithmus berechnet $\phi^k$ in jede Iteration $k$
+\[\phi^k \leftarrow  Estimate(x , y^k)\]
+\item Minimum-Change-Prinzip, ein Wert $r$ wird geändert 
+\[y^k_r\neq y^{k-1}_r\]
+\item Fast alle Werte in $Z^k,Z^{k-1}$ und $V^k, V^{k-1}$ bleiben unverändert
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}{Inkrementelle Berechnung (IMR-IC)}
+\begin{block}{Rekursive Formel}
+Sei $\phi^{(k)} = (A^{(k)})^{-1}B^{(k)}$ mit $A^{(k)}=(Z^{(k)})'Z^{(k)}$ und $B^{(k)}=(Z^{(k)})'V^{(k)}$
+\end{block}
+\begin{block}{Fall: $1\leq i \leq p$}
+\[a_{ii}^{(k)}=a_{ii}^{(k-1)} + \begin{cases}
+0 &falls\, r<p+1-i\vee r>n-i\\
+z_r^{(k)}z_r^{(k)}-z_r^{(k-1)}z_r^{(k-1)} &falls\, p+1-i\leq r\leq n-i
+\end{cases}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Inkrementelle Berechnung (IMR-IC)}
+\begin{block}{Fall: $1\leq i \leq p$, $1\leq j \leq p$, $i<j$}
+\[a_{ij}^{(k)}=a_{ji}^{(k)}=a_{ij}^{(k-1)}+ (z_r^{(k)}-z_r^{(k-1)}) \times\]
+\[
+\begin{cases}
+0 &falls\, r<p+1-j\vee r>n-i\\
+z_{r+j-i}^{(k-1)}&falls\, p+1-j\leq r < p+1-i\\
+z_{r-j+i}^{(k-1)}&falls\, n-j<r\leq n-i\\
+(z_{r+j-i}^{(k-1)} + z_{r-j+i}^{(k-1)})&falls\, p+1-i\leq r\leq n-i
+\end{cases}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Inkrementelle Berechnung (IMR-IC)}
+\begin{block}{Fall: $1\leq i \leq p$}
+\[b_{i}^{(k)}=b_{i}^{(k-1)}+ (z_r^{(k)}-z_r^{(k-1)}) \times\]
+\[
+\begin{cases}
+0 &falls\, r<p+1-i\vee r>n-i\\
+z_{r+i}^{(k-1)}&falls\, p+1-i\leq r < p+1\\
+z_{r-i}^{(k-1)}&falls\, r> n-i\\
+(z_{r+i}^{(k-1)} + z_{r-i}^{(k-1)})&falls\, p+1\leq r\leq n-i
+\end{cases}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Rekursive Algorithmus}
+    \begin{algorithm}[H]
+    \begin{algorithmic}[1]
+\STATE \textbf{Eingabe}: Messung $x$, Reparatur/Label $y$
+\STATE \textbf{Ausgabe}: $\phi^{(k)}$
+        \IF{$k=0$}
+            \STATE Init $A^{(0)}$,$B^{(0)}$ mit $Z^{(0)}$, $V^{(0)}$
+        \ELSE
+            \STATE $r$ Index $y_r^{(k)}\neq y_r^{(k-1)}$ 
+            \STATE Erstelle $A^{(k)}$, $B^{(k)}$ mit hilfe von $A^{(k-1)}$ und $B^{(k-1)}$ nach rekursive Formeln
+        \ENDIF
+        \STATE $\phi^{(k)}$ $\gets$ $(A^{(k)})^{-1}B^{(k)}$ 
+\RETURN $\phi^{(k)}$
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+
 
