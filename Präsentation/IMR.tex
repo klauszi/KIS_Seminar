@@ -2,15 +2,15 @@
 
 \subsection{IMR}
 
-\begin{frame}
+\begin{frame}{\insertsubsection\ Intuition}
     \begin{block}{Intuitiver Ansatz von IMR}
         \begin{itemize}
             \item ARX nutzt markierte Werte effizient, \textbf{aber} verändert die Werte zu drastisch.
             \item IMR Ansatz:
                 \begin{enumerate}
                     \item Wende ARX an
-                    \item Wähle Reparaturwert aus mit minimalen Abstand zur Messung
-                    \item Wiederhole Prozedur
+                    \item Wähle \textbf{einen} Reparaturwert mit minimalen Abstand zur Messung
+                    \item Wiederhole Prozedur bis aktuelle Reparatur sich nicht signifkant ändert
                 \end{enumerate}
             \item Motivation: Reparierte Werte verbessern zukünftige Reparaturen 
         \end{itemize}
@@ -61,7 +61,7 @@
     \end{block}
     \begin{tikzpicture}
 \begin{axis}[width=.8\textwidth,
-   height=.5\textwidth,
+   height=.4\textwidth,
 xlabel=Zeitpunkt,
 ylabel=Datenpunkt,
 legend pos=outer north east,
@@ -138,7 +138,7 @@ zeitpunkt wert
     \begin{block}{Kandidaten}
         \begin{itemize}
             \item Parameterschätzung $\phi$: aktuelle Reparatur $y^{(k)}$ wird als $x^{\text{truth}}$ interpretiert.
-            \item Reparatur sind Kandidaten $\hat{y}$ (angewendetes ARX kennt vorangegangene Aktualisierung nicht)
+            \item Kandidaten $\hat{y}$ sind neue Reparaturwerte
         \end{itemize}
     \end{block}
 \begin{tikzpicture}
@@ -217,7 +217,7 @@ Zeitpunkt Wert
     \begin{block}{Minimum-Change}
         \begin{itemize}
             \item Zu geringe Änderungen werden herausgefiltert $|y^{(k)}_i - \hat{y}_i| > \tau$
-            \item Geringste Änderung zu Messung $x$ wird als Kandidaten herangezogen
+            \item Geringste Änderung zu Messung $x$ wird als Kandidat ausgewählt
         \end{itemize}
     \end{block}
 \begin{tikzpicture}
@@ -313,9 +313,9 @@ Zeitpunkt Wert
 
 \subsection{Optimierung 1: Matrix-Pruning IMR}
 \begin{frame}{Motivation von Matrix-Pruning IMR}
-    \begin{block}{Laufzeitproblem}
+    \begin{block}{Laufzeit- \& Platzproblem}
         \begin{itemize}
-            \item Parameterschätzung beansprucht viel Zeit 
+            \item Parameterschätzung beansprucht viel Zeit und Platz
             \item Matrizen V und Z bestehen aus $y_i^{(k)} - x_i$:
                 \begin{itemize}
                     \item wenige markierte Werte vorhanden
@@ -330,7 +330,56 @@ Zeitpunkt Wert
 
 \begin{frame}{Matrix Pruning IMR Beispiel}
     \begin{block}{Beispiel}
-        Beispiel
+        Zeilen mit 0en in Z und entsprechende Zeile in V sind entfernbar:
+        \[
+            Z =
+            \left(
+\begin{array}{c}
+0\\
+-4.4\\
+-4.2\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+\end{array}
+\right)
+            V =
+            \left(
+\begin{array}{c}
+-4.4\\
+-4.2\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+\end{array}
+\right)
+\rightarrow
+            Z_{mp} =
+            \left(
+\begin{array}{c}
+-4.4\\
+-4.2\\
+\end{array}
+\right)
+            V_{mp} =
+            \left(
+\begin{array}{c}
+-4.2\\
+0\\
+\end{array}
+        \right)
+        \]
     \end{block}
 \end{frame}
 
