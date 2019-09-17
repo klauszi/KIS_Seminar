@@ -224,7 +224,7 @@ zeitpunkt wert
 \begin{frame}{Reparatur durch Anomalienerkennung}
   \begin{block}<+->{Autoregressive Modell $AR(p)$}
     \begin{itemize}
-      \item Lineare Regression der letze $p$ Werte:\\
+      \item Prädiktion aus den vorangegangen $p$ Werte:\\
         \[x_t'=\sum_{i=1}^{p}\phi_ix_{t-i}+\epsilon_t\]
       \item Reparatur:
         \[y_t= 
@@ -246,7 +246,6 @@ zeitpunkt wert
             y_t'& \text{falls} \,\,kein\, Label\, und \,|y_t'-x_t|>\tau\\
             y_t              & \text{sonst}
           \end{cases}\]
-      \item 
     \end{itemize}
   \end{block}
 \end{frame}
@@ -291,11 +290,16 @@ zeitpunkt wert
 \addlegendentry{$x$}
 \addplot[only marks, red, mark size=5.0pt] table{
 zeitpunkt wert 
+1 6
+2 5.6
 3 5.4
 };
 \addlegendentry{$x^{\text{truth}}$}
     \addplot[olive,mark size=5.0pt, mark=x, line width=1.5pt] table{
     zeitpunkt wert 
+    1 6
+    2 5.6
+    3 5.4
     4 6.2 
     };
     \addlegendentry{$y$}
@@ -322,11 +326,45 @@ zeitpunkt wert
 \end{column}
 \end{columns}
 \end{frame}
+\begin{frame}{Parameter Abschätzung}
+  \begin{block}<+->{AR(1)}
+      \[
+      X_t = \phi X_{t-1} + \epsilon_t
+      \]
+  \end{block}
+  \begin{block}<+->{Kleinste Quadrate Schätzung}
+      \begin{align}
+      \frac{\partial }{\partial \phi}\sum_{k=2}^{n}(X_k-\phi X_{k-1})^2&=2\sum_{k=2}^{n}(X_k-\phi X_{k-1})(-X_{k-1})
+      \end{align}
+ \end{block}
+\end{frame}
+\begin{frame}{Parameter Abschätzung}
+  \begin{block}<+->{Kleinste Quadrate Schätzung}
+      \begin{align*}
+        2\sum_{k=2}^{n}(X_k-\phi X_{k-1})(-X_{k-1})&=0\\
+        \sum_{k=2}^{n}(-X_kX_{k-1}+\phi X_{k-1}^2)&=0\\
+        -\sum_{k=2}^{n}X_kX_{k-1}+\sum_{k=2}^{n}\phi X_{k-1}^2)&=0\\
+        +\sum_{k=2}^{n}\phi X_{k-1}^2&=\sum_{k=2}^{n}X_kX_{k-1}\\
+        \hat{\phi}&=\frac{\sum_{k=2}^{n}X_kX_{k-1}}{\sum_{k=2}^{n}
+        X_{k-1}^2}
+      \end{align*}
+  \end{block}
+\end{frame}
+\begin{frame}{Parameter Abschätzung $p=1$}
+\begin{block}{Beispiel}
+\begin{align*}
+x&=\{6, 10, 9.6, 8.3, 7.7, 5.4, 5.6, 5.9, 6.3, 6.8, 7.5, 8.5\}\\
+y&=\{6, 5.6, 5.4, 8.3, 7.7, 5.4, 5.6, 5.9, 6.3, 6.8, 7.5, 8.5\}\\
+y-x &= \{0, -4.4, -4.2, 0, 0, 0, 0, 0, 0, 0, 0\}\\
+\phi&=\frac{(-4.2)\cdot(-4.4)}{(-4.2)^2+(-4.4)^2}=0.5
+\end{align*}
+\end{block}
+\end{frame}
 \subsection{Andere Reparatur Methoden}
 \begin{frame}{Glättungsverfahren}
   \begin{block}<+->{Gleitender Mittelwert}
     \begin{itemize}
-      \item 
+      \item Reparatur alle Werte durch $y_i$
       \[
     y_j = \frac{1}{k}\sum_{i=1}^{k}x_{j-i} \quad j \in \{k,..,n\}
       \] 
@@ -334,7 +372,7 @@ zeitpunkt wert
   \end{block}
   \begin{block}<+->{Exponentiell Gewichteten Gleitender Mittelwert (EWMA)}
     \begin{itemize}
-      \item 
+    \item
   \[
     v_j = \sum_{i=0}^{n}(\beta-1)\beta^{i}x_{j-i}\quad j \in \{k,..,n\}
   \]
