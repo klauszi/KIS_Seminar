@@ -321,9 +321,35 @@ zeitpunkt wert
 % \addplot table {datafile.csv};
 \end{axis}
 \end{tikzpicture}
-   
 \end{column}
 \end{columns}
+\end{frame}
+\begin{frame}{Andere Reparaturen}
+  \begin{block}<+->{Gleitender Mittelwert}
+    \begin{itemize}
+      \item 
+      \[
+    y_j = \frac{1}{k}\sum_{i=1}^{k}x_{j-i} \quad j \in \{k,..,n\}
+      \] 
+    \end{itemize}
+  \end{block}
+  \begin{block}<+->{Exponentiell Gewichteten Gleitender Mittelwert (EWMA)}
+    \begin{itemize}
+      \item 
+  \[
+    v_j = \sum_{i=0}^{n}(\beta-1)\beta^{i}x_{j-i}\quad j \in \{k,..,n\}
+  \]
+  as
+  \[
+   v_j = \beta v_{j-1} + (1-\beta)x_j \quad mit\,\, V_0=0
+  \]
+    \end{itemize}
+  \end{block}
+  \begin{block}<+->{SCREEN}
+    \begin{itemize}
+      \item 
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 
