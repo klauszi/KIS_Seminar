@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.10.7)  17 SEP 2019 19:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.10.7)  17 SEP 2019 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1699,12 +1699,12 @@ Package pdftex.def Info: uhh.pdf used on input line 384.
 ]
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 394.
+Package pdftex.def Info: vsis.pdf used on input line 393.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
 
 <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 394.
+Package pdftex.def Info: uhh.pdf used on input line 393.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [27
 
@@ -2264,7 +2264,7 @@ public/lm/lmsso10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss
 o12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Beispiel.pdf (63 pages, 3256338 bytes).
+Output written on Beispiel.pdf (63 pages, 3256325 bytes).
 PDF statistics:
  4816 PDF objects out of 5155 (max. 8388607)
  4592 compressed objects within 46 object streams
