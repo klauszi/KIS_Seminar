@@ -1,49 +1,56 @@
 \section{Evaluierung}
 
+\begin{frame}{\insertsection}
+  \begin{block}<+->{Versuchsaufabau}
+    \begin{itemize}
+        \item Versuchsperson bewegt sich mit dem Handy auf den Hauptcampus
+        \item Strecke ist festgelegt ($x^{\text{truth}}, x^{\text{truth*}}$)
+        \item 186 von 742 GPS-Daten wurden als fehlerhaft festgestellt
+    \end{itemize}
+  \end{block}
+    \includegraphics[width=\textwidth]{GPS_Motivation_Example.png}
+\end{frame}
+
 \subsection{Ordnung}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
-    \begin{itemize}
-      \item Faktenöasdkfjöasdöasdkfjöasd
-      \item Fakten
-      \item Fakten
-    \end{itemize}
-  \end{block}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/varying_order_p.png}
+    \caption{Unterschiedliche Ordnung $p$ über GPS-Daten mit $\tau$ = 0.2, Datengröße 750 und Markierungsrate 0.2}%
+    \label{varying_order_p}
+\end{figure}
 \end{frame}
 
 \subsection{Schwellenwert}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
-    \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten
-    \end{itemize}
-  \end{block}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/varying_threshold.png}
+    \caption{Unterschiedliche Schwellenwerte $\tau$ über GPS-Daten mit $p$ = 3, Datengröße 750 und Markierungsrate 0.2}%
+    \label{varying_threshold}
+\end{figure}
 \end{frame}
 
-\subsection{maximale Anzahl von Iterationen}
+\subsection{Maximale Anzahl von Iterationen}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
-    \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten
-    \end{itemize}
-  \end{block}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/varying_maximum_number.png}
+    \caption{Unterschiedliche maximale Anzahl von Iterationen über GPS-Daten mit $\tau = 0,2$, $p$ = 3 und Datengröße 750}%
+    \label{varying_maximum_number}
+\end{figure}
 \end{frame}
 
 \subsection{Markierungsrate}
 
 \begin{frame}{\insertsubsection}
-  \begin{block}<+->{Blank}
-    \begin{itemize}
-      \item Fakten
-      \item Fakten
-      \item Fakten
-    \end{itemize}
-  \end{block}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/varying_labeling_rate.png}
+    \caption{Unterschiedliche Markierungsraten über GPS-Daten mit $\tau = 0,2$, $p$ = 3 und Datengröße 750}%
+   \label{varying_labeling_rate}
+\end{figure}
 \end{frame}
