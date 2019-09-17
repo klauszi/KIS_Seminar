@@ -2,7 +2,7 @@
 
 \subsection{IMR}
 
-\begin{frame}
+\begin{frame}{\insertsubsection\ Intuition}
     \begin{block}{Intuitiver Ansatz von IMR}
         \begin{itemize}
             \item ARX nutzt markierte Werte effizient, \textbf{aber} verändert die Werte zu drastisch.
@@ -330,7 +330,56 @@ Zeitpunkt Wert
 
 \begin{frame}{Matrix Pruning IMR Beispiel}
     \begin{block}{Beispiel}
-        Beispiel
+        Zeilen mit 0en in Z und entsprechende Zeile in V sind entfernbar:
+        \[
+            Z =
+            \left(
+\begin{array}{c}
+0\\
+-4.4\\
+-4.2\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+\end{array}
+\right)
+            V =
+            \left(
+\begin{array}{c}
+-4.4\\
+-4.2\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+\end{array}
+\right)
+\rightarrow
+            Z_{mp} =
+            \left(
+\begin{array}{c}
+-4.4\\
+-4.2\\
+\end{array}
+\right)
+            V_{mp} =
+            \left(
+\begin{array}{c}
+-4.2\\
+0\\
+\end{array}
+        \right)
+        \]
     \end{block}
 \end{frame}
 
