@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.10.7)  17 SEP 2019 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.10.7)  17 SEP 2019 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1373,7 +1373,7 @@ Package pdftex.def Info: uhh.pdf used on input line 3.
 
 
 ]
-<GPS_Motivation_Example.png, id=405, 329.7921pt x 98.769pt>
+<GPS_Motivation_Example.png, id=409, 329.7921pt x 98.769pt>
 File: GPS_Motivation_Example.png Graphic file (type png)
 
 <use GPS_Motivation_Example.png>
@@ -1406,7 +1406,7 @@ Package pdftex.def Info: uhh.pdf used on input line 39.
  [5
 
 ]
-<markierte_GPS_Motivation_Example.png, id=548, 329.7921pt x 98.769pt>
+<markierte_GPS_Motivation_Example.png, id=554, 329.7921pt x 98.769pt>
 File: markierte_GPS_Motivation_Example.png Graphic file (type png)
 
 <use markierte_GPS_Motivation_Example.png>
@@ -1699,12 +1699,12 @@ Package pdftex.def Info: uhh.pdf used on input line 384.
 ]
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 391.
+Package pdftex.def Info: vsis.pdf used on input line 394.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
 
 <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 391.
+Package pdftex.def Info: uhh.pdf used on input line 394.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [27
 
@@ -2035,7 +2035,7 @@ Package pdftex.def Info: uhh.pdf used on input line 14.
  [50
 
 ]
-<../plots/varying_order_p.png, id=3711, 1240.635pt x 545.03625pt>
+<../plots/varying_order_p.png, id=3763, 1240.635pt x 545.03625pt>
 File: ../plots/varying_order_p.png Graphic file (type png)
 
 <use ../plots/varying_order_p.png>
@@ -2066,7 +2066,7 @@ Package pdftex.def Info: uhh.pdf used on input line 25.
  [52
 
 ]
-<../plots/varying_threshold.png, id=3861, 1228.59pt x 553.06625pt>
+<../plots/varying_threshold.png, id=3914, 1228.59pt x 553.06625pt>
 File: ../plots/varying_threshold.png Graphic file (type png)
 
 <use ../plots/varying_threshold.png>
@@ -2097,7 +2097,7 @@ Package pdftex.def Info: uhh.pdf used on input line 36.
  [54
 
 ]
-<../plots/varying_maximum_number.png, id=4010, 1310.8975pt x 532.99126pt>
+<../plots/varying_maximum_number.png, id=4066, 1310.8975pt x 532.99126pt>
 File: ../plots/varying_maximum_number.png Graphic file (type png)
 
 <use ../plots/varying_maximum_number.png>
@@ -2129,7 +2129,7 @@ Package pdftex.def Info: uhh.pdf used on input line 47.
  [56
 
 ]
-<../plots/varying_labeling_rate.png, id=4161, 1268.74pt x 566.115pt>
+<../plots/varying_labeling_rate.png, id=4218, 1268.74pt x 566.115pt>
 File: ../plots/varying_labeling_rate.png Graphic file (type png)
 
 <use ../plots/varying_labeling_rate.png>
@@ -2166,11 +2166,11 @@ Package pdftex.def Info: uhh.pdf used on input line 3.
 ]
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 16.
+Package pdftex.def Info: vsis.pdf used on input line 20.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 16.
+Package pdftex.def Info: uhh.pdf used on input line 20.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [59
 
@@ -2178,36 +2178,48 @@ Package pdftex.def Info: uhh.pdf used on input line 16.
 File: vsis.pdf Graphic file (type pdf)
 
 <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 16.
-(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
-File: uhh.pdf Graphic file (type pdf)
- <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 16.
-(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [60
-
-] (./Beispiel.toc)
-File: vsis.pdf Graphic file (type pdf)
- <use vsis.pdf>
 Package pdftex.def Info: vsis.pdf used on input line 20.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
-
-<use uhh.pdf>
+ <use uhh.pdf>
 Package pdftex.def Info: uhh.pdf used on input line 20.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
- [61
+ [60
 
-] (./Beispiel.bbl)
+]
 File: vsis.pdf Graphic file (type pdf)
  <use vsis.pdf>
-Package pdftex.def Info: vsis.pdf used on input line 29.
+Package pdftex.def Info: vsis.pdf used on input line 25.
 (pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
 File: uhh.pdf Graphic file (type pdf)
  <use uhh.pdf>
-Package pdftex.def Info: uhh.pdf used on input line 29.
+Package pdftex.def Info: uhh.pdf used on input line 25.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [61
+
+]
+(./Beispiel.toc)
+File: vsis.pdf Graphic file (type pdf)
+ <use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 30.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 30.
 (pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
  [62
+
+] (./Beispiel.bbl)
+File: vsis.pdf Graphic file (type pdf)
+
+<use vsis.pdf>
+Package pdftex.def Info: vsis.pdf used on input line 39.
+(pdftex.def)             Requested size: 22.75179pt x 22.75322pt.
+File: uhh.pdf Graphic file (type pdf)
+ <use uhh.pdf>
+Package pdftex.def Info: uhh.pdf used on input line 39.
+(pdftex.def)             Requested size: 22.76222pt x 22.76163pt.
+ [63
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonbook.pdf>])
 \tf@nav=\write6
@@ -2221,21 +2233,20 @@ Package pdftex.def Info: uhh.pdf used on input line 29.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
- (./Beispiel.aux (./Einleitung.aux) (./Grundlagen.aux) (./IMR.aux) (./Evaluieru
-ng.aux)
-(./Schluss.aux))
+ (./Beispiel.aux (./Einleitung.aux)
+(./Grundlagen.aux) (./IMR.aux) (./Evaluierung.aux) (./Schluss.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
 Package rerunfilecheck Info: File `Beispiel.out' has not changed.
-(rerunfilecheck)             Checksum: D5BD73CD2A0AF2135B74B67C67F66588;1294.
+(rerunfilecheck)             Checksum: DA65610B33ACF0E67A784A15F5B560C8;1294.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 33757 strings out of 493064
- 818372 string characters out of 6138159
- 1066689 words of memory out of 5000000
- 36324 multiletter control sequences out of 15000+600000
- 81929 words of font info for 71 fonts, out of 8000000 for 9000
+ 33763 strings out of 493064
+ 818435 string characters out of 6138159
+ 1068148 words of memory out of 5000000
+ 36327 multiletter control sequences out of 15000+600000
+ 84718 words of font info for 72 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  72i,24n,112p,738b,2430s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texli
@@ -2245,17 +2256,18 @@ m-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</
 usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/lm/lmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/lm/lmsso10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/lm/lmsso12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lms
-so8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Beispiel.pdf (62 pages, 3233232 bytes).
+ic/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss17.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/lm/lmsso10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss
+o12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Beispiel.pdf (63 pages, 3256342 bytes).
 PDF statistics:
- 4680 PDF objects out of 5155 (max. 8388607)
- 4460 compressed objects within 45 object streams
- 151 named destinations out of 1000 (max. 500000)
+ 4816 PDF objects out of 5155 (max. 8388607)
+ 4592 compressed objects within 46 object streams
+ 153 named destinations out of 1000 (max. 500000)
  327 words of extra memory for PDF output out of 10000 (max. 10000000)
 
