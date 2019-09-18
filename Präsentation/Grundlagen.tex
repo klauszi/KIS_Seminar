@@ -342,7 +342,7 @@ zeitpunkt wert
       \begin{align*}
         2\sum_{k=2}^{n}(X_k-\phi X_{k-1})(-X_{k-1})&=0\\
         \sum_{k=2}^{n}(-X_kX_{k-1}+\phi X_{k-1}^2)&=0\\
-        -\sum_{k=2}^{n}X_kX_{k-1}+\sum_{k=2}^{n}\phi X_{k-1}^2)&=0\\
+        -\sum_{k=2}^{n}X_kX_{k-1}+\sum_{k=2}^{n}\phi X_{k-1}^2&=0\\
         \sum_{k=2}^{n}\phi X_{k-1}^2&=\sum_{k=2}^{n}X_kX_{k-1}\\
         \hat{\phi}&=\frac{\sum_{k=2}^{n}X_kX_{k-1}}{\sum_{k=2}^{n}
         X_{k-1}^2}
@@ -373,7 +373,7 @@ y-x &= \{0, -4.4, -4.2, 0, 0, 0, 0, 0, 0, 0, 0\}\\
     \begin{itemize}
     \item
   \[
-    v_j = \sum_{i=0}^{n}(\beta-1)\beta^{i}x_{j-i}\quad j \in \{k,..,n\}
+    v_j = \sum_{i=0}^{n}(1-\beta)\beta^{i}x_{j-i}\quad j \in \{k,..,n\}
   \]
     \item Effizient durch Dynamischesprogrammierung:
   \[
